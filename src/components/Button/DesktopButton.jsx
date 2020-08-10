@@ -11,6 +11,7 @@ const NextButton = styled(Button)`
   font-size: 27px;
   color: white;
   margin-top: 37px;
+  text-align: center;
   
   &.${ButtonSize.MD} {
     font-size: 21px;

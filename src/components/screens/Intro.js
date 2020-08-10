@@ -6,7 +6,7 @@ import {DesktopButton} from "../Button/DesktopButton";
 import {Text} from "../shared/Text";
 
 const intro = process.env.PUBLIC_URL + '/static/images/intro.png';
-const logo = process.env.PUBLIC_URL + '/static/images/logo.png';
+const logo = process.env.PUBLIC_URL + '/static/images/logo.svg';
 
 const IntroWrapper = styled.div`
   background-color: #1E1D1C;
