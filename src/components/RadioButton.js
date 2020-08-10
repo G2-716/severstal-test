@@ -11,13 +11,12 @@ const RadioIconStyled = styled.div`
   height: 16px;
   border: 1px solid rgba(255, 255, 255, 0.57);
   border-radius: 50%;
-  margin-right: 14px;
+  margin-right: 12px;
 `;
 
 const LabelStyled = styled.label`
   display: flex;
   align-items: center;
-  line-height: 1.87;
   cursor: pointer;
 
   & ${InputStyled}:checked + ${RadioIconStyled}:after {
@@ -32,9 +31,17 @@ const LabelStyled = styled.label`
   }
 `;
 
+const TextStyled = styled.span`
+  margin-top: 0.22em;
+`;
+
 const WrapperStyled = styled.div`
   display: flex;
   justify-content: flex-start;
+  
+  & + & {
+    margin-top: 10px;
+  }
 `;
 
 export const RadioButton = (props) => {
@@ -50,7 +57,7 @@ export const RadioButton = (props) => {
                     onChange={() => onChange(value)}
                 />
                 <RadioIconStyled />
-                {children}
+                <TextStyled>{children}</TextStyled>
             </LabelStyled>
         </WrapperStyled>
     )

@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components'
 import { screens } from '../screens.config';
 import { questions } from "../questions.config";
 import { ProgressProvider } from "../contexts/ProgressContext";
+import { preloadImage } from '../utils/preloadImage';
 
 const AppWrapper = styled.div`
   width: 100%;
@@ -39,6 +40,15 @@ function App() {
 
   const { component, ...screen } = screens[currentScreen] || {};
   const Component = component || (() => null);
+
+  useEffect(() => {
+    const nextScreen = screens[currentScreen + 1];
+    let clear = null;
+    if (nextScreen && nextScreen.image) {
+      clear = preloadImage(nextScreen.image);
+    }
+    return () => clear?.();
+  }, [currentScreen]);
 
   const progressProviderValue = {
     screen,

@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useCallback } from 'react';
+import React, { useEffect, useContext, useCallback, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { questions } from '../questions.config';
 import { ProgressContext } from '../contexts/ProgressContext';
@@ -59,7 +59,7 @@ export const QuestionWrapper = props => {
     const questionNumber = questions.findIndex(item => item.id === question.id) + 1;
     const questionsCount = questions.length;
 
-    useEffect(() => {
+    useLayoutEffect(() => {
         if (!answers[question.id]) setIsLocked(true);
         return () => setIsLocked(false);
     }, []);
