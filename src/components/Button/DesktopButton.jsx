@@ -16,7 +16,7 @@ const ArrowImg = styled.img`
   margin-left: 43px;
 `
 
-export const DesktopBtn = props => {
+export const DesktopButton = props => {
     return (
         <NextButton>
             {props.title}

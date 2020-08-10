@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const StartButton = styled.button`
+const MobileButton = styled.button`
   padding: 15px 30px 6px 96px; 
   background: #00569D;
   border: none;
@@ -12,10 +12,10 @@ const StartButton = styled.button`
   margin-top: 150px;
 `
 
-export const MobileBtn = props => {
+export const MobileButton = props => {
     return (
-        <StartButton>
+        <MobileButton>
             {props.title}
-        </StartButton>
+        </MobileButton>
     )
 }

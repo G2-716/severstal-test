@@ -1,8 +1,9 @@
 import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import {ProgressContext} from "../../contexts/ProgressContext";
-import {Button} from "../Button";
-import {DesktopBtn} from "../DesktopBtn";
+import {Button} from "../Button/Button";
+import {DesktopButton} from "../Button/DesktopButton";
+import {Text} from "../shared/Text";
 
 const intro = process.env.PUBLIC_URL + '/static/images/intro.png';
 const logo = process.env.PUBLIC_URL + '/static/images/logo.png';
@@ -25,12 +26,6 @@ const IntroTitle = styled.h1`
   margin: 65px 0 37px;
 `;
 
-const IntroText = styled.p`
-  font-size: 18px;
-  line-height: 113%;
-  letter-spacing: 0.01em;
-`
-
 const InfoWrapper = styled.div`
   padding-top: 20px;
 `
@@ -48,19 +43,19 @@ export const Intro = props => {
             <InfoWrapper>
                 <img src={logo} alt={''}/>
                 <IntroTitle>Лидер перемен</IntroTitle>
-                <IntroText>
+                <Text>
                     Кого зовут лидерами перемен? Людей, осставляющих вмятину во Вселенной.
                     Людей, разрушающих рамки привычного, раздвинающих границы возможного,
                     объединяющихся друг с другом и меняющих мир.
-                </IntroText>
+                </Text>
                 <br />
-                <IntroText>
+                <Text>
                     Генри Форд, Мария Кюри,
                     Стив Джобс и принцесса Диана. Какой лидер перемен ты?
                     Пройди тест, чтобы узнать!
-                </IntroText>
+                </Text>
                 <Button onClick={setNext}>
-                    <DesktopBtn title={'Пройти тест'} />
+                    <DesktopButton title={'Пройти тест'} />
                 </Button>
             </InfoWrapper>
             <ImgWrapper >
