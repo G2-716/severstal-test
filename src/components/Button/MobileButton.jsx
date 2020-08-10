@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Button } from './Button';
 
-const MobileButton = styled.button`
+const MobileButtonStyled = styled(Button)`
   padding: 15px 30px 6px 96px; 
   background: #00569D;
   border: none;
@@ -13,9 +14,5 @@ const MobileButton = styled.button`
 `
 
 export const MobileButton = props => {
-    return (
-        <MobileButton>
-            {props.title}
-        </MobileButton>
-    )
+    return <MobileButtonStyled {...props} />;
 }

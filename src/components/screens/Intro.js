@@ -54,9 +54,7 @@ export const Intro = props => {
                     Стив Джобс и принцесса Диана. Какой лидер перемен ты?
                     Пройди тест, чтобы узнать!
                 </Text>
-                <Button onClick={setNext}>
-                    <DesktopButton title={'Пройти тест'} />
-                </Button>
+                <DesktopButton onClick={setNext}>Пройти тест</DesktopButton>
             </InfoWrapper>
             <ImgWrapper >
                 <img style={{height:'100%'}} src={intro} alt={''}/>

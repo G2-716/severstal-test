@@ -4,6 +4,8 @@ import { questions } from '../questions.config';
 import { ProgressContext } from '../contexts/ProgressContext';
 import { QuestionLabel } from "./QuestionLabel";
 import { RadioButton } from './RadioButton';
+import { DesktopButton } from './Button/DesktopButton';
+import { ButtonSize } from './Button/Button';
 
 const QuestionWrapperStyled = styled.div`
   display: grid;
@@ -87,7 +89,13 @@ export const QuestionWrapper = props => {
                 </AnswersBoxStyled>
                 <ButtonsBoxStyled>
                     {/*<button onClick={setPrev}>Prev</button>*/}
-                    <button disabled={isLocked} onClick={setNext}>Дальше</button>
+                    <DesktopButton
+                        size={ButtonSize.MD}
+                        disabled={isLocked}
+                        onClick={setNext}
+                    >
+                        Дальше
+                    </DesktopButton>
                 </ButtonsBoxStyled>
             </QuestionBoxStyled>
             <ImageStyled src={screen.image} alt='' />
