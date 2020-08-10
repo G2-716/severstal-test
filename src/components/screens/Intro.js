@@ -38,8 +38,7 @@ const ImgWrapper = styled.div`
 
 const ImageStyled = styled.img`
   height: 100%;
-  width: 100%;
-  object-fit: contain;
+  width: auto;
 `
 
 const DesktopButtonStyled = styled(DesktopButton)`
