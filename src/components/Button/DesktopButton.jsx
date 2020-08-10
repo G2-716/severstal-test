@@ -10,7 +10,6 @@ const NextButton = styled(Button)`
   border: none;
   font-size: 27px;
   color: white;
-  margin-top: 37px;
   text-align: center;
   
   &.${ButtonSize.MD} {

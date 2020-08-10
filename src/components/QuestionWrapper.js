@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useCallback, useLayoutEffect } from 'react';
+import React, { useContext, useCallback, useLayoutEffect } from 'react';
 import styled from 'styled-components';
 import { questions } from '../questions.config';
 import { ProgressContext } from '../contexts/ProgressContext';
@@ -6,6 +6,7 @@ import { QuestionLabel } from "./QuestionLabel";
 import { RadioButton } from './RadioButton';
 import { DesktopButton } from './Button/DesktopButton';
 import { ButtonSize } from './Button/Button';
+import { Text } from './shared/Text';
 
 const QuestionWrapperStyled = styled.div`
   display: grid;
@@ -25,8 +26,11 @@ const QuestionBoxStyled = styled.div`
   grid-area: 2/2/3/3;
   display: flex;
   flex-direction: column;
-  padding-top: 60%;
   padding-right: 80px;
+`;
+
+const Spacer = styled.div`
+  flex-grow: ${({ value }) => value || 1};
 `;
 
 const AnswersBoxStyled = styled.div`
@@ -39,10 +43,6 @@ const RadioButtonStyled = styled(RadioButton)`
 
 const ButtonsBoxStyled = styled.div`
   margin-top: auto;
-`;
-
-const QuestionTextStyled = styled.div`
-  font-size: 18px;
 `;
 
 const ImageStyled = styled.img`
@@ -73,7 +73,8 @@ export const QuestionWrapper = props => {
         <QuestionWrapperStyled>
             <QuestionLabelStyled current={questionNumber} total={questionsCount} />
             <QuestionBoxStyled>
-                <QuestionTextStyled>{question.text}</QuestionTextStyled>
+                <Spacer value={2} />
+                <Text>{question.text}</Text>
                 <AnswersBoxStyled>
                     {question.answers.map(answer => (
                         <RadioButtonStyled
@@ -87,6 +88,7 @@ export const QuestionWrapper = props => {
                         </RadioButtonStyled>
                     ))}
                 </AnswersBoxStyled>
+                <Spacer value={1} />
                 <ButtonsBoxStyled>
                     {/*<button onClick={setPrev}>Prev</button>*/}
                     <DesktopButton

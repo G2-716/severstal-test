@@ -1,7 +1,6 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import {ProgressContext} from "../../contexts/ProgressContext";
-import {Button} from "../Button/Button";
 import {DesktopButton} from "../Button/DesktopButton";
 import {Text} from "../shared/Text";
 
@@ -33,8 +32,19 @@ const InfoWrapper = styled.div`
 const ImgWrapper = styled.div`
   display: flex;
   justify-content: flex-end;
+  height: 100%;
+  width: 100%;
 `
 
+const ImageStyled = styled.img`
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+`
+
+const DesktopButtonStyled = styled(DesktopButton)`
+  margin-top: 37px;
+`
 
 export const Intro = props => {
     const { setNext } = useContext(ProgressContext);
@@ -54,10 +64,10 @@ export const Intro = props => {
                     Стив Джобс и принцесса Диана. Какой лидер перемен ты?
                     Пройди тест, чтобы узнать!
                 </Text>
-                <DesktopButton onClick={setNext}>Пройти тест</DesktopButton>
+                <DesktopButtonStyled onClick={setNext}>Пройти тест</DesktopButtonStyled>
             </InfoWrapper>
-            <ImgWrapper >
-                <img style={{height:'100%'}} src={intro} alt={''}/>
+            <ImgWrapper>
+                <ImageStyled src={intro} alt={''} />
             </ImgWrapper>
         </IntroWrapper>
     );
