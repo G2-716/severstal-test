@@ -12,7 +12,12 @@ const AppWrapper = styled.div`
 const DEFAULT_ANSWERS = questions.reduce((res, question) => ({ ...res, [question.id]: null }), {});
 
 function App() {
-  const [currentScreen, setCurrentScreen] = useState(0);
+  /////////////////// for development ////////////////////////////////////
+  const urlParams = new URLSearchParams(window.location.search);
+  const screenParam = urlParams.get('screen');
+  ////////////////////////////////////////////////////////////////////////
+
+  const [currentScreen, setCurrentScreen] = useState(+screenParam || 0);
   const [answers, setAnswers] = useState(DEFAULT_ANSWERS);
   const [isLocked, setIsLocked] = useState(false);
 
@@ -32,8 +37,8 @@ function App() {
     setAnswers(answers => ({ ...answers, [questionId]: answerId }));
   };
 
-  const screen = screens[currentScreen];
-  const Component = screen?.component || (() => null);
+  const { component, ...screen } = screens[currentScreen] || {};
+  const Component = component || (() => null);
 
   const progressProviderValue = {
     screen,

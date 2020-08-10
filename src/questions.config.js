@@ -9,31 +9,31 @@ export const AnswerType = {
 export const questions = [
     {
         id: '1',
-        text: 'First question?',
+        text: 'Если у вас есть возможность стать чемпионом в одном виде спорта, какой вы бы выбрали?',
         answers: [
             {
                 id: '1',
-                text: 'Answer 1',
+                text: 'Шахматы. Да-да, это спорт!',
                 pointsTo: [AnswerType.Sales],
             },
             {
                 id: '2',
-                text: 'Answer 2',
+                text: 'Сноуборд/Лыжи',
                 pointsTo: [AnswerType.Finance],
             },
             {
                 id: '3',
-                text: 'Answer 3',
+                text: 'Бокс',
                 pointsTo: [AnswerType.Engineering],
             },
             {
                 id: '4',
-                text: 'Answer 4',
+                text: 'Конный спорт',
                 pointsTo: [AnswerType.ProjectOffice],
             },
             {
                 id: '5',
-                text: 'Answer 5',
+                text: 'Плавание',
                 pointsTo: [AnswerType.Purchases],
             },
         ],
