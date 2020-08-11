@@ -1,4 +1,4 @@
-import React, { useContext, useCallback, useLayoutEffect } from 'react';
+import React, { useContext, useCallback, useLayoutEffect, useState } from 'react';
 import styled from 'styled-components';
 import { questions } from '../questions.config';
 import { ProgressContext } from '../contexts/ProgressContext';
@@ -6,6 +6,7 @@ import { QuestionLabel } from "./QuestionLabel";
 import { RadioButton } from './RadioButton';
 import { DesktopButton } from './Button/DesktopButton';
 import { ButtonSize } from './Button/Button';
+import { shuffle } from '../utils/shuffle';
 //import { Text } from './shared/Text';
 
 const QuestionWrapperStyled = styled.div`
@@ -66,7 +67,8 @@ const ImageStyled = styled.img`
 
 export const QuestionWrapper = props => {
     const { question, image } = props;
-    const { screen, answers, setAnswer, setPrev, setNext, isLocked, setIsLocked } = useContext(ProgressContext);
+    const [questionAnswers, setQuestionAnswers] = useState(question.answers);
+    const { answers, setAnswer, setPrev, setNext, isLocked, setIsLocked } = useContext(ProgressContext);
 
     const questionNumber = questions.findIndex(item => item.id === question.id) + 1;
     const questionsCount = questions.length;
@@ -75,6 +77,10 @@ export const QuestionWrapper = props => {
         if (!answers[question.id]) setIsLocked(true);
         return () => setIsLocked(false);
     }, []);
+
+    useLayoutEffect(() => {
+        setQuestionAnswers(shuffle(question.answers));
+    }, [question]);
 
     const handleAnswerChange = useCallback((answerId) => {
         setIsLocked(false);
@@ -88,7 +94,7 @@ export const QuestionWrapper = props => {
                 <Spacer value={2} />
                 <Text>{question.text}</Text>
                 <AnswersBoxStyled>
-                    {question.answers.map(answer => (
+                    {questionAnswers.map(answer => (
                         <RadioButtonStyled
                             key={answer.id}
                             name={question.id}

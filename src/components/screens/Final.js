@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import {ProgressContext} from "../../contexts/ProgressContext";
+import { join } from 'path';
+import { ProgressContext } from '../../contexts/ProgressContext';
 import { AnswerType, answerTypes } from '../../answerTypes.config';
 import { getAnswerById } from '../../utils/getAnswerById';
 import { logoImage, shareArrow } from '../../constants/images';
@@ -132,11 +133,10 @@ export const Final = props => {
     const result = answerTypes[resultType || DEFAULT_RESULT];
 
     const url = [window.location.protocol, '//', window.location.host, window.location.pathname].join('');
-    const urlWithoutTrailingSlash = url.replace(/\/*$/, '');
 
     const shareTitle = 'Лидер перемен - Северсталь';
     const shareDescription = '#северсталь #лидерперемен';
-    const shareImage = urlWithoutTrailingSlash + result.image;
+    const shareImage = join(url, result.image);
 
     const queryParams = new URLSearchParams();
 

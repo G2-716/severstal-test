@@ -8,17 +8,17 @@ export const questions = [
             {
                 id: '1',
                 text: 'Шахматы. Да-да, это спорт!',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Сноуборд/Лыжи',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Бокс',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
@@ -34,23 +34,23 @@ export const questions = [
     },
     {
         id: '2',
-        text: 'Представь, что в 5 утра тебе звонит староста/ ментор/ руководитель. Как думаешь, что случилось?',
+        text: 'Представь, что в 5 утра тебе звонит староста/ментор/руководитель. Как думаешь, что случилось?',
         answers: [
             {
                 id: '1',
                 text: 'Он понял, как решить задачу с прошлой пары/по работе, с которой никто не ' +
                     'справился, теперь звонит всем, рассказывает',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Не может уснуть, хочет с тобой поговорить',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Какая разница, что случилось?! Я хочу спать!',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
@@ -71,17 +71,17 @@ export const questions = [
             {
                 id: '1',
                 text: 'А что, работать надо обязательно в офисе?',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Пойду с коллегами гулять',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Давно хотел сходить на выставку недалеко от работы',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
@@ -102,17 +102,17 @@ export const questions = [
             {
                 id: '1',
                 text: 'Отслеживать техническую сторону проекта',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Разрабатывать новые идеи',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Заниматься всем и сразу',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
@@ -133,17 +133,17 @@ export const questions = [
             {
                 id: '1',
                 text: 'Я работаю',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Приду с пряниками знакомиться',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Напишу в общем чатике «Вэлкам»',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
@@ -164,17 +164,17 @@ export const questions = [
             {
                 id: '1',
                 text: 'Пицца',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Запеченная рыба',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Бургер',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
@@ -195,17 +195,17 @@ export const questions = [
             {
                 id: '1',
                 text: 'Многоэтажное здание в центре города',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Просторный лофт рядом с парком',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Удалёнка, чтобы можно было работать из кроватки или кафе',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
@@ -226,17 +226,17 @@ export const questions = [
             {
                 id: '1',
                 text: 'Телевизор',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Холодильник',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Кофемашина',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
@@ -257,17 +257,17 @@ export const questions = [
             {
                 id: '1',
                 text: 'Пытаюсь быстрее закончить разговор, всё равно останусь при своём мнении',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Могу склонить людей на свою точку зрения',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Привожу доказательства своей точки зрениями графиками, цифрами и гуглом',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
@@ -288,17 +288,17 @@ export const questions = [
             {
                 id: '1',
                 text: 'Возьму энциклопедию по устройству механизмов, приборов, машин',
-                type: AnswerType.Sales,
+                type: AnswerType.Engineering,
             },
             {
                 id: '2',
                 text: 'Книжка по психологии явно ждёт меня',
-                type: AnswerType.Finance,
+                type: AnswerType.Sales,
             },
             {
                 id: '3',
                 text: 'Мой утренний New York Times принесли?',
-                type: AnswerType.Engineering,
+                type: AnswerType.Finance,
             },
             {
                 id: '4',
