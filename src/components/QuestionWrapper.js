@@ -65,7 +65,7 @@ const ImageStyled = styled.img`
 `;
 
 export const QuestionWrapper = props => {
-    const { question } = props;
+    const { question, image } = props;
     const { screen, answers, setAnswer, setPrev, setNext, isLocked, setIsLocked } = useContext(ProgressContext);
 
     const questionNumber = questions.findIndex(item => item.id === question.id) + 1;
@@ -112,7 +112,7 @@ export const QuestionWrapper = props => {
                     </DesktopButton>
                 </ButtonsBoxStyled>
             </QuestionBoxStyled>
-            <ImageStyled src={screen.image} alt='' />
+            <ImageStyled src={image} alt='' />
         </QuestionWrapperStyled>
     );
 };

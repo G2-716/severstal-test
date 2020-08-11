@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, ButtonSize } from './Button';
-
-const arrow = process.env.PUBLIC_URL + '/static/images/desktopArrow.svg';
+import { desktopArrow } from '../../constants/images';
 
 const NextButton = styled(Button)`
   padding: 3.2323% 3.6363% 3.2323% 6.0606%; 
@@ -26,7 +25,7 @@ export const DesktopButton = props => {
     return (
         <NextButton {...props}>
             {props.children}
-            <ArrowImg src={arrow} alt="" />
+            <ArrowImg src={desktopArrow} alt="" />
         </NextButton>
     )
 }

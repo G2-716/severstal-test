@@ -1,12 +1,10 @@
-import React, { useState, useContext } from 'react';
+import React, { useContext } from 'react';
 import styled from 'styled-components';
 import {ProgressContext} from "../../contexts/ProgressContext";
 import { AnswerType, answerTypes } from '../../answerTypes.config';
 import { getAnswerById } from '../../utils/getAnswerById';
+import { logoImage, shareArrow } from '../../constants/images';
 //import {Text} from "../shared/Text";
-
-const logo = process.env.PUBLIC_URL + '/static/images/logo.svg';
-const shareArrow = process.env.PUBLIC_URL + '/static/images/share.svg';
 
 const FinalWrapper = styled.div`
   background-color: #1E1D1C;
@@ -112,6 +110,8 @@ const ShareImg = styled.img`
     height: 6vw;
 `
 
+const DEFAULT_RESULT = AnswerType.Sales;
+
 export const Final = props => {
     const { answers } = useContext(ProgressContext);
 
@@ -126,7 +126,7 @@ export const Final = props => {
 
     const maxPoints = Math.max(...Object.keys(resultPoints).map(key => resultPoints[key]));
     const resultType = Object.keys(resultPoints).find(key => resultPoints[key] === maxPoints);
-    const result = answerTypes[resultType];
+    const result = answerTypes[resultType || DEFAULT_RESULT];
 
     return (
         <FinalWrapper>
@@ -135,7 +135,7 @@ export const Final = props => {
             </ImgWrapper>
             <InfoWrapper>
                 <LogoWrapper>
-                    <LogoStyled src={logo} alt={''}/>
+                    <LogoStyled src={logoImage} alt={''}/>
                 </LogoWrapper>
                 <ResultTitle>Твой результат</ResultTitle>
                 <Text>{result.description}</Text>

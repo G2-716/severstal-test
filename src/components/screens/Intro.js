@@ -4,16 +4,13 @@ import {ProgressContext} from "../../contexts/ProgressContext";
 import {DesktopButton} from "../Button/DesktopButton";
 //import {Text} from "../shared/Text";
 import {MobileButton} from "../Button/MobileButton";
-
-const intro = process.env.PUBLIC_URL + '/static/images/intro.png';
-const logo = process.env.PUBLIC_URL + '/static/images/logo.svg';
-const intro_mobile = process.env.PUBLIC_URL + '/static/images/intro_mobile.png';
+import { introImage, introMobileImage, logoImage } from '../../constants/images';
 
 const IntroWrapper = styled.div`
   height: 100vh;
   width: 100%;
   color: #FFFFFF;
-  background: #090908 url(${intro_mobile}) no-repeat center;
+  background: #090908 url(${introMobileImage}) no-repeat center;
   background-position-y: 2.890%;
   background-size: contain;
   @media screen and (min-width: 1100px) {
@@ -114,7 +111,7 @@ export const Intro = props => {
     return (
         <IntroWrapper>
             <InfoWrapper className={'InfoWrapper'}>
-                <LogoStyled src={logo} alt={''}/>
+                <LogoStyled src={logoImage} alt={''}/>
                 <IntroTitle>Лидер перемен</IntroTitle>
                 <Text>
                     Кого зовут лидерами перемен? Людей, осставляющих вмятину во Вселенной.
@@ -131,7 +128,7 @@ export const Intro = props => {
                 <MobileButtonStyled onClick={setNext}>Пройти тест</MobileButtonStyled>
             </InfoWrapper>
             <ImgWrapper>
-                <ImageStyled src={intro} alt={''} />
+                <ImageStyled src={introImage} alt={''} />
             </ImgWrapper>
         </IntroWrapper>
     );

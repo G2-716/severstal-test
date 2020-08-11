@@ -1,3 +1,11 @@
+import {
+    elonMuskImage,
+    jackMaImage,
+    peterDruckerImage,
+    tonyRobbinsImage,
+    warrenBuffettImage
+} from './constants/images';
+
 export const AnswerType = {
     Sales: 'sales',
     Finance: 'finance',
@@ -5,12 +13,6 @@ export const AnswerType = {
     ProjectOffice: 'projectOffice',
     Purchases: 'purchases',
 };
-
-const elonMuskImage = process.env.PUBLIC_URL + '/static/images/elon-musk.png';
-const peterDruckerImage = process.env.PUBLIC_URL + '/static/images/peter-drucker.png';
-const warrenBuffettImage = process.env.PUBLIC_URL + '/static/images/warren-buffett.png';
-const tonyRobbinsImage = process.env.PUBLIC_URL + '/static/images/tony-robbins.png';
-const jackMaImage = process.env.PUBLIC_URL + '/static/images/jack-ma.png';
 
 export const answerTypes = {
     [AnswerType.Sales]: {

@@ -38,17 +38,13 @@ function App() {
     setAnswers(answers => ({ ...answers, [questionId]: answerId }));
   };
 
-  const { component, ...screen } = screens[currentScreen] || {};
+  const { component, preloadImages, ...screen } = screens[currentScreen] || {};
   const Component = component || (() => null);
 
   useEffect(() => {
-    const nextScreen = screens[currentScreen + 1];
-    let clear = null;
-    if (nextScreen && nextScreen.image) {
-      clear = preloadImage(nextScreen.image);
-    }
-    return () => clear?.();
-  }, [currentScreen]);
+    const clears = preloadImages && preloadImages.map(img => preloadImage(img));
+    return () => clears && clears.forEach(clear => clear());
+  }, [preloadImages]);
 
   const progressProviderValue = {
     screen,
