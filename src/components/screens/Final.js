@@ -1,9 +1,10 @@
 import React, { useState, useContext } from 'react';
 import styled from 'styled-components';
 import {ProgressContext} from "../../contexts/ProgressContext";
+import { AnswerType, answerTypes } from '../../answerTypes.config';
+import { getAnswerById } from '../../utils/getAnswerById';
 //import {Text} from "../shared/Text";
 
-const resultElon = process.env.PUBLIC_URL + '/static/images/result_Elon.png';
 const logo = process.env.PUBLIC_URL + '/static/images/logo.svg';
 const shareArrow = process.env.PUBLIC_URL + '/static/images/share.svg';
 
@@ -113,21 +114,31 @@ const ShareImg = styled.img`
 
 export const Final = props => {
     const { answers } = useContext(ProgressContext);
+
+    const resultPoints = Object.keys(answers).reduce((res, questionId) => {
+        const answerId = answers[questionId];
+        if (!answerId) return res;
+
+        const answer = getAnswerById(questionId, answerId);
+        const { type } = answer;
+        return { ...res, [type]: (res[type] || 0) + 1 };
+    }, {});
+
+    const maxPoints = Math.max(...Object.keys(resultPoints).map(key => resultPoints[key]));
+    const resultType = Object.keys(resultPoints).find(key => resultPoints[key] === maxPoints);
+    const result = answerTypes[resultType];
+
     return (
         <FinalWrapper>
             <ImgWrapper>
-                <ImgStyled src={resultElon} alt={''}/>
+                <ImgStyled src={result.image} alt={''}/>
             </ImgWrapper>
             <InfoWrapper>
                 <LogoWrapper>
                     <LogoStyled src={logo} alt={''}/>
                 </LogoWrapper>
                 <ResultTitle>Твой результат</ResultTitle>
-                <Text>
-                    Ты точно знаешь, сколько коробок пиццы съедят твои друзья на вечеринке
-                    (и сколько бутылок воды припасти на утро;) ) Тебе не говорили, что ты похож
-                    на основателя Алибабы – Джека Ма?
-                </Text>
+                <Text>{result.description}</Text>
                 <br />
                 <Text>
                     Хочешь, чтобы было так? Проходи отбор на
