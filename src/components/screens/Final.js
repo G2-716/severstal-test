@@ -6,7 +6,6 @@ import { AnswerType, answerTypes } from '../../answerTypes.config';
 import { getAnswerById } from '../../utils/getAnswerById';
 import { fade, slideDown } from '../../utils/keyframes';
 import { logoImage, shareArrow } from '../../constants/images';
-//import {Text} from "../shared/Text";
 
 const FinalWrapper = styled.div`
   background-color: #1E1D1C;
@@ -25,6 +24,7 @@ const FinalWrapper = styled.div`
 
   }
 `;
+
 const ResultTitle = styled.h1`
   font-weight: 800;
   font-size: 2.5vw;
@@ -36,6 +36,24 @@ const ResultTitle = styled.h1`
     font-size: 6.6666vw;
     margin-bottom: 6.4971%;
   }
+  
+  @media screen and (min-width: 500px) and (max-height: 700px){
+    margin-top: -2%;
+    margin-bottom: 2.4971%;
+  }
+  
+`
+const Text = styled.p`
+  font-size: 1.6666vw;
+  line-height: 113%;
+  @media screen and (min-width: 640px) and (max-width: 1100px)
+      {
+        font-size: 2.6vw;
+      }
+  @media screen and (max-width: 640px)
+      {
+        font-size: 2.7341vh;
+      }
 `
 const LogoWrapper = styled.div`
   width: 13.6111%;
@@ -56,17 +74,6 @@ const InfoWrapper = styled.div`
   padding: 180px 0 0 60px;
   @media screen and (max-width: 1100px){
     padding: 9.6% 7.5% 0;
-  }
-`
-const Text = styled.p`
-  font-size: 1.6666vw;
-  line-height: 113%;
-  letter-spacing: 0.01em;
-  
-  @media screen and (max-width: 1100px)
-  {
-    font-size: 2.2vw;
-
   }
 `
 
@@ -173,9 +180,10 @@ export const Final = props => {
                 <InvitingText>
                     Хочешь, чтобы было так? Проходи отбор на
                     лидерскую программу компании “Северсталь”
+
                 </InvitingText>
                 <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
-                    Поделиться 
+                    Поделиться
                     <ShareImg src={shareArrow} alt={''}/>
                 </ShareLink>
             </InfoWrapper>

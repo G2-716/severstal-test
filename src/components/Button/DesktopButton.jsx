@@ -11,7 +11,8 @@ const NextButton = styled(Button)`
   color: white;
   
   &.${ButtonSize.MD} {
-    font-size: 1.6962vh;
+    font-size: 1.4583vw;
+    padding: 2.2323% 2.6363% 2.2323% 5.0606%; 
   }
 `
 

@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import {ProgressContext} from "../../contexts/ProgressContext";
 import {DesktopButton} from "../Button/DesktopButton";
-//import {Text} from "../shared/Text";
+import {Text} from "../../shared/Text";
 import {MobileButton} from "../Button/MobileButton";
 import { introImage, introMobileImage, logoImage } from '../../constants/images';
 import { fade, slideDown } from '../../utils/keyframes';
@@ -14,7 +14,8 @@ const IntroWrapper = styled.div`
   background: #090908 url(${introMobileImage}) no-repeat center;
   background-position-y: 2.890%;
   background-size: contain;
-  @media screen and (min-width: 1100px) {
+  @media screen and (min-width: 1199px) 
+  {
     background-color: #1E1D1C;
     display: grid;
     padding: 0.7% 7%;
@@ -25,17 +26,7 @@ const IntroWrapper = styled.div`
   
 `;
 
-const Text = styled.p`
-  font-size: 1vw;
-  line-height: 113%;
-  letter-spacing: 0.01em;
-  
-  @media screen and (max-width: 1100px)
-  {
-    font-size: 1.7341vh;
-    padding-right: 12%;
-  }
-`
+
 
 const FirstTextParagraph = styled(Text)`
   animation: ${slideDown} 0.4s ease-out 0.1s both;
@@ -50,23 +41,32 @@ const IntroTitle = styled.h1`
   font-size: 5.5vw;
   line-height: 95%;
   margin: 13.8324% 0 7.8738%;
-  @media screen and (max-width: 1100px)
+  @media screen and (max-width: 1199px)
   {
     padding-right: 12%;
     font-size: 8.3815vh;
   }
+  @media screen and (max-height: 650px ) 
+  {
+    margin: 5.3324% 0 3.5738%;
+  }
   
+  @media screen and (min-width: 1000px)and (max-height: 950px ) 
+  {
+    margin: 5.3324% 0 3.5738%;
+  }
 `;
 
 const InfoWrapper = styled.div`
   padding-top: 4.9273%;
- @media screen and (max-width: 1100px)
+ @media screen and (max-width: 1199px)
   {
     position: absolute;
     z-index: 2;
     padding: 2.890% 10.4109% 11.8497% 8.7671%;
   }
-  @media screen and (min-width: 450px) and (max-width: 800px) {
+  @media screen and (min-width: 450px) and (max-width: 800px) 
+  {
    padding: 2.890% 15.2117%;
   }
 
@@ -77,9 +77,11 @@ const ImgWrapper = styled.div`
   justify-content: flex-end;
   height: 100%;
   padding-left: 8.75%;
+
   animation: ${fade} 0.4s ease-out 0.1s both;
   
-  @media screen and (max-width: 1100px)
+  @media screen and (max-width: 1200px)
+
   {
     display: none;
   }
@@ -93,29 +95,46 @@ const ImageStyled = styled.img`
 const LogoStyled = styled.img`
     height: 6.777%;
     width: 32.6666%;
-    animation: ${slideDown} 0.4s ease-out 0.1s both;
-    
-    @media screen and (max-width: 1100px)
-      {
-          height: 5.3468%;
-          width: 32.8767%;
-      }
+    animation: ${slideDown} 0.4s ease-out 0.1s both; 
+    @media screen and (max-width: 1199px)
+    {
+      height: 5.3468%;
+      width: 32.8767%;
+    }
+      
+  @media screen and (min-width: 800px) and (max-width: 1200px) and (max-height: 950px ) 
+  {
+    height: 5%;
+    width: 13%;
+  }
 `
 
 const DesktopButtonStyled = styled(DesktopButton)`
   margin-top: 14.2823%;
-   @media screen and (max-width: 1100px)
-      {
-         display: none;
-      }
+   @media screen and (max-width: 1199px)
+   {
+       display: none;
+   }
 `
 
 const MobileButtonStyled = styled(MobileButton)`
   margin-top: 23.1213%;
-  @media screen and (min-width: 1100px)
+  @media screen and (min-width: 1199px)
     {
        display: none;
     }
+  
+  @media screen and  (max-height: 900px ) {
+     padding: 2.1676% 0;
+  }
+  @media screen and  (min-height: 300px ) and  (max-height: 812px ) {
+     margin-top: 5%;
+     padding: 2.1676% 0;
+  }
+  @media screen and (min-width: 1000px)and (max-height: 950px ) 
+  {
+    margin-top: 5%;
+  }
     
 `
 

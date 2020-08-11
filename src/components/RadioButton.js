@@ -17,9 +17,12 @@ const RadioIconStyled = styled.div`
 
 const LabelStyled = styled.label`
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   cursor: pointer;
-
+  @media screen and (max-width: 1100px) 
+  { 
+  }
+  
   & ${InputStyled}:checked + ${RadioIconStyled}:after {
     content: '';
     position: absolute;
@@ -29,6 +32,15 @@ const LabelStyled = styled.label`
     height: 12px;
     border-radius: 50%;
     background-color: #3D8FE3;
+    @media screen and (max-width: 1100px) 
+      { 
+        top: -1px;
+        left: -1px;
+        width: 14px;
+        height: 14px;
+        border: 1px solid white;
+        background-color: #FFFFFF;
+      }
   }
 `;
 

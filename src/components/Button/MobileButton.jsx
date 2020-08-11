@@ -12,7 +12,6 @@ const MobileButtonStyled = styled(Button)`
   line-height: 18px;
   letter-spacing: 0.01em;
   color: white;
-  margin-top: 150px;
 `
 
 export const MobileButton = props => {

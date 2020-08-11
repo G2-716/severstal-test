@@ -4,7 +4,7 @@ import styled from "styled-components";
 const QuestionLabelStyled = styled.div`
   font-weight: 600;
   white-space: nowrap;
-  font-size: 18px;
+  font-size: 1.3888vw;
 `;
 
 export const QuestionLabel = props => {

@@ -20,6 +20,8 @@ const introMobileImage = process.env.PUBLIC_URL + '/static/images/intro_mobile.p
 const logoImage = process.env.PUBLIC_URL + '/static/images/logo.svg';
 const shareArrow = process.env.PUBLIC_URL + '/static/images/share.svg';
 const desktopArrow = process.env.PUBLIC_URL + '/static/images/desktopArrow.svg';
+const next = process.env.PUBLIC_URL + '/static/images/next.svg';
+const prev = process.env.PUBLIC_URL + '/static/images/prev.svg';
 
 export {
     questionImage1,
@@ -42,4 +44,6 @@ export {
     introMobileImage,
     shareArrow,
     desktopArrow,
+    next,
+    prev
 };
