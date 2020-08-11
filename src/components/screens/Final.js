@@ -91,7 +91,7 @@ const ImgStyled = styled.img`
    }
 `
 
-const ShareButton = styled.button`
+const ShareLink = styled.a`
     position: absolute;
     bottom: 3.2912%;
     border: none;
@@ -99,8 +99,11 @@ const ShareButton = styled.button`
     color: white;
     font-size: 5vw;
     font-weight: 800;
+    outline: none;
+    text-decoration: none;
+    
     @media screen and (min-width: 1100px){
-    display: none;
+      display: none;
     }
 `
 
@@ -128,6 +131,20 @@ export const Final = props => {
     const resultType = Object.keys(resultPoints).find(key => resultPoints[key] === maxPoints);
     const result = answerTypes[resultType || DEFAULT_RESULT];
 
+    const url = [window.location.protocol, '//', window.location.host, window.location.pathname].join('');
+    const urlWithoutTrailingSlash = url.replace(/\/*$/, '');
+
+    const shareTitle = 'Лидер перемен - Северсталь';
+    const shareDescription = '#северсталь #лидерперемен';
+    const shareImage = urlWithoutTrailingSlash + result.image;
+
+    const queryParams = new URLSearchParams();
+
+    queryParams.append('url', url);
+    queryParams.append('title', shareTitle);
+    queryParams.append('description', shareDescription);
+    queryParams.append('image', shareImage);
+
     return (
         <FinalWrapper>
             <ImgWrapper>
@@ -144,10 +161,10 @@ export const Final = props => {
                     Хочешь, чтобы было так? Проходи отбор на
                     лидерскую программу компании “Северсталь”
                 </Text>
-                <ShareButton>
+                <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
                     Поделиться 
                     <ShareImg src={shareArrow} alt={''}/>
-                </ShareButton>
+                </ShareLink>
             </InfoWrapper>
         </FinalWrapper>
     );
