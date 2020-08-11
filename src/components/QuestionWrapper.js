@@ -138,7 +138,7 @@ const ImageStyled = styled.img`
   height: 100%;
   object-fit: contain;
   grid-area: 1/3/4/4;
-  animation: ${fade} 0.2s ease-out both;
+  animation: ${fade} 0.3s ease-out both;
   @media screen and (max-width: 1100px)
     { 
       height: auto;

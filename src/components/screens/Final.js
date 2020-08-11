@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
-import { join } from 'path';
+import { resolve } from 'url';
 import { ProgressContext } from '../../contexts/ProgressContext';
 import { AnswerType, answerTypes } from '../../answerTypes.config';
 import { getAnswerById } from '../../utils/getAnswerById';
@@ -156,7 +156,7 @@ export const Final = props => {
 
     const shareTitle = 'Лидер перемен - Северсталь';
     const shareDescription = '#северсталь #лидерперемен';
-    const shareImage = join(url, result.image);
+    const shareImage = resolve(url, result.image);
 
     const queryParams = new URLSearchParams();
 
