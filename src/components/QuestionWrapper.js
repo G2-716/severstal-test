@@ -7,6 +7,7 @@ import { RadioButton } from './RadioButton';
 import { DesktopButton } from './Button/DesktopButton';
 import { ButtonSize } from './Button/Button';
 import { shuffle } from '../utils/shuffle';
+import { fade } from '../utils/keyframes';
 //import { Text } from './shared/Text';
 
 const QuestionWrapperStyled = styled.div`
@@ -63,6 +64,7 @@ const ImageStyled = styled.img`
   height: 100%;
   object-fit: contain;
   grid-area: 1/3/4/4;
+  animation: ${fade} 0.2s ease-out both;
 `;
 
 export const QuestionWrapper = props => {

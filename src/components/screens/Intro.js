@@ -5,6 +5,7 @@ import {DesktopButton} from "../Button/DesktopButton";
 //import {Text} from "../shared/Text";
 import {MobileButton} from "../Button/MobileButton";
 import { introImage, introMobileImage, logoImage } from '../../constants/images';
+import { fade, slideDown } from '../../utils/keyframes';
 
 const IntroWrapper = styled.div`
   height: 100vh;
@@ -34,6 +35,14 @@ const Text = styled.p`
     font-size: 1.7341vh;
     padding-right: 12%;
   }
+`
+
+const FirstTextParagraph = styled(Text)`
+  animation: ${slideDown} 0.4s ease-out 0.1s both;
+`
+
+const SecondTextParagraph = styled(Text)`
+  animation: ${slideDown} 0.4s ease-out 0.4s both;
 `
 
 const IntroTitle = styled.h1`
@@ -68,6 +77,8 @@ const ImgWrapper = styled.div`
   justify-content: flex-end;
   height: 100%;
   padding-left: 8.75%;
+  animation: ${fade} 0.4s ease-out 0.1s both;
+  
   @media screen and (max-width: 1100px)
   {
     display: none;
@@ -82,6 +93,8 @@ const ImageStyled = styled.img`
 const LogoStyled = styled.img`
     height: 6.777%;
     width: 32.6666%;
+    animation: ${slideDown} 0.4s ease-out 0.1s both;
+    
     @media screen and (max-width: 1100px)
       {
           height: 5.3468%;
@@ -113,17 +126,17 @@ export const Intro = props => {
             <InfoWrapper className={'InfoWrapper'}>
                 <LogoStyled src={logoImage} alt={''}/>
                 <IntroTitle>Лидер перемен</IntroTitle>
-                <Text>
+                <FirstTextParagraph>
                     Кого зовут лидерами перемен? Людей, осставляющих вмятину во Вселенной.
                     Людей, разрушающих рамки привычного, раздвинающих границы возможного,
                     объединяющихся друг с другом и меняющих мир.
-                </Text>
+                </FirstTextParagraph>
                 <br />
-                <Text>
+                <SecondTextParagraph>
                     Генри Форд, Мария Кюри,
                     Стив Джобс и принцесса Диана. Какой лидер перемен ты?
                     Пройди тест, чтобы узнать!
-                </Text>
+                </SecondTextParagraph>
                 <DesktopButtonStyled onClick={setNext}>Пройти тест</DesktopButtonStyled>
                 <MobileButtonStyled onClick={setNext}>Пройти тест</MobileButtonStyled>
             </InfoWrapper>

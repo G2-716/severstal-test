@@ -4,6 +4,7 @@ import { join } from 'path';
 import { ProgressContext } from '../../contexts/ProgressContext';
 import { AnswerType, answerTypes } from '../../answerTypes.config';
 import { getAnswerById } from '../../utils/getAnswerById';
+import { fade, slideDown } from '../../utils/keyframes';
 import { logoImage, shareArrow } from '../../constants/images';
 //import {Text} from "../shared/Text";
 
@@ -42,13 +43,14 @@ const LogoWrapper = styled.div`
   position: absolute;
   top: 6.6666%;
   right: 3.125%;
+  animation: ${slideDown} 0.4s ease-out 0.1s both;
+  
   @media screen and (max-width: 1100px){
       width: 33.3333%;
       height: 5.7812%;
       top: 2.9687%;
       left: 3.333%;
   }
-  
 `
 const InfoWrapper = styled.div`
   padding: 180px 0 0 60px;
@@ -67,11 +69,22 @@ const Text = styled.p`
 
   }
 `
+
+const ResultText = styled(Text)`
+  animation: ${slideDown} 0.4s ease-out 0.1s both;
+`
+
+const InvitingText = styled(Text)`
+  animation: ${slideDown} 0.4s ease-out 0.4s both;
+`
+
 const LogoStyled = styled.img`
     max-width: 100%;
 `
 
 const ImgWrapper = styled.div`
+  animation: ${fade} 0.4s ease-out 0.1s both;
+  
  @media screen and (max-width: 1100px)
   { 
   overflow: hidden;
@@ -155,12 +168,12 @@ export const Final = props => {
                     <LogoStyled src={logoImage} alt={''}/>
                 </LogoWrapper>
                 <ResultTitle>Твой результат</ResultTitle>
-                <Text>{result.description}</Text>
+                <ResultText>{result.description}</ResultText>
                 <br />
-                <Text>
+                <InvitingText>
                     Хочешь, чтобы было так? Проходи отбор на
                     лидерскую программу компании “Северсталь”
-                </Text>
+                </InvitingText>
                 <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
                     Поделиться 
                     <ShareImg src={shareArrow} alt={''}/>
