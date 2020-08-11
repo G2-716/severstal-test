@@ -4,7 +4,8 @@ import { Button } from './Button';
 
 
 const MobileButtonStyled = styled(Button)`
-  padding: 15px 30px 6px 96px; 
+  width: 100%;
+  padding: 3.1676% 0;
   background: #00569D;
   border: none;
   font-size: 18px;

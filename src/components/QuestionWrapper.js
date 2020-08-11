@@ -6,7 +6,7 @@ import { QuestionLabel } from "./QuestionLabel";
 import { RadioButton } from './RadioButton';
 import { DesktopButton } from './Button/DesktopButton';
 import { ButtonSize } from './Button/Button';
-import { Text } from './shared/Text';
+//import { Text } from './shared/Text';
 
 const QuestionWrapperStyled = styled.div`
   display: grid;
@@ -28,6 +28,18 @@ const QuestionBoxStyled = styled.div`
   flex-direction: column;
   padding-right: 80px;
 `;
+
+const Text = styled.p`
+  font-size: 1vw;
+  line-height: 113%;
+  letter-spacing: 0.01em;
+  
+  @media screen and (max-width: 1100px)
+  {
+    font-size: 1.7341vh;
+    padding-right: 12%;
+  }
+`
 
 const Spacer = styled.div`
   flex-grow: ${({ value }) => value || 1};
