@@ -16,6 +16,10 @@ const ButtonStyled = styled.button`
   &:disabled {
     opacity: 0.6;
     pointer-events: none;
+    @media screen and (max-width: 1100px) 
+    {
+      opacity: 0.4;
+    }
   }
 `;
 

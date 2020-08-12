@@ -55,6 +55,11 @@ const IntroTitle = styled.h1`
   {
     margin: 5.3324% 0 3.5738%;
   }
+  @media screen and (max-height: 700px) and (min-width: 640px)
+  {
+    font-size: 5.3815vh;
+     margin: 3.3324% 0 2.5738%;
+  }
 `;
 
 const InfoWrapper = styled.div`
@@ -65,7 +70,7 @@ const InfoWrapper = styled.div`
     z-index: 2;
     padding: 2.890% 10.4109% 11.8497% 8.7671%;
   }
-  @media screen and (min-width: 450px) and (max-width: 800px) 
+  @media screen and (min-width: 450px) and (max-width: 850px) 
   {
    padding: 2.890% 15.2117%;
   }
@@ -90,23 +95,25 @@ const ImgWrapper = styled.div`
 const ImageStyled = styled.img`
   height: 100%;
   max-width: 100%;
+ 
 `
 
 const LogoStyled = styled.img`
-    height: 6.777%;
-    width: 32.6666%;
+//    width: 33.6666%;
     animation: ${slideDown} 0.4s ease-out 0.1s both; 
     @media screen and (max-width: 1199px)
     {
-      height: 5.3468%;
-      width: 32.8767%;
+      width: 120px;
     }
-      
-  @media screen and (min-width: 800px) and (max-width: 1200px) and (max-height: 950px ) 
-  {
-    height: 5%;
-    width: 13%;
-  }
+    @media screen and (min-width: 800px) and (max-width: 1200px) and (max-height: 950px ) 
+    {
+      width: 80px;
+    }
+    
+    @media screen and (max-height: 700px) and (min-width: 640px) 
+    {
+       width: 70px;
+    }
 `
 
 const DesktopButtonStyled = styled(DesktopButton)`
@@ -127,7 +134,7 @@ const MobileButtonStyled = styled(MobileButton)`
   @media screen and  (max-height: 900px ) {
      padding: 2.1676% 0;
   }
-  @media screen and  (min-height: 300px ) and  (max-height: 812px ) {
+  @media screen and  (min-height: 270px ) and  (max-height: 812px ) {
      margin-top: 5%;
      padding: 2.1676% 0;
   }

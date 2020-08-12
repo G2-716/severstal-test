@@ -25,6 +25,7 @@ const QuestionWrapperStyled = styled.div`
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr auto;
   }
+  
 `;
 
 const QuestionLabelStyled = styled(QuestionLabel)`
@@ -38,7 +39,10 @@ const QuestionLabelStyled = styled(QuestionLabel)`
    z-index: 2;
    font-size: 2.94vw;
   }
-   
+    @media screen and (min-height: 450px ) and (max-height: 700px) 
+  {
+    font-size: 2.34vh;
+  }
   
 `;
 
@@ -51,6 +55,12 @@ const QuestionBoxStyled = styled.div`
   {
     grid-area: 2/1/3/2;
     padding: 5% 3.888%;
+  }
+  
+  @media screen and (max-height: 700px) and (min-width: 640px)
+  {
+    font-size: 2.7333vw;
+    padding: 2% 3.888% 0;
   }
 `;
 
@@ -69,15 +79,49 @@ const AnswersBoxStyled = styled.div`
 
 const RadioButtonStyled = styled(RadioButton)`
   font-size: 1.25vw;
-  @media screen and (max-width: 1100px) 
+  @media screen and (min-width: 640px) and (max-width: 1100px)
   {
-    font-size: 3.3333vw;
+    font-size: 2.1vw;
+  }
+  @media screen and (max-width: 640px)
+  {
+    font-size: 2.43vw;
+    @media screen and (min-height: 560px ) 
+      {
+        font-size: 2.1341vh;
+      }
+  }
+  @media screen and (max-height: 450px ) 
+  {
+    font-size: 1.9341vw;
+  }
+  @media screen and (min-width: 750px ) and (min-height: 1025px ) 
+  {
+    font-size: 2.4341vw;
   }
   
-  @media screen and (min-height: 700px) and (max-width: 1100px) 
+  @media screen and (min-height: 450px ) and (max-height: 700px) and (min-width: 640px)
   {
     font-size: 2.3333vw;
   }
+  //@media screen and (max-width: 1100px) 
+  //{
+  //  font-size: 3.3333vw;
+  //}
+  //
+  //@media screen and (min-height: 700px) and (max-width: 1100px) 
+  //{
+  //  font-size: 2.3333vw;
+  //}
+  //
+  //@media screen and (max-height: 700px) 
+  //{
+  //  font-size: 2.7333vw;
+  //}
+  //@media screen and (max-width: 640px)and (min-height: 560px ) 
+  //  {
+  //    font-size: 2.1111vh;
+  //  }
 `;
 
 const ButtonsBoxStyled = styled.div`
@@ -147,15 +191,12 @@ const ImageStyled = styled.img`
       width:100%;
       overflow: hidden;
     }
-    @media screen and (max-width: 1100px) and (min-height: 700px)
+  @media screen and (max-width: 1100px) and (min-height: 700px)
       {
         top:-23%;
       }
+  
       
-    @media screen and (min-height: 700px) and (max-width: 1100px) 
-      {
-        top:-100%;
-      }
 `;
 
 export const QuestionWrapper = props => {

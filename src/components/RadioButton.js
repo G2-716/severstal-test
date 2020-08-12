@@ -19,9 +19,7 @@ const LabelStyled = styled.label`
   display: flex;
   align-items: center;
   cursor: pointer;
-  @media screen and (max-width: 1100px) 
-  { 
-  }
+  
   
   & ${InputStyled}:checked + ${RadioIconStyled}:after {
     content: '';
