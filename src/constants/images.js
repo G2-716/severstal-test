@@ -18,10 +18,6 @@ const jackMaImage = process.env.PUBLIC_URL + '/static/images/jack-ma.png';
 const introImage = process.env.PUBLIC_URL + '/static/images/intro.png';
 const introMobileImage = process.env.PUBLIC_URL + '/static/images/intro_mobile.png';
 const logoImage = process.env.PUBLIC_URL + '/static/images/logo.svg';
-const shareArrow = process.env.PUBLIC_URL + '/static/images/share.svg';
-const desktopArrow = process.env.PUBLIC_URL + '/static/images/desktopArrow.svg';
-const next = process.env.PUBLIC_URL + '/static/images/next.svg';
-const prev = process.env.PUBLIC_URL + '/static/images/prev.svg';
 
 export {
     questionImage1,
@@ -42,8 +38,4 @@ export {
     logoImage,
     introImage,
     introMobileImage,
-    shareArrow,
-    desktopArrow,
-    next,
-    prev
 };

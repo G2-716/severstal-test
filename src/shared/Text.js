@@ -28,7 +28,7 @@ export const Text = styled.p`
     font-size: 2.7341vw;
   }
   
-  @media screen and (min-height: 450px ) and (max-height: 700px) and (min-width: 640px)
+  @media screen and (min-height: 450px ) and (max-height: 700px) and (min-width: 640px) and (max-width: 1199px)
   {
     font-size: 2.6333vw;
   }

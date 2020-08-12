@@ -7,9 +7,9 @@ import { RadioButton } from './RadioButton';
 import { DesktopButton } from './Button/DesktopButton';
 import { shuffle } from '../utils/shuffle';
 import { fade } from '../utils/keyframes';
-import {Button, ButtonSize} from './Button/Button';
+import {ButtonSize} from './Button/Button';
 import { Text } from '../shared/Text';
-import { next, prev } from '../constants/images';
+import {ButtonArrow} from "./Button/ButtonArrow";
 
 
 const QuestionWrapperStyled = styled.div`
@@ -104,24 +104,6 @@ const RadioButtonStyled = styled(RadioButton)`
   {
     font-size: 2.3333vw;
   }
-  //@media screen and (max-width: 1100px) 
-  //{
-  //  font-size: 3.3333vw;
-  //}
-  //
-  //@media screen and (min-height: 700px) and (max-width: 1100px) 
-  //{
-  //  font-size: 2.3333vw;
-  //}
-  //
-  //@media screen and (max-height: 700px) 
-  //{
-  //  font-size: 2.7333vw;
-  //}
-  //@media screen and (max-width: 640px)and (min-height: 560px ) 
-  //  {
-  //    font-size: 2.1111vh;
-  //  }
 `;
 
 const ButtonsBoxStyled = styled.div`
@@ -132,32 +114,6 @@ const ButtonsBoxStyled = styled.div`
   }
 `;
 
-const NextButton = styled(Button)`
-    background: url(${next}) no-repeat;
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    bottom: 3.8555%;
-    right: 3.8555%;
-    @media screen and (min-width: 1100px) 
-  {
-    display: none;
-  }
-`
-
-const PrevButton = styled(Button)`
-background: url(${prev}) no-repeat;
-    width: 28px;
-    height: 28px;
-    position: absolute;
-    bottom: 3.8555%;
-    left: 3.8555%;
-    @media screen and (min-width: 1100px) 
-  {
-    display: none;
-  }
-
-`
 
 const MobileButtonsBox = styled.div`
     display: flex;
@@ -253,10 +209,12 @@ export const QuestionWrapper = props => {
                 </DesktopButton>
             </ButtonsBoxStyled>
             <MobileButtonsBox>
-                <PrevButton
+                <ButtonArrow
+                    direction={'left'}
                     onClick={setPrev}
                 />
-                <NextButton
+                <ButtonArrow
+                    direction={'right'}
                     onClick={setNext}
                     disabled={isLocked}
                 />

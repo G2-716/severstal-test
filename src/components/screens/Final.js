@@ -5,7 +5,9 @@ import { ProgressContext } from '../../contexts/ProgressContext';
 import { AnswerType, answerTypes } from '../../answerTypes.config';
 import { getAnswerById } from '../../utils/getAnswerById';
 import { fade, slideDown } from '../../utils/keyframes';
-import { logoImage, shareArrow } from '../../constants/images';
+import { logoImage } from '../../constants/images';
+import {ShareArrow} from "../Button/ShareArrow";
+import {Logo} from "../svg/Logo";
 
 const FinalWrapper = styled.div`
   background-color: #1E1D1C;
@@ -31,13 +33,16 @@ const ResultTitle = styled.h1`
   line-height: 2.5vw;
   letter-spacing: 0.015em;
   margin-bottom: 4.4444%;
-  @media screen and (max-width: 1100px){
+  
+  @media screen and (max-width: 1100px)
+  {
     padding: 0;
     font-size: 6.6666vw;
     margin-bottom: 6.4971%;
   }
   
-  @media screen and (min-width: 500px) and (max-height: 700px){
+  @media screen and (min-width: 500px) and (max-width: 1100px) and (max-height: 700px)
+  {
     margin-top: -2%;
     margin-bottom: 2.4971%;
     font-size: 5.6666vw;
@@ -49,23 +54,26 @@ const ResultTitle = styled.h1`
 const Text = styled.p`
   font-size: 1.6666vw;
   line-height: 113%;
+  
   @media screen and (min-width: 640px) and (max-width: 1100px)
-      {
-        font-size: 2.6vw;
-      }
+  {
+    font-size: 2.6vw;
+  }
+  
   @media screen and (max-width: 640px)
-      {
-        font-size: 2.7341vh;
-        @media screen and (min-height: 560px ) 
-          {
-            font-size: 2.5341vh;
-          }
-      }
+  {
+    font-size: 2.7341vh;
+    @media screen and (min-height: 560px ) 
+    {
+        font-size: 2.5341vh;
+    }
+  }
  
   @media screen and (max-height: 450px ) 
   {
     font-size: 2.1341vw;
   }
+  
   @media screen and (min-width: 750px ) and (min-height: 1025px ) 
   {
     font-size: 2.9341vw;
@@ -74,6 +82,10 @@ const Text = styled.p`
   @media screen and (min-height: 450px ) and (max-height: 700px) and (min-width: 640px)
   {
     font-size: 2.8333vw;
+  }
+  
+  @media screen and (min-width: 1100px) and (max-height: 800px){
+    font-size: 1.8333vw;
   }
 `
 const LogoWrapper = styled.div`
@@ -93,11 +105,20 @@ const LogoWrapper = styled.div`
 `
 const InfoWrapper = styled.div`
   padding: 180px 0 0 60px;
-  @media screen and (max-width: 1100px){
+  
+  @media screen and (max-width: 1100px)
+  {
     padding: 5.6% 7.5% 0;
   }
-   @media screen and (max-height: 400px){
+  
+  @media screen and (max-height: 400px)
+  {
     padding: 1.6% 7.5% 0;
+  }
+  
+  @media screen and (min-width: 1100px) and (max-height: 700px)
+  {
+    padding: 3.6% 7.5% 0;
   }
 `
 
@@ -109,7 +130,7 @@ const InvitingText = styled(Text)`
   animation: ${slideDown} 0.4s ease-out 0.4s both;
 `
 
-const LogoStyled = styled.img`
+const LogoStyled = styled(Logo)`
     max-width: 100%;
 `
 
@@ -127,7 +148,8 @@ const ImgWrapper = styled.div`
 const ImgStyled = styled.img`
   max-width: 100%;
   height: 100%;
-    @media screen and (max-width: 1100px)
+  
+  @media screen and (max-width: 1100px)
   { 
     height: auto;
     position:absolute;
@@ -148,14 +170,9 @@ const ShareLink = styled.a`
     text-decoration: none;
     
     @media screen and (min-width: 1100px){
-      display: none;
+      font-size: 2.5vw;
+      bottom: 5.2912%;
     }
-`
-
-const ShareImg = styled.img`
-    margin-left: 2vw;
-    vertical-align: middle;
-    height: 6vw;
 `
 
 const DEFAULT_RESULT = AnswerType.Sales;
@@ -196,7 +213,7 @@ export const Final = props => {
             </ImgWrapper>
             <InfoWrapper>
                 <LogoWrapper>
-                    <LogoStyled src={logoImage} alt={''}/>
+                    <LogoStyled />
                 </LogoWrapper>
                 <ResultTitle>Твой результат</ResultTitle>
                 <ResultText>{result.description}</ResultText>
@@ -208,7 +225,7 @@ export const Final = props => {
                 </InvitingText>
                 <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
                     Поделиться
-                    <ShareImg src={shareArrow} alt={''}/>
+                    <ShareArrow />
                 </ShareLink>
             </InfoWrapper>
         </FinalWrapper>
