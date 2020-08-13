@@ -41,7 +41,7 @@ const ResultTitle = styled.h1`
     margin-bottom: 6.4971%;
   }
   
-  @media screen and (min-width: 500px) and (max-width: 1100px) and (max-height: 700px)
+  @media screen and (max-width: 1100px) and (orientation: landscape)
   {
     margin-top: -2%;
     margin-bottom: 2.4971%;
@@ -54,39 +54,30 @@ const ResultTitle = styled.h1`
 const Text = styled.p`
   font-size: 1.6666vw;
   line-height: 113%;
-  
-  @media screen and (min-width: 640px) and (max-width: 1100px)
+
+   @media screen and (min-width: 640px) and (max-width: 1199px)
   {
     font-size: 2.6vw;
+    @media screen and (orientation: landscape) and (min-height: 450px) and (max-height: 700px)
+    {
+      font-size: 2.8333vw;
+    }
   }
   
   @media screen and (max-width: 640px)
   {
-    font-size: 2.7341vh;
+    font-size: 2.5341vw;
+    padding-right: 12%;
     @media screen and (min-height: 560px ) 
-    {
-        font-size: 2.5341vh;
+      {
+        font-size: 2.3341vh;
+      }
+     
+    @media screen and (orientation: landscape){
+      font-size: 2.1341vw;
     }
   }
- 
-  @media screen and (max-height: 450px ) 
-  {
-    font-size: 2.1341vw;
-  }
   
-  @media screen and (min-width: 750px ) and (min-height: 1025px ) and (max-width: 1100px)
-  {
-    font-size: 2.9341vw;
-  }
-  
-  @media screen and (min-height: 450px ) and (max-height: 700px) and (min-width: 640px)
-  {
-    font-size: 2.8333vw;
-  }
-  
-  @media screen and (min-width: 1100px) and (max-height: 800px){
-    font-size: 1.8333vw;
-  }
 `
 const LogoWrapper = styled.div`
   width: 13.6111%;
@@ -166,11 +157,15 @@ const ShareLink = styled.a`
     font-weight: 800;
     outline: none;
     text-decoration: none;
-    
+    @media screen and (orientation: landscape) and (max-width: 1100px){
+      font-size: 4.8vw;
+      bottom: 2.5%;
+    }
     @media screen and (min-width: 1100px){
       font-size: 2.5vw;
       bottom: 5.2912%;
     }
+    
 `
 const StyledLink = styled.a`
     color: white;

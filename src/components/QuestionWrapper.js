@@ -26,7 +26,7 @@ const QuestionWrapperStyled = styled.div`
     grid-template-rows: 1fr 1fr auto;
    @media screen and (max-height: 300px) and (orientation: landscape) 
    {
-    grid-template-rows: 1fr 1fr 30px;
+    grid-template-rows: 1fr 1fr 40px;
    }
   }
   
