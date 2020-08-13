@@ -24,6 +24,10 @@ const QuestionWrapperStyled = styled.div`
     background-color: #3A3939;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr auto;
+   @media screen and (max-height: 300px) and (orientation: landscape) 
+   {
+    grid-template-rows: 1fr 1fr 30px;
+   }
   }
   
 `;
@@ -79,30 +83,25 @@ const AnswersBoxStyled = styled.div`
 
 const RadioButtonStyled = styled(RadioButton)`
   font-size: 1.25vw;
-  @media screen and (min-width: 640px) and (max-width: 1100px)
+   @media screen and (min-width: 640px) and (max-width: 1199px)
   {
-    font-size: 2.1vw;
+    font-size: 2.35vw;
+    @media screen and (orientation: landscape) and (max-height: 700px)
+    {
+     font-size: 2.0833vw;
+    }
   }
   @media screen and (max-width: 640px)
   {
-    font-size: 2.43vw;
+    font-size: 2.4841vw;
     @media screen and (min-height: 560px ) 
       {
-        font-size: 2.1341vh;
+        font-size: 2.2841vh;
       }
-  }
-  @media screen and (max-height: 450px ) 
-  {
-    font-size: 1.9341vw;
-  }
-  @media screen and (min-width: 750px ) and (min-height: 1025px ) 
-  {
-    font-size: 2.4341vw;
-  }
-  
-  @media screen and (min-height: 450px ) and (max-height: 700px) and (min-width: 640px)
-  {
-    font-size: 2.3333vw;
+     
+    @media screen and (orientation: landscape){
+      font-size: 2.0841vw;
+    }
   }
 `;
 
@@ -120,6 +119,10 @@ const MobileButtonsBox = styled.div`
     grid-area: 3/1/4/2;
     padding: 5% 3.888%;
     justify-content: space-between;
+    @media screen and (max-height: 300px) and (orientation: landscape) 
+   {
+     padding: 0 0.888%;
+   }
 `
 
 const ImageWrapper = styled.div`

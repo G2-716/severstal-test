@@ -13,10 +13,10 @@ const FinalWrapper = styled.div`
   background-color: #1E1D1C;
   height: 100vh;
   width: 100%;
-  padding: 8.3333%  3.9583% 0 6.9444% ;
+  padding: 8.3333%  0 0 6.9444% ;
   color: #FFFFFF;
   display: grid;
-  grid-template-columns: 3fr 2fr ;
+  grid-template-columns: 2fr 2fr ;
   grid-template-rows: 100%;
   @media screen and (max-width: 1100px)
   { 
@@ -74,7 +74,7 @@ const Text = styled.p`
     font-size: 2.1341vw;
   }
   
-  @media screen and (min-width: 750px ) and (min-height: 1025px ) 
+  @media screen and (min-width: 750px ) and (min-height: 1025px ) and (max-width: 1100px)
   {
     font-size: 2.9341vw;
   }
@@ -104,8 +104,7 @@ const LogoWrapper = styled.div`
   }
 `
 const InfoWrapper = styled.div`
-  padding: 180px 0 0 60px;
-  
+  padding: 20% 10.9234% 0 9.5798%;
   @media screen and (max-width: 1100px)
   {
     padding: 5.6% 7.5% 0;
@@ -136,7 +135,6 @@ const LogoStyled = styled(Logo)`
 
 const ImgWrapper = styled.div`
   animation: ${fade} 0.4s ease-out 0.1s both;
-  
  @media screen and (max-width: 1100px)
   { 
   overflow: hidden;
@@ -173,6 +171,9 @@ const ShareLink = styled.a`
       font-size: 2.5vw;
       bottom: 5.2912%;
     }
+`
+const StyledLink = styled.a`
+    color: white;
 `
 
 const DEFAULT_RESULT = AnswerType.Sales;
@@ -219,9 +220,10 @@ export const Final = props => {
                 <ResultText>{result.description}</ResultText>
                 <br />
                 <InvitingText>
-                    Хочешь, чтобы было так? Проходи отбор на
-                    лидерскую программу компании “Северсталь”
-
+                    Хочешь, чтобы было так? Проходи отбор &nbsp;
+                    <StyledLink href={'http://fut.ru/grp/severstal_grp'}>
+                        на лидерскую программу компании “Северсталь”
+                    </StyledLink>
                 </InvitingText>
                 <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
                     Поделиться

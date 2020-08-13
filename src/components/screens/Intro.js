@@ -119,27 +119,20 @@ const DesktopButtonStyled = styled(DesktopButton)`
 
 const MobileButtonStyled = styled(MobileButton)`
   margin-top: 23.1213%;
-  
+  font-size: 2.8125vh;
   @media screen and (min-width: 1199px)
   {
     display: none;
   }
   
-  @media screen and  (max-height: 900px ) 
-  {
-     padding: 2.1676% 0;
-  }
-  
-  @media screen and  (min-height: 270px ) and  (max-height: 812px ) 
-  {
-     margin-top: 5%;
-     padding: 2.1676% 0;
-  }
-      
-  @media screen and (min-width: 1000px)and (max-height: 950px ) 
+  @media screen and (max-height: 720px) and (orientation: landscape)
   {
     margin-top: 5%;
+    font-size: 2.3125vw;
+    padding: 2% 0; 
   }
+   
+  
     
 `
 
@@ -154,10 +147,14 @@ const LogoWrapper = styled.div`
      width: 13%;
     }
 
-  @media screen and (max-height: 700px) and (min-width: 640px) and (max-width: 800px)
+  @media screen and (max-height: 700px) and (min-width: 640px) and (max-width: 800px) 
     {
       max-width: 20%;
     }
+   @media screen and (max-width: 640px) and (orientation: landscape)
+   {
+      max-width: 25%
+   }
 `
 
 export const Intro = props => {
