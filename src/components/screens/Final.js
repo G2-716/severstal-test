@@ -55,7 +55,8 @@ const Text = styled.p`
   font-size: 1.6666vw;
   line-height: 113%;
 
-   @media screen and (min-width: 640px) and (max-width: 1199px)
+
+   @media screen and (min-width: 640px) and (max-width: 1100px)
   {
     font-size: 2.6vw;
     @media screen and (orientation: landscape) and (min-height: 450px) and (max-height: 700px)
