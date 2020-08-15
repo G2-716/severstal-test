@@ -43,9 +43,9 @@ const QuestionLabelStyled = styled(QuestionLabel)`
    z-index: 2;
    font-size: 2.94vw;
   }
-    @media screen and (min-height: 450px ) and (max-height: 700px) 
+    @media screen and (orientation: landscape) and (max-height: 640px) 
   {
-    font-size: 2.34vh;
+    font-size: 2.0341vw;
   }
   
 `;
@@ -58,7 +58,7 @@ const QuestionBoxStyled = styled.div`
   @media screen and (max-width: 1100px) 
   {
     grid-area: 2/1/3/2;
-    padding: 5% 3.888%;
+    padding: 5% 3.888% 0;
   }
   
   @media screen and (max-height: 700px) and (min-width: 640px)
@@ -103,6 +103,9 @@ const RadioButtonStyled = styled(RadioButton)`
       font-size: 2.0841vw;
     }
   }
+  @media screen and (max-height: 640px) and (orientation: landscape){
+      font-size: 2.0341vw;
+    }
 `;
 
 const ButtonsBoxStyled = styled.div`
