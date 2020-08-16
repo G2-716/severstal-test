@@ -22,10 +22,6 @@ export const Text = styled.p`
       {
         font-size: 2.3341vh;
       }
-     
-    @media screen and (orientation: landscape){
-      font-size: 2.1341vw;
-    }
   }
   @media screen and (max-height: 640px) and (orientation: landscape){
       font-size: 2.1341vw;

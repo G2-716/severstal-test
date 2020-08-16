@@ -15,7 +15,7 @@ import {ButtonArrow} from "./Button/ButtonArrow";
 const QuestionWrapperStyled = styled.div`
   display: grid;
   grid-template-columns: 11% 2fr 3fr 11%;
-  grid-template-rows: 11% 1fr 90px;
+  grid-template-rows: 11% 1fr 15%;
   height: 100%;
   width: 100%;
   background-color: #585858;
@@ -85,7 +85,7 @@ const RadioButtonStyled = styled(RadioButton)`
   font-size: 1.25vw;
    @media screen and (min-width: 640px) and (max-width: 1199px)
   {
-    font-size: 2.35vw;
+    font-size: 2.15vw;
     @media screen and (orientation: landscape) and (max-height: 700px)
     {
      font-size: 2.0833vw;
@@ -122,10 +122,6 @@ const MobileButtonsBox = styled.div`
     grid-area: 3/1/4/2;
     padding: 5% 3.888%;
     justify-content: space-between;
-    @media screen and (max-height: 300px) and (orientation: landscape) 
-   {
-     padding: 0 0.888%;
-   }
 `
 
 const ImageWrapper = styled.div`

@@ -13,6 +13,10 @@ const RadioIconStyled = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.57);
   border-radius: 50%;
   margin-right: 12px;
+  @media screen and (max-height: 250px) {
+    width: 10px;
+    height: 10px;
+  }
 `;
 
 const LabelStyled = styled.label`
@@ -38,6 +42,10 @@ const LabelStyled = styled.label`
         height: 14px;
         border: 1px solid white;
         background-color: #FFFFFF;
+        @media screen and (max-height: 250px) {
+         width: 8px;
+         height: 8px;
+        }
       }
   }
 `;

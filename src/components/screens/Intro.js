@@ -15,9 +15,15 @@ const IntroWrapper = styled.div`
   background: #090908 url(${introMobileImage}) no-repeat center;
   background-position-y: 2.890%;
   background-size: contain;
-  
-  @media screen and (min-width: 1199px) 
+  overflow: auto;
+  position:absolute;
+  top:0px;
+  right:0px;
+  bottom:0px;
+  left:0px;
+  @media screen and (min-width: 1201px) 
   {
+    overflow: auto;
     background-color: #1E1D1C;
     display: grid;
     padding: 0.7% 7%;
@@ -44,26 +50,32 @@ const IntroTitle = styled.h1`
   line-height: 95%;
   margin: 13.8324% 0 7.8738%;
   
-  @media screen and (max-width: 1199px)
-  {
-    padding-right: 12%;
-    font-size: 8.3815vh;
-  }
-  
   @media screen and (max-height: 650px ) 
   {
     margin: 5.3324% 0 3.5738%;
   }
   
-  @media screen and (min-width: 1000px)and (max-height: 950px ) 
+   @media screen and (min-width: 640px) and (max-width: 1199px)
   {
-    margin: 5.3324% 0 3.5738%;
+    padding-right: 12%;
+    font-size: 8.3815vh;
+    @media screen and (orientation: landscape) and (max-height: 700px)
+    {
+     font-size: 8.0512vw;
+    }
   }
-  
-  @media screen and (max-height: 700px) and (min-width: 640px)
+  @media screen and (max-width: 640px)
   {
-    font-size: 5.3815vh;
-     margin: 3.3324% 0 2.5738%;
+    font-size: 9.5639vw;
+    padding-right: 12%;
+    @media screen and (min-height: 560px ) 
+      {
+        font-size: 8.8091vh;
+      }
+     
+  }
+  @media screen and (max-height: 640px) and (orientation: landscape){
+      font-size: 8.0441vw;
   }
 `;
 
@@ -77,9 +89,11 @@ const InfoWrapper = styled.div`
     padding: 2.890% 10.4109% 11.8497% 8.7671%;
   }
   
-  @media screen and (min-width: 450px) and (max-width: 850px) 
+  @media screen and (max-height: 640px) and (orientation: landscape) 
   {
-   padding: 2.890% 15.2117%;
+    position: absolute;
+    z-index: 2;
+    padding-bottom: 0;
   }
 
 `
@@ -92,7 +106,7 @@ const ImgWrapper = styled.div`
 
   animation: ${fade} 0.4s ease-out 0.1s both;
   
-  @media screen and (max-width: 1200px)
+  @media screen and (max-width: 1199px)
 
   {
     display: none;
@@ -142,7 +156,7 @@ const LogoWrapper = styled.div`
     {
        max-width: 32.8767%;
     }
-  @media screen and (min-width: 800px) and (max-width: 1200px) and (max-height: 950px )
+  @media screen and (min-width: 800px) and (max-width: 1199px) and (max-height: 950px )
     {
      width: 13%;
     }

@@ -8,6 +8,7 @@ import { preloadImage } from '../utils/preloadImage';
 const AppWrapper = styled.div`
   width: 100%;
   height: 100%;
+  overflow: hidden;
 `;
 
 const DEFAULT_ANSWERS = questions.reduce((res, question) => ({ ...res, [question.id]: null }), {});
