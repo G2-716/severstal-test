@@ -9,20 +9,6 @@ import { fade, slideDown } from '../../utils/keyframes';
 import {Logo} from "../svg/Logo";
 
 const IntroWrapper = styled.div`
-  height: 100vh;
-  width: 100%;
-  color: #FFFFFF;
-  background: #090908 url(${introMobileImage}) no-repeat center;
-  background-position-y: 2.890%;
-  background-size: contain;
-  overflow: auto;
-  position:absolute;
-  top:0px;
-  right:0px;
-  bottom:0px;
-  left:0px;
-  @media screen and (min-width: 1201px) 
-  {
     overflow: auto;
     background-color: #1E1D1C;
     display: grid;
@@ -30,6 +16,21 @@ const IntroWrapper = styled.div`
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 100%;
     background-image: none;
+  
+  @media screen and (max-width: 1199px) 
+  {
+      height: 100vh;
+      width: 100%;
+      color: #FFFFFF;
+      background: #090908 url(${introMobileImage}) no-repeat center;
+      background-position-y: 2.890%;
+      background-size: contain;
+      overflow: auto;
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0;
   }
   
 `;
@@ -134,7 +135,7 @@ const DesktopButtonStyled = styled(DesktopButton)`
 const MobileButtonStyled = styled(MobileButton)`
   margin-top: 23.1213%;
   font-size: 2.8125vh;
-  @media screen and (min-width: 1199px)
+  @media screen and (min-width: 1200px)
   {
     display: none;
   }
