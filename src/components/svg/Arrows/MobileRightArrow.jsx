@@ -4,7 +4,7 @@ export const MobileRightArrow = ( props ) =>
 {
     const { className, ...restProps } = props;
     return (
-        <svg className={className} width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" >
+        <svg className={className} viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg" >
             <rect width="23" height="23" fill="url(#pattern0)"/>
             <defs>
                 <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">

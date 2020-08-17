@@ -5,7 +5,6 @@ import { ProgressContext } from '../../contexts/ProgressContext';
 import { AnswerType, answerTypes } from '../../answerTypes.config';
 import { getAnswerById } from '../../utils/getAnswerById';
 import { fade, slideDown } from '../../utils/keyframes';
-import { logoImage } from '../../constants/images';
 import {ShareArrow} from "../Button/ShareArrow";
 import {Logo} from "../svg/Logo";
 
@@ -15,13 +14,14 @@ const FinalWrapper = styled.div`
   width: 100%;
   padding: 8.3333%  0 0 6.9444% ;
   color: #FFFFFF;
+  overflow: auto;
   display: grid;
-  grid-template-columns: 2fr 2fr ;
-  grid-template-rows: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr  8.25%;
   @media screen and (max-width: 1100px)
   { 
     padding:0;
-    grid-template-rows: 2fr 3fr;
+    grid-template-rows: 2fr 3fr  10.25%;
     grid-template-columns: 100% ;
 
   }
@@ -47,36 +47,50 @@ const ResultTitle = styled.h1`
     margin-bottom: 2.4971%;
     font-size: 5.6666vw;
   }
- 
- 
+   @media screen and (min-width: 640px) and (max-width: 1199px)
+  {
+    font-size: 3.809vh;
+    @media screen and (orientation: landscape) and (max-height: 700px)
+    {
+     font-size: 3.6596vw;
+    }
+  }
+  @media screen and (max-width: 640px)
+  {
+    font-size: 4.3472vw;
+    @media screen and (min-height: 560px ) 
+      {
+        font-size: 4.0041vh;
+      }
+     
+  }
+  @media screen and (max-height: 640px) and (orientation: landscape){
+      font-size: 3.6564vw;
+  }
   
 `
 const Text = styled.p`
   font-size: 1.6666vw;
   line-height: 113%;
-
-
-   @media screen and (min-width: 640px) and (max-width: 1100px)
+  
+  @media screen and (min-width: 640px) and (max-width: 1100px)
   {
-    font-size: 2.6vw;
-    @media screen and (orientation: landscape) and (min-height: 450px) and (max-height: 700px)
+    font-size: 2.5428vw;
+    @media screen and (orientation: landscape) and (max-height: 700px)
     {
-      font-size: 2.8333vw;
+     font-size: 2.438vw;
     }
   }
-  
   @media screen and (max-width: 640px)
   {
-    font-size: 2.5341vw;
-    padding-right: 12%;
-    @media screen and (min-height: 560px ) 
+    font-size: 2.9064vw;
+    @media screen and (min-height: 520px ) 
       {
-        font-size: 2.3341vh;
+        font-size: 2.6675vh;
       }
-     
-    @media screen and (orientation: landscape){
+  }
+  @media screen and (max-height: 640px) and (orientation: landscape){
       font-size: 2.1341vw;
-    }
   }
   
 `
@@ -93,24 +107,24 @@ const LogoWrapper = styled.div`
       height: 5.7812%;
       top: 2.9687%;
       left: 3.333%;
-  }
+   }
+   @media screen and (orientation: landscape) and (max-height: 640px) {
+       width: 15.3333%;
+   }
+   @media screen and (orientation: landscape) and (max-height: 180px) {
+       width: 9.3333%;
+       top: 1.9687%;
+   }
 `
 const InfoWrapper = styled.div`
   padding: 20% 10.9234% 0 9.5798%;
+  grid-area:1/2/2/2;
   @media screen and (max-width: 1100px)
   {
-    padding: 5.6% 7.5% 0;
+    grid-area: 2/1/3/1;
+    padding: 5.6% 7.5%;
   }
   
-  @media screen and (max-height: 400px)
-  {
-    padding: 1.6% 7.5% 0;
-  }
-  
-  @media screen and (min-width: 1100px) and (max-height: 700px)
-  {
-    padding: 3.6% 7.5% 0;
-  }
 `
 
 const ResultText = styled(Text)`
@@ -127,18 +141,20 @@ const LogoStyled = styled(Logo)`
 
 const ImgWrapper = styled.div`
   animation: ${fade} 0.4s ease-out 0.1s both;
+  grid-area:1/1/3/2;
+
  @media screen and (max-width: 1100px)
   { 
-  overflow: hidden;
-  position: relative;
-  height: 89.5%;
+      grid-area:1/1/2/1;
+      overflow: hidden;
+      position: relative;
+      height: 89.5%;
   }
 `
 
 const ImgStyled = styled.img`
   max-width: 100%;
   height: 100%;
-  
   @media screen and (max-width: 1100px)
   { 
     height: auto;
@@ -149,8 +165,7 @@ const ImgStyled = styled.img`
 `
 
 const ShareLink = styled.a`
-    position: absolute;
-    bottom: 3.2912%;
+    padding-left: 7.5%;
     border: none;
     background: none;
     color: white;
@@ -158,13 +173,46 @@ const ShareLink = styled.a`
     font-weight: 800;
     outline: none;
     text-decoration: none;
+    grid-area:3/1/3/1;
+    
     @media screen and (orientation: landscape) and (max-width: 1100px){
       font-size: 4.8vw;
       bottom: 2.5%;
     }
+    
     @media screen and (min-width: 1100px){
-      font-size: 2.5vw;
-      bottom: 5.2912%;
+         font-size: 2.5vw;
+         grid-area:2/2/2/2;
+         padding-left: 9.5798%;
+    }
+    @media screen and (max-width: 1100px)
+    {
+        font-size: 4.9999vw;
+    }
+  
+    @media screen and (max-width: 1100px) and (orientation: landscape)
+    {
+      font-size: 4.2496vw;
+    }
+     @media screen and (min-width: 640px) and (max-width: 1199px)
+    {
+       font-size: 2.8568vh;
+      @media screen and (orientation: landscape) and (max-height: 700px)
+     {
+       font-size: 2.7447vw;
+     } 
+    }
+    
+    @media screen and (max-width: 640px)
+    {
+       font-size: 3.2604vw;
+       @media screen and (min-height: 560px ) 
+       {
+         font-size: 3.0003vh;
+       }
+    }
+    @media screen and (max-height: 640px) and (orientation: landscape){
+      font-size: 2.7423vw;
     }
     
 `
@@ -221,11 +269,11 @@ export const Final = props => {
                         на лидерскую программу компании “Северсталь”
                     </StyledLink>
                 </InvitingText>
-                <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
-                    Поделиться
-                    <ShareArrow />
-                </ShareLink>
             </InfoWrapper>
+            <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
+                Поделиться
+                <ShareArrow />
+            </ShareLink>
         </FinalWrapper>
     );
 };
