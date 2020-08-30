@@ -72,10 +72,6 @@ const QuestionBoxStyled = styled.div`
 
 const Spacer = styled.div`
   flex-grow: ${({ value }) => value || 1};
-  @media screen and (max-width: 1100px) 
-  {
-    display: none;
-  }
 `;
 
 const AnswersBoxStyled = styled.div`

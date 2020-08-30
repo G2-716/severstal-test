@@ -9,6 +9,10 @@ html, body, #root {
   width: 100%;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   font-family: Muller, Tahoma, Geneva, sans-serif;
   color: #ffffff;

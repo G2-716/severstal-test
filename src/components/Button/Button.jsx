@@ -11,7 +11,7 @@ const ButtonStyled = styled.button`
   outline: none;
   cursor: pointer;
   transition: all 0.2s;
-  border:none;
+  border: none;
   font-family: Muller, Tahoma, Geneva, sans-serif;
   background: none;
   

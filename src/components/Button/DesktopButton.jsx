@@ -1,24 +1,20 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Button, ButtonSize } from './Button';
-import {RightArrowLongIcon} from "../svg/arrows/RightArrowLongIcon";
+import { Button } from './Button';
+import { RightArrowLongIcon } from "../svg/arrows/RightArrowLongIcon";
 
 const NextButton = styled(Button)`
-  padding: 3.2323% 3.6363% 3.2323% 6.0606%; 
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px; 
   background: #C3C47E;
-  border: none;
-  font-size: 1.875vw;
+  font-size: 1.2rem;
   color: white;
-  
-  &.${ButtonSize.MD} {
-    font-size: 1.4583vw;
-    padding: 2.2323% 2.6363% 2.2323% 5.0606%; 
-  }
 `
 const RightArrowStyled = styled(RightArrowLongIcon)`
-  margin-left: 43px;
-  max-width: 15%;
-  vertical-align: middle;
+  max-width: 25px;
+  margin-left: 32px;
 `
 
 export const DesktopButton = props => {
