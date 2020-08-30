@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-export const DesktopRightArrow = ( props ) => {
+export const RightArrowLongIcon = (props ) => {
     const {  className, ...restProps } = props;
     return (
         <svg {...restProps} className={className} width="27" height="18" viewBox="0 0 27 18" fill="none" xmlns="http://www.w3.org/2000/svg">

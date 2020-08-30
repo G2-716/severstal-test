@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, ButtonSize } from './Button';
-import {DesktopRightArrow} from "../svg/Arrows/DesktopRightArrow";
+import {RightArrowLongIcon} from "../svg/arrows/RightArrowLongIcon";
 
 const NextButton = styled(Button)`
   padding: 3.2323% 3.6363% 3.2323% 6.0606%; 
@@ -15,7 +15,7 @@ const NextButton = styled(Button)`
     padding: 2.2323% 2.6363% 2.2323% 5.0606%; 
   }
 `
-const RightArrowStyled = styled(DesktopRightArrow)`
+const RightArrowStyled = styled(RightArrowLongIcon)`
   margin-left: 43px;
   max-width: 15%;
   vertical-align: middle;

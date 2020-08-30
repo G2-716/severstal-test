@@ -13,13 +13,11 @@ const ButtonStyled = styled.button`
   transition: all 0.2s;
   border:none;
   font-family: Muller, Tahoma, Geneva, sans-serif;
+  background: none;
+  
   &:disabled {
     opacity: 0.6;
     pointer-events: none;
-    @media screen and (max-width: 1100px) 
-    {
-      opacity: 0.4;
-    }
   }
 `;
 

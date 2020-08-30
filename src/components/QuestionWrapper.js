@@ -9,7 +9,8 @@ import { shuffle } from '../utils/shuffle';
 import { fade } from '../utils/keyframes';
 import {ButtonSize} from './Button/Button';
 import { Text } from '../shared/Text';
-import {ButtonArrow} from "./Button/ButtonArrow";
+import { PreviousButton } from './Button/PreviousButton';
+import { NextButton } from './Button/NextButton';
 
 
 const QuestionWrapperStyled = styled.div`
@@ -109,20 +110,14 @@ const RadioButtonStyled = styled(RadioButton)`
 `;
 
 const ButtonsBoxStyled = styled.div`
+  display: flex;
+  justify-content: space-between;
   grid-area: 3/2/4/2;
-  @media screen and (max-width: 1100px) 
-  {
-    display: none;
-  }
-`;
-
-
-const MobileButtonsBox = styled.div`
-    display: flex;
+  @media screen and (max-width: 1100px) {
     grid-area: 3/1/4/2;
     padding: 5% 3.888%;
-    justify-content: space-between;
-`
+  }
+`;
 
 const ImageWrapper = styled.div`
     grid-area: 1/3/4/4;
@@ -160,24 +155,21 @@ const ImageStyled = styled.img`
 export const QuestionWrapper = props => {
     const { question, image } = props;
     const [questionAnswers, setQuestionAnswers] = useState(question.answers);
-    const { answers, setAnswer, setPrev, setNext, isLocked, setIsLocked } = useContext(ProgressContext);
+    const { answers, screenDelta, setAnswer, setPrev, setNext } = useContext(ProgressContext);
 
     const questionNumber = questions.findIndex(item => item.id === question.id) + 1;
     const questionsCount = questions.length;
 
-    useLayoutEffect(() => {
-        if (!answers[question.id]) setIsLocked(true);
-        return () => setIsLocked(false);
-    }, []);
+    const isFirstQuestion = questionNumber === 1;
 
     useLayoutEffect(() => {
         setQuestionAnswers(shuffle(question.answers));
     }, [question]);
 
     const handleAnswerChange = useCallback((answerId) => {
-        setIsLocked(false);
         setAnswer(question.id, answerId);
-    }, [question, setAnswer, setIsLocked]);
+        setNext();
+    }, [question, setAnswer]);
 
     return (
         <QuestionWrapperStyled>
@@ -202,25 +194,9 @@ export const QuestionWrapper = props => {
 
             </QuestionBoxStyled>
             <ButtonsBoxStyled>
-                <DesktopButton
-                    size={ButtonSize.MD}
-                    disabled={isLocked}
-                    onClick={setNext}
-                >
-                    Дальше
-                </DesktopButton>
+                {!isFirstQuestion && <PreviousButton onClick={setPrev} />}
+                {screenDelta < 0 && <NextButton onClick={setNext} />}
             </ButtonsBoxStyled>
-            <MobileButtonsBox>
-                <ButtonArrow
-                    direction={'left'}
-                    onClick={setPrev}
-                />
-                <ButtonArrow
-                    direction={'right'}
-                    onClick={setNext}
-                    disabled={isLocked}
-                />
-            </MobileButtonsBox>
             <ImageWrapper>
                 <ImageStyled src={image} alt='' />
             </ImageWrapper>
