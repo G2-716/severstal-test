@@ -1,13 +1,23 @@
-const questionImage1 = process.env.PUBLIC_URL + '/static/images/question-image-1.png';
-const questionImage2 = process.env.PUBLIC_URL + '/static/images/question-image-2.png';
-const questionImage3 = process.env.PUBLIC_URL + '/static/images/question-image-3.png';
-const questionImage4 = process.env.PUBLIC_URL + '/static/images/question-image-4.png';
-const questionImage5 = process.env.PUBLIC_URL + '/static/images/question-image-5.png';
-const questionImage6 = process.env.PUBLIC_URL + '/static/images/question-image-6.png';
-const questionImage7 = process.env.PUBLIC_URL + '/static/images/question-image-7.png';
-const questionImage8 = process.env.PUBLIC_URL + '/static/images/question-image-8.png';
-const questionImage9 = process.env.PUBLIC_URL + '/static/images/question-image-9.png';
-const questionImage10 = process.env.PUBLIC_URL + '/static/images/question-image-10.png';
+const question1Image1 = process.env.PUBLIC_URL + '/static/images/Question1/topPic.png';
+const question1Image2 = process.env.PUBLIC_URL + '/static/images/Question1/bottomPic.png';
+const question2Image1 = process.env.PUBLIC_URL + '/static/images/Question2/topPic.png';
+const question2Image2 = process.env.PUBLIC_URL + '/static/images/Question2/bottomPic.png';
+const question3Image1 = process.env.PUBLIC_URL + '/static/images/Question3/topPic.png';
+const question3Image2 = process.env.PUBLIC_URL + '/static/images/Question3/bottomPic.png';
+const question4Image1 = process.env.PUBLIC_URL + '/static/images/Question4/topPic.png';
+const question4Image2 = process.env.PUBLIC_URL + '/static/images/Question4/bottomPic.png';
+const question5Image1 = process.env.PUBLIC_URL + '/static/images/Question5/topPic.png';
+const question5Image2 = process.env.PUBLIC_URL + '/static/images/Question5/bottomPic.png';
+const question6Image1 = process.env.PUBLIC_URL + '/static/images/Question6/topPic.png';
+const question6Image2 = process.env.PUBLIC_URL + '/static/images/Question6/bottomPic.png';
+const question7Image1 = process.env.PUBLIC_URL + '/static/images/Question7/topPic.png';
+const question7Image2 = process.env.PUBLIC_URL + '/static/images/Question7/bottomPic.png';
+const question8Image1 = process.env.PUBLIC_URL + '/static/images/Question8/topPic.png';
+const question8Image2 = process.env.PUBLIC_URL + '/static/images/Question8/bottomPic.png';
+const question9Image1 = process.env.PUBLIC_URL + '/static/images/Question9/topPic.png';
+const question9Image2 = process.env.PUBLIC_URL + '/static/images/Question9/bottomPic.png';
+const question10Image1 = process.env.PUBLIC_URL + '/static/images/Question10/topPic.png';
+const question10Image2 = process.env.PUBLIC_URL + '/static/images/Question10/bottomPic.png';
 
 const elonMuskImage = process.env.PUBLIC_URL + '/static/images/elon-musk.png';
 const peterDruckerImage = process.env.PUBLIC_URL + '/static/images/peter-drucker.png';
@@ -20,16 +30,26 @@ const introMobileImage = process.env.PUBLIC_URL + '/static/images/intro_mobile.p
 const logoImage = process.env.PUBLIC_URL + '/static/images/logo.svg';
 
 export {
-    questionImage1,
-    questionImage2,
-    questionImage3,
-    questionImage4,
-    questionImage5,
-    questionImage6,
-    questionImage7,
-    questionImage8,
-    questionImage9,
-    questionImage10,
+    question1Image1,
+    question1Image2,
+    question2Image1,
+    question2Image2,
+    question3Image1,
+    question3Image2,
+    question4Image1,
+    question4Image2,
+    question5Image1,
+    question5Image2,
+    question6Image1,
+    question6Image2,
+    question7Image1,
+    question7Image2,
+    question8Image1,
+    question8Image2,
+    question9Image1,
+    question9Image2,
+    question10Image1,
+    question10Image2,
     elonMuskImage,
     jackMaImage,
     tonyRobbinsImage,

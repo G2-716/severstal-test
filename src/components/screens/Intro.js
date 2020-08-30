@@ -10,7 +10,7 @@ import {Logo} from "../svg/Logo";
 
 const IntroWrapper = styled.div`
     overflow: auto;
-    background-color: #1E1D1C;
+    background-color: #000000;
     display: grid;
     padding: 0.7% 7%;
     grid-template-columns: 2fr 3fr;
@@ -22,7 +22,7 @@ const IntroWrapper = styled.div`
       height: 100vh;
       width: 100%;
       color: #FFFFFF;
-      background: #090908 url(${introMobileImage}) no-repeat center;
+      background: #000000 url(${introMobileImage}) no-repeat center;
       background-position-y: 2.890%;
       background-size: contain;
       overflow: auto;
@@ -202,9 +202,9 @@ export const Intro = props => {
                 <DesktopButtonStyled onClick={setNext}>Пройти тест</DesktopButtonStyled>
                 <MobileButtonStyled onClick={setNext}>Пройти тест</MobileButtonStyled>
             </InfoWrapper>
-            <ImgWrapper>
+            {/*<ImgWrapper>*/}
                 <ImageStyled src={introImage} alt={''}/>
-            </ImgWrapper>
+            {/*</ImgWrapper>*/}
         </IntroWrapper>
     );
 };

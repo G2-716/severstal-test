@@ -13,14 +13,17 @@ import { NextButton } from './Button/NextButton';
 
 const QuestionWrapperStyled = styled.div`
   display: grid;
-  grid-template-columns: 11% 2fr 3fr 11%;
+  grid-template-columns: 11% 1fr 46.25%;
   grid-template-rows: 11% 1fr 15%;
   height: 100%;
   width: 100%;
-  background-color: #585858;
+  background-color: #1E1D1C;
+  @media screen and (min-width: 1600px) {
+      grid-template-columns: 11% 1fr 46.25%;
+      grid-template-rows: 18.4259% 1fr 15%;
+  }
   @media screen and (max-width: 1100px) 
   {
-    background-color: #3A3939;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr auto;
    @media screen and (max-height: 300px) and (orientation: landscape) 
@@ -53,7 +56,6 @@ const QuestionBoxStyled = styled.div`
   grid-area: 2/2/3/3;
   display: flex;
   flex-direction: column;
-  padding-top: 23%;
   @media screen and (max-width: 1100px) 
   {
     grid-area: 2/1/3/2;
@@ -200,7 +202,7 @@ export const QuestionWrapper = props => {
                 {screenDelta < 0 && <NextButtonStyled onClick={setNext} />}
             </ButtonsBoxStyled>
             <ImageWrapper>
-                <ImageStyled src={image} alt='' />
+                {image}
             </ImageWrapper>
         </QuestionWrapperStyled>
     );
