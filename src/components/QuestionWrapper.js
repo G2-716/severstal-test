@@ -4,10 +4,8 @@ import { questions } from '../questions.config';
 import { ProgressContext } from '../contexts/ProgressContext';
 import { QuestionLabel } from "./QuestionLabel";
 import { RadioButton } from './RadioButton';
-import { DesktopButton } from './Button/DesktopButton';
 import { shuffle } from '../utils/shuffle';
 import { fade } from '../utils/keyframes';
-import {ButtonSize} from './Button/Button';
 import { Text } from '../shared/Text';
 import { PreviousButton } from './Button/PreviousButton';
 import { NextButton } from './Button/NextButton';
@@ -111,12 +109,16 @@ const RadioButtonStyled = styled(RadioButton)`
 
 const ButtonsBoxStyled = styled.div`
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   grid-area: 3/2/4/2;
   @media screen and (max-width: 1100px) {
     grid-area: 3/1/4/2;
     padding: 5% 3.888%;
   }
+`;
+
+const NextButtonStyled = styled(NextButton)`
+  margin-left: auto;
 `;
 
 const ImageWrapper = styled.div`
@@ -195,7 +197,7 @@ export const QuestionWrapper = props => {
             </QuestionBoxStyled>
             <ButtonsBoxStyled>
                 {!isFirstQuestion && <PreviousButton onClick={setPrev} />}
-                {screenDelta < 0 && <NextButton onClick={setNext} />}
+                {screenDelta < 0 && <NextButtonStyled onClick={setNext} />}
             </ButtonsBoxStyled>
             <ImageWrapper>
                 <ImageStyled src={image} alt='' />
