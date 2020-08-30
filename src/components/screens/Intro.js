@@ -44,6 +44,9 @@ const FirstTextParagraph = styled(Text)`
 const SecondTextParagraph = styled(Text)`
   animation: ${slideDown} 0.4s ease-out 0.4s both;
 `
+const ThirdTextParagraph = styled(Text)`
+  animation: ${slideDown} 0.4s ease-out 0.7s both;
+`
 
 const IntroTitle = styled.h1`
   font-weight: 800;
@@ -182,16 +185,20 @@ export const Intro = props => {
                 </LogoWrapper>
                 <IntroTitle>Лидер перемен</IntroTitle>
                 <FirstTextParagraph>
-                    Кого зовут лидерами перемен? Людей, осставляющих вмятину во Вселенной.
+                    Кого зовут лидерами перемен? Людей, оставляющих вмятину во Вселенной.
                     Людей, разрушающих рамки привычного, раздвинающих границы возможного,
                     объединяющихся друг с другом и меняющих мир.
                 </FirstTextParagraph>
                 <br />
                 <SecondTextParagraph>
                     Генри Форд, Мария Кюри,
-                    Стив Джобс и принцесса Диана. Какой лидер перемен ты?
-                    Пройди тест, чтобы узнать!
+                    Стив Джобс и принцесса Диана.
                 </SecondTextParagraph>
+                <br />
+                <ThirdTextParagraph>
+                    Какой лидер перемен ты?
+                    Пройди тест, чтобы узнать!
+                </ThirdTextParagraph>
                 <DesktopButtonStyled onClick={setNext}>Пройти тест</DesktopButtonStyled>
                 <MobileButtonStyled onClick={setNext}>Пройти тест</MobileButtonStyled>
             </InfoWrapper>
