@@ -13,13 +13,12 @@ const IntroWrapper = styled.div`
     background-color: #000000;
     display: grid;
     padding: 0.7% 7%;
+    height: 100vh;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 100%;
     background-image: none;
-  
   @media screen and (max-width: 1199px) 
   {
-      height: 100vh;
       width: 100%;
       color: #FFFFFF;
       background: #000000 url(${introMobileImage}) no-repeat center;
@@ -202,9 +201,9 @@ export const Intro = props => {
                 <DesktopButtonStyled onClick={setNext}>Пройти тест</DesktopButtonStyled>
                 <MobileButtonStyled onClick={setNext}>Пройти тест</MobileButtonStyled>
             </InfoWrapper>
-            {/*<ImgWrapper>*/}
+            <ImgWrapper>
                 <ImageStyled src={introImage} alt={''}/>
-            {/*</ImgWrapper>*/}
+            </ImgWrapper>
         </IntroWrapper>
     );
 };

@@ -11,8 +11,12 @@ export const Question2 = (props) => {
     const FirstImg = styled.img`
       position: absolute;
       left: 5.26%;
-      top: -1.7592vh;
       height: 71.2962vh;
+      @media screen and (max-width: 1100px)
+      { 
+          top: -1.7592vh;
+         height: 40.8203vh;
+      }
     `
     const BlueRectangle = styled.div`
       position: absolute;
@@ -23,12 +27,25 @@ export const Question2 = (props) => {
       height: 10.3703vh;
       mix-blend-mode: lighten;
       z-index: 2;
+       @media screen and (max-width: 1100px)
+      { 
+         top: 34.8632vh;
+         left: 47.7192%;
+         height: 7.03125vh;
+         width: 41.7968vw;
+      }
     `
     const SecondImg = styled.img`
       position: absolute;
       left: 0;
       top: 65.0925vh;
       height: 35.3703vh;
+      @media screen and (max-width: 1100px)
+      { 
+         top: 22.7539vh;
+         left: 30.1754%;
+         height: 24.0234vh;
+      }
     `
 
     const createImage = () => {

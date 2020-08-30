@@ -13,6 +13,12 @@ export const Question3 = (props) => {
       left: 0;
       top: 1.4814vh;
       height: 28.4259vh;
+       @media screen and (max-width: 1100px)
+      { 
+         top: 0;
+         left: 0;
+         height: 19.1406vh;
+      }
     `
     const YellowRectangle = styled.div`
       position: absolute;
@@ -23,12 +29,25 @@ export const Question3 = (props) => {
       height: 86.574vh;
       mix-blend-mode: lighten;
       z-index: 2;
+       @media screen and (max-width: 1100px)
+      { 
+         top: 0;
+         left: 68.7719%;
+         height: 45.8984vh;
+         width: 15.3645vw;
+      }
     `
     const SecondImg = styled.img`
       position: absolute;
       left: 17.2242%;
       top: 33.1481vh;
       height: 34.9074vh;
+      @media screen and (max-width: 1100px)
+      { 
+         top: 7.3242vh;
+         left: 38.5964%;
+         height: 23.4375vh;
+      }
     `
 
     const createImage = () => {
