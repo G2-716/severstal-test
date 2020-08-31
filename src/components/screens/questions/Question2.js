@@ -1,7 +1,7 @@
 import React from 'react';
 import { QuestionWrapper } from '../../QuestionWrapper';
 import { getQuestionById } from '../../../utils/getQuestionById';
-import {question2Image1, question2Image2} from '../../../constants/images';
+import {question2Image1, question2Image2, question2gif} from '../../../constants/images';
 import styled from "styled-components";
 
 export const Question2 = (props) => {
@@ -10,17 +10,18 @@ export const Question2 = (props) => {
     `
     const FirstImg = styled.img`
       position: absolute;
-      left: 5.26%;
+      left: 4.216vw;
       height: 71.2962vh;
       @media screen and (max-width: 1100px)
       { 
-          top: -1.7592vh;
+         left:0;
+         top: -1.7592vh;
          height: 40.8203vh;
       }
     `
     const BlueRectangle = styled.div`
       position: absolute;
-      left: 19.7064%;
+      left: 11.355vw;
       top: 86.2962vh;
       background: #00569D;
       width: 26.8229vw;
@@ -37,7 +38,7 @@ export const Question2 = (props) => {
     `
     const SecondImg = styled.img`
       position: absolute;
-      left: 0;
+      left: 1.7652vw;
       top: 65.0925vh;
       height: 35.3703vh;
       @media screen and (max-width: 1100px)
@@ -47,6 +48,19 @@ export const Question2 = (props) => {
          height: 24.0234vh;
       }
     `
+    const Gif = styled.img`
+      position: absolute;
+      top: 50.6481vh;
+      left: 19.1652vw;
+      height: 25.3703vh;
+      @media screen and (max-width: 1100px)
+          { 
+             top: 4.2968vh;
+             left: auto;
+             right: 0;
+             height: 17.0898vh;
+          }
+    `
 
     const createImage = () => {
         return (
@@ -54,6 +68,7 @@ export const Question2 = (props) => {
                 <FirstImg src={question2Image1} />
                 <BlueRectangle />
                 <SecondImg src={question2Image2} />
+                <Gif src={question2gif} />
             </ImageWrapper>
         );
     }

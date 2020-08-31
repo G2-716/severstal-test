@@ -10,7 +10,7 @@ export const Question7 = (props) => {
     `
     const FirstImg = styled.img`
       position: absolute;
-      left: 9.4047%;
+      left: 6.721vw;
       top: 0;
       height: 40.3703vh;
       @media screen and (max-width: 1100px)
@@ -23,7 +23,7 @@ export const Question7 = (props) => {
     `
     const YellowRectangle = styled.div`
       position: absolute;
-      left: 56.3095%;
+      left: 27.2401vw;
       top: 86.574vh;
       background: #C3C47E;
       width: 15.625vw;
@@ -40,7 +40,7 @@ export const Question7 = (props) => {
     `
     const SecondImg = styled.img`
       position: absolute;
-      left: 5%;
+      left: 4.794vw;
       top: 59.1666vh;
       height: 36.7592vh;
       @media screen and (max-width: 1100px)
@@ -52,7 +52,7 @@ export const Question7 = (props) => {
     `
     const BlueRectangle = styled.div`
       position: absolute;
-      left: 0;
+      left: 2.501vw;
       top: 26.1111vh;
       background: #00569D;
       width: 34.1666vw;
@@ -69,7 +69,7 @@ export const Question7 = (props) => {
     `
     const GrayRectangle = styled.div`
       position: absolute;
-      left: 57.5%;
+      left: 27.761vw;
       top: 48.8888vh;
       background: #3B3B3B;
       width: 15.625vw;

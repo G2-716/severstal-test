@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { QuestionWrapper } from '../../QuestionWrapper';
 import { getQuestionById } from '../../../utils/getQuestionById';
-import { question1Image1, question1Image2 } from '../../../constants/images';
+import { question1Image1, question1Image2, question1gif } from '../../../constants/images';
 
 export const Question1 = (props) => {
     const ImageWrapper = styled.div`
@@ -31,7 +31,7 @@ export const Question1 = (props) => {
       mix-blend-mode: lighten;
       z-index: 2;
       @media screen and (max-width: 1100px)
-        { //fixed-width: 570px;
+        { 
           left: 36.6666%;
           top: 38.9648vh;
           height: 4.0003vh;
@@ -50,6 +50,18 @@ export const Question1 = (props) => {
           height: 23.8281vh;
         }
     `
+    const Gif = styled.img`
+      position: absolute;
+      top: 69.537vh;
+      left: -0.019vw;
+      height: 19.8148vh;
+      @media screen and (max-width: 1100px)
+          { 
+             top: 4.6875vh;
+             left: 5.7894%;
+             height: 14.746vh;
+          }
+    `
 
     const createImage = () => {
         return (
@@ -57,6 +69,7 @@ export const Question1 = (props) => {
                 <FirstImg src={question1Image1} />
                 <YellowRectangle />
                 <SecondImg src={question1Image2} />
+                <Gif src={question1gif} />
             </ImageWrapper>
         );
     }

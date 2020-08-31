@@ -1,7 +1,11 @@
 import React from 'react';
 import { QuestionWrapper } from '../../QuestionWrapper';
 import { getQuestionById } from '../../../utils/getQuestionById';
-import {question5Image1, question5Image2, question6Image1, question6Image2} from '../../../constants/images';
+import {
+    question6gif,
+    question6Image1,
+    question6Image2
+} from '../../../constants/images';
 import styled from "styled-components";
 
 export const Question6 = (props) => {
@@ -10,7 +14,7 @@ export const Question6 = (props) => {
     `
     const FirstImg = styled.img`
       position: absolute;
-      left: 42.9035%;
+      left: 18.803vw;
       top: 1.4814vh;
       height: 66.9444vh;
       @media screen and (max-width: 1100px)
@@ -40,7 +44,7 @@ export const Question6 = (props) => {
     `
     const SecondImg = styled.img`
       position: absolute;
-      left: 0;
+      left: -3.749vw;
       top: 50vh;
       height: 62.2222vh;
       @media screen and (max-width: 1100px)
@@ -50,13 +54,26 @@ export const Question6 = (props) => {
              height: 30.0781vh;
           } 
     `
-
+    const Gif = styled.img`
+      position: absolute;
+      top: 47.3714vh;
+      left: 8.7899vw;
+      height: 25.1851vh;
+      z-index: 3;
+      @media screen and (max-width: 1100px)
+          { 
+             top: 23.7304vh;
+             left: 19.7917vw;
+             height: 17.0898vh;
+          }
+    `
     const createImage = () => {
         return (
             <ImageWrapper>
                 <FirstImg src={question6Image1}/>
                 <YellowRectangle/>
                 <SecondImg src={question6Image2}/>
+                <Gif src={question6gif}/>
             </ImageWrapper>
         );
     }
