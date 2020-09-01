@@ -5,7 +5,10 @@ export const Text = styled.p`
   font-size: 0.8rem;
   line-height: 113%;
   letter-spacing: 0.01em;
-  margin-top: 0.8rem;
+  
+  &:not(:first-of-type) {
+    margin-top: 0.8rem;
+  }
     
   ${respondTo.xs`
     font-size: 1rem;

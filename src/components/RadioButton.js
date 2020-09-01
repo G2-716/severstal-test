@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { respondTo } from '../utils/respondTo';
 
 const InputStyled = styled.input`
   display: none;
@@ -8,15 +9,16 @@ const InputStyled = styled.input`
 const RadioIconStyled = styled.div`
   position: relative;
   flex-shrink: 0;
-  width: 16px;
-  height: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.57);
+  width: 12px;
+  height: 12px;
+  border: 2px solid rgba(255, 255, 255, 0.57);
   border-radius: 50%;
   margin-right: 12px;
-  @media screen and (max-height: 250px) {
-    width: 10px;
-    height: 10px;
-  }
+  
+  ${respondTo.xmd`
+    width: 16px;
+    height: 16px;
+  `}
 `;
 
 const LabelStyled = styled.label`
@@ -24,29 +26,20 @@ const LabelStyled = styled.label`
   align-items: center;
   cursor: pointer;
   
-  
   & ${InputStyled}:checked + ${RadioIconStyled}:after {
     content: '';
     position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 12px;
-    height: 12px;
+    top: 0;
+    left: 0;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
-    background-color: #3D8FE3;
-    @media screen and (max-width: 1100px) 
-      { 
-        top: -1px;
-        left: -1px;
-        width: 14px;
-        height: 14px;
-        border: 1px solid white;
-        background-color: #FFFFFF;
-        @media screen and (max-height: 250px) {
-         width: 8px;
-         height: 8px;
-        }
-      }
+    background-color: #ffffff;
+    
+    ${respondTo.xmd`
+      width: 12px;
+      height: 12px;
+    `}
   }
 `;
 
@@ -58,6 +51,13 @@ const TextWrapperStyled = styled.div`
 
 const TextStyled = styled.span`
   margin-top: 2px;
+  font-size: 0.8rem;
+  line-height: 112.5%;
+  letter-spacing: 0.015em;
+  
+  ${respondTo.xmd`
+    font-size: 0.94rem;
+  `}
 `;
 
 const WrapperStyled = styled.div`

@@ -4,18 +4,21 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
-  height: 100%;
-  width: 100%;
-}
-
 html {
+  height: 100%;
   font-size: 18px;
 }
 
 body {
   font-family: Muller, Tahoma, Geneva, sans-serif;
+  display: flex;
+  min-height: 100%;
   color: #ffffff;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  min-height: 100%;
+  width: 100%;
 }

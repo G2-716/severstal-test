@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Button } from "./Button";
 import { LeftArrowIcon } from "../svg/arrows/LeftArrowIcon";
+import { respondTo } from '../../utils/respondTo';
 
 const ButtonStyled = styled(Button)`
   display: flex;
@@ -11,14 +12,14 @@ const ButtonStyled = styled(Button)`
 const ButtonLabel = styled.span`
   display: none;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 0.94rem;
   line-height: 95%;
   color: #9E9E9D;
   margin-left: 10px;
   
-  @media screen and (min-width: 1100px) {
-      display: initial;
-  }
+  ${respondTo.xmd`
+    display: initial;
+  `}
 `
 
 export const PreviousButton = (props) =>

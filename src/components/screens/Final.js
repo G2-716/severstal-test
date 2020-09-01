@@ -9,7 +9,7 @@ import {ShareArrow} from "../Button/ShareArrow";
 import {Logo} from "../svg/Logo";
 
 const FinalWrapper = styled.div`
-  background-color: #1E1D1C;
+  background-color: #000000;
   height: 100vh;
   width: 100%;
   padding: 8.3333%  0 0 6.9444% ;

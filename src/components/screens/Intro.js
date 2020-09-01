@@ -11,50 +11,49 @@ import { Spacer } from '../Spacer';
 import { respondTo } from '../../utils/respondTo';
 
 const IntroWrapper = styled.div`
+  display: flex;
   width: 100%;
   min-height: 100%;
   background-color: #000000;
 `;
 
 const Container = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  position: relative;
+  display: flex;
   width: 100%;
-  height: 100%;
+  min-height: 100%;
+  
+  ${respondTo.xs`
+    max-width: 620px;
+    margin: 0 auto;
+  `}
 
   ${respondTo.xmd`
-    grid-template-columns: 2fr 3fr;
     max-width: 1200px;
     margin: 0 auto;
   `}
 `
 
 const InfoWrapper = styled.div`
-  grid-area: 1/1/2/2;
+  flex: 1;
   display: flex;
   flex-direction: column;
   padding: 20px 30px;
   z-index: 1;
   
-  ${respondTo.xs`
-    max-width: 620px;
-    margin: 0 auto;
-  `}
-  
   ${respondTo.md`
-    padding: 40px 30px;
+    padding: 40px 30px 70px;
   `}
   
   ${respondTo.xmd`
-    max-width: 100%;
-    margin: 0;
+    flex: 2;
     padding: 70px 120px;
   `}
 `
 
 const LogoStyled = styled(Logo)`
   width: 120px;
+  flex-shrink: 0;
   animation: ${slideDown} 0.4s ease-out 0.1s both;
   
   ${respondTo.xs`
@@ -75,6 +74,7 @@ const IntroTitle = styled.h1`
   font-size: 2.8rem;
   line-height: 95%;
   margin-top: 20px;
+  flex-shrink: 0;
   
   ${respondTo.xs`
     font-size: 3.4rem;
@@ -93,6 +93,7 @@ const IntroTitle = styled.h1`
 
 const ParagraphsWrapper = styled.div`
   margin-top: 8px;
+  flex-shrink: 0;
   
   ${respondTo.xs`
     margin-top: 20px;
@@ -117,6 +118,7 @@ const ThirdTextParagraph = styled(Text)`
 
 const ButtonsWrapper = styled.div`
   margin-top: 20px;
+  flex-shrink: 0;
   
   ${respondTo.md`
     margin-top: 60px;
@@ -138,8 +140,10 @@ const DesktopButtonStyled = styled(DesktopButton)`
 `
 
 const ImageWrapper = styled.div`
-  position: relative;
-  grid-area: 1/1/2/2;
+  flex: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   animation: ${fade} 0.4s ease-out 0.1s both;
@@ -155,7 +159,8 @@ const ImageWrapper = styled.div`
   }
   
   ${respondTo.xmd`
-    grid-area: 1/2/2/3;
+    flex: 3;
+    position: static;
     
     &:after {
       content: none;
@@ -164,17 +169,12 @@ const ImageWrapper = styled.div`
 `
 
 const ImageStyled = styled.img`
-  position: absolute;
   height: 100%;
   width: 100%;
   max-width: 100%;
   
   ${respondTo.xs`
     object-fit: contain;
-  `}
-  
-  ${respondTo.xmd`
-    width: auto;
   `}
 `
 
@@ -220,7 +220,7 @@ export const Intro = props => {
                     <SpacerStyled />
                 </InfoWrapper>
                 <ImageWrapper>
-                    <ImageStyled src={introMobileImage} alt={''}/>
+                    <ImageStyled src={introImage} alt={''}/>
                 </ImageWrapper>
             </Container>
         </IntroWrapper>
