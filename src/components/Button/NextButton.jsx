@@ -6,12 +6,16 @@ import { RightArrowIcon } from '../svg/arrows/RightArrowIcon';
 const ButtonStyled = styled(Button)`
   display: flex;
   align-items: baseline;
+  align-self: flex-start;
+  @media screen and (max-height: 640px) and (orientation: landscape){
+      align-self: flex-end;
+  }
 `
 
 const ButtonLabel = styled.span`
   display: none;
   font-weight: 800;
-  font-size: 18px;
+  font-size: 25px;
   line-height: 95%;
   color: #9E9E9D;
   margin-right: 10px;

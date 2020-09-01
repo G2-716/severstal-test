@@ -26,7 +26,7 @@ export const Question1 = (props) => {
       left: 22.8603%;
       top: 21.4814vh; 
       background: #C3C47E;
-      width: 68.1306%;
+      width: 31.511vw;
       height: 15.3703vh;
       mix-blend-mode: lighten;
       z-index: 2;

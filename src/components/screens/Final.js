@@ -7,6 +7,7 @@ import { getAnswerById } from '../../utils/getAnswerById';
 import { fade, slideDown } from '../../utils/keyframes';
 import {ShareArrow} from "../Button/ShareArrow";
 import {Logo} from "../svg/Logo";
+import {DesktopShare} from "../Button/DesktopShare";
 
 const FinalWrapper = styled.div`
   background-color: #1E1D1C;
@@ -14,12 +15,13 @@ const FinalWrapper = styled.div`
   width: 100%;
   padding: 8.3333%  0 0 6.9444% ;
   color: #FFFFFF;
-  overflow: auto;
+ 
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr  8.25%;
+  grid-template-rows: 100%;
   @media screen and (max-width: 1100px)
   { 
+    overflow: auto;
     padding:0;
     grid-template-rows: 2fr 3fr  10.25%;
     grid-template-columns: 100% ;
@@ -181,9 +183,10 @@ const ShareLink = styled.a`
     }
     
     @media screen and (min-width: 1100px){
-         font-size: 2.5vw;
-         grid-area:2/2/2/2;
-         padding-left: 9.5798%;
+         //font-size: 2.5vw;
+         //grid-area:2/2/2/2;
+         //padding-left: 9.5798%;
+         display: none;
     }
     @media screen and (max-width: 1100px)
     {
@@ -269,11 +272,14 @@ export const Final = props => {
                         на лидерскую программу компании “Северсталь”
                     </StyledLink>
                 </InvitingText>
+                <DesktopShare onClick={()=>window.location = `http://vk.com/share.php?${queryParams.toString()}`} />
             </InfoWrapper>
+            <div>
             <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
                 Поделиться
                 <ShareArrow />
             </ShareLink>
+            </div>
         </FinalWrapper>
     );
 };
