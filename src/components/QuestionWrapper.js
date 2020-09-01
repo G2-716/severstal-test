@@ -16,9 +16,9 @@ const QuestionWrapperStyled = styled.div`
   grid-template-rows: 7.888% 1fr 12.037%;
   height: 100%;
   width: 100%;
-  overflow: auto;
   background-color: #1E1D1C;
   overflow-x: hidden;
+  overflow: initial;
   @media screen and (min-width: 1700px) {
       grid-template-columns: 11% 1fr 46.25%;
       grid-template-rows: 18.4259% 1fr 8.3333%;
@@ -43,9 +43,10 @@ const QuestionWrapperStyled = styled.div`
 `;
 
 const QuestionLabelStyled = styled(QuestionLabel)`
+
   grid-area: 1/2/2/3;
   align-self: flex-end;
-  font-size: 30px;
+  font-size: 23px;
    @media screen and (max-width: 1100px) 
   {
    grid-area: 2/1/3/2;
@@ -61,12 +62,16 @@ const QuestionLabelStyled = styled(QuestionLabel)`
     padding-left: 8vw;
     font-size: 1.83vh;
   }
+  @media screen and (max-height: 640px) and (orientation: landscape){
+      font-size: 1.8341vw;
+    }
 `;
 
 const QuestionBoxStyled = styled.div`
   grid-area: 2/2/3/3;
   display: flex;
   flex-direction: column;
+  padding-right: 2.7416vw;
   @media screen and (max-width: 1100px) 
   {
     grid-area: 3/1/4/2;
@@ -90,7 +95,7 @@ const Question = styled.p`
   font-weight: 600;
   line-height: 114%;
   letter-spacing: 0.015em;
-  
+  padding-bottom: 9.537vh;    
   @media screen and (min-width: 640px) and (max-width: 1199px)
   {
     font-size: 3.26vw;
@@ -123,7 +128,7 @@ const Spacer = styled.div`
 `;
 
 const AnswersBoxStyled = styled.div`
-  padding-top: 4.2%;
+  
   @media screen and (max-width: 480px) and (orientation: portrait) 
   {
     padding: 0;
@@ -162,6 +167,7 @@ const ButtonsBoxStyled = styled.div`
   display: flex;
   align-items: center;
   grid-area: 3/2/4/2;
+  padding-right: 2.7416vw;
   @media screen and (max-width: 1100px) {
     grid-area: 4/1/4/2;
     padding: 2% 0 5%;
@@ -195,6 +201,7 @@ const ImageWrapper = styled.div`
 
 const Wrapper = styled.div`
   background-color: #1E1D1C;
+  overflow: auto;
   height: 100vh;
 `
 

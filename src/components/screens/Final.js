@@ -15,7 +15,6 @@ const FinalWrapper = styled.div`
   width: 100%;
   padding: 8.3333%  0 0 6.9444% ;
   color: #FFFFFF;
- 
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 100%;
@@ -23,9 +22,11 @@ const FinalWrapper = styled.div`
   { 
     overflow: auto;
     padding:0;
-    grid-template-rows: 2fr 3fr  10.25%;
+    grid-template-rows: 3fr 2fr  10.25%;
     grid-template-columns: 100% ;
-
+    @media screen and (orientation: landscape) and (max-height: 400px){
+    grid-template-rows: 51% 1fr 10.25%;
+    }
   }
 `;
 
@@ -105,12 +106,12 @@ const LogoWrapper = styled.div`
   animation: ${slideDown} 0.4s ease-out 0.1s both;
   
   @media screen and (max-width: 1100px){
-      width: 33.3333%;
+      width: 20.3333%;
       height: 5.7812%;
       top: 2.9687%;
       left: 3.333%;
    }
-   @media screen and (orientation: landscape) and (max-height: 640px) {
+   @media screen and (orientation: landscape) and (max-height: 760px) {
        width: 15.3333%;
    }
    @media screen and (orientation: landscape) and (max-height: 180px) {
@@ -151,18 +152,29 @@ const ImgWrapper = styled.div`
       overflow: hidden;
       position: relative;
       height: 89.5%;
+       @media screen and (orientation: landscape) and (max-height: 400px){
+          grid-template-rows: 51% 1fr 10.25%;
+          height:100%;
+          width: 60%;
+          margin: 0 auto;
+       }
   }
 `
 
 const ImgStyled = styled.img`
   max-width: 100%;
-  height: 100%;
+  width: 100%;
+  //height: 100%;
+  object-fit: cover;
   @media screen and (max-width: 1100px)
   { 
     height: auto;
     position:absolute;
     width:100%;
     overflow: hidden;
+     @media screen and (orientation: landscape) and (max-height: 400px){
+        margin-top: -9.615vh;
+     }
    }
 `
 
@@ -223,7 +235,7 @@ const StyledLink = styled.a`
     color: white;
 `
 
-const DEFAULT_RESULT = AnswerType.Sales;
+const DEFAULT_RESULT = AnswerType.Purchases;
 
 export const Final = props => {
     const { answers } = useContext(ProgressContext);

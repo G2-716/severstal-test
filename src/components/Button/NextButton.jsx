@@ -15,13 +15,28 @@ const ButtonStyled = styled(Button)`
 const ButtonLabel = styled.span`
   display: none;
   font-weight: 800;
-  font-size: 25px;
+  font-size: 1.502vw;
   line-height: 95%;
   color: #9E9E9D;
   margin-right: 10px;
-  
+  align-self: center;
   @media screen and (min-width: 1100px) {
       display: initial;
+      @media screen and (orientation: portrait) {
+                  font-size: 1.5vh;
+          }
+  }
+`
+const Icons = styled.div`
+  display: flex;
+  align-self: center;
+  width: 1.8vw;
+  @media screen and (max-height: 640px) and (max-width: 1100px) and (orientation: landscape){
+    width: 5vw;
+  }
+  @media screen and (max-width: 480px) and (orientation: portrait) 
+  {
+      width: 5vh;
   }
 `
 
@@ -30,8 +45,11 @@ export const NextButton = (props) =>
     return (
         <ButtonStyled {...props}>
             <ButtonLabel>Дальше</ButtonLabel>
-            <RightArrowIcon width={10} height={12} fill={'#9E9E9D'} />
-            <RightArrowIcon width={10} height={12} fill={'#9E9E9D'} />
+            <Icons>
+                <RightArrowIcon fill={'#9E9E9D'} />
+                <RightArrowIcon fill={'#9E9E9D'} />
+            </Icons>
+
         </ButtonStyled>
     );
 }
