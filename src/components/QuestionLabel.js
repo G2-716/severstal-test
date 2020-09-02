@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const QuestionLabelStyled = styled.div`
-  font-weight: 600;
+  font-weight: 400;
   white-space: nowrap;
   font-size: 1.3888vw;
 `;

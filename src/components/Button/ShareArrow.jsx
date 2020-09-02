@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import {Share} from "../svg/Arrows/Share";
+import {ShareIcon} from "../svg/arrows/ShareIcon";
 
-const ShareArrowStyled = styled(Share)`
+const ShareArrowStyled = styled(ShareIcon)`
   margin-left: 2vw;
   vertical-align: middle;
   height: 7vw;
@@ -14,9 +14,8 @@ const ShareArrowStyled = styled(Share)`
     }
 `
 
-export const ShareArrow = () =>
-{
+export const ShareArrow = () => {
     return (
         <ShareArrowStyled />
     );
-}
+};

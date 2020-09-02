@@ -1,9 +1,19 @@
 import {
+    elonMuskFacebookShareImage,
     elonMuskImage,
+    elonMuskInstagramVKShareImage,
+    jackMaFacebookShareImage,
     jackMaImage,
+    jackMaInstagramVKShareImage,
+    peterDruckerFacebookShareImage,
     peterDruckerImage,
+    peterDruckerInstagramVKShareImage,
+    tonyRobbinsFacebookShareImage,
     tonyRobbinsImage,
-    warrenBuffettImage
+    tonyRobbinsInstagramVKShareImage,
+    warrenBuffettFacebookShareImage,
+    warrenBuffettImage,
+    warrenBuffettInstagramVKShareImage,
 } from './constants/images';
 
 export const AnswerType = {
@@ -20,6 +30,11 @@ export const answerTypes = {
             'системное видение процессов. Твое будущее – обогнать Илона Маска и ' +
             'стать лидером инноваций.',
         image: elonMuskImage,
+        shareImage: {
+            vk: elonMuskInstagramVKShareImage,
+            instagram: elonMuskInstagramVKShareImage,
+            facebook: elonMuskFacebookShareImage,
+        },
     },
     [AnswerType.ProjectOffice]: {
         description: 'Ты инноватор и в тебе иногда просыпается внутренний предприниматель. ' +
@@ -27,21 +42,41 @@ export const answerTypes = {
             'используя открывающиеся возможности. Слышал что-то о Питере Друкере? ' +
             'Что-то есть у вас общее ;)',
         image: peterDruckerImage,
+        shareImage: {
+            vk: peterDruckerInstagramVKShareImage,
+            instagram: peterDruckerInstagramVKShareImage,
+            facebook: peterDruckerFacebookShareImage,
+        },
     },
     [AnswerType.Finance]: {
         description: 'Хочешь, чтобы завтрак с тобой стоил $3,5 млн? Потому что нам кажется, ' +
             'ты идешь по стопам Уоррена Баффета.',
         image: warrenBuffettImage,
+        shareImage: {
+            vk: warrenBuffettInstagramVKShareImage,
+            instagram: warrenBuffettInstagramVKShareImage,
+            facebook: warrenBuffettFacebookShareImage,
+        },
     },
     [AnswerType.Sales]: {
         description: 'Ты продашь даже детальку из своего детского лего! А твои эмоции ' +
             'всегда под контролем. Может ты русский Тони Роббинс?',
         image: tonyRobbinsImage,
+        shareImage: {
+            vk: tonyRobbinsInstagramVKShareImage,
+            instagram: tonyRobbinsInstagramVKShareImage,
+            facebook: tonyRobbinsFacebookShareImage,
+        },
     },
     [AnswerType.Purchases]: {
         description: 'Ты точно знаешь, сколько коробок пиццы съедят твои друзья на вечеринке ' +
             '(и сколько бутылок воды припасти на утро ;) ) Тебе не говорили, что ты похож на ' +
             'основателя Алибабы – Джека Ма?',
         image: jackMaImage,
+        shareImage: {
+            vk: jackMaInstagramVKShareImage,
+            instagram: jackMaInstagramVKShareImage,
+            facebook: jackMaFacebookShareImage,
+        },
     },
 };

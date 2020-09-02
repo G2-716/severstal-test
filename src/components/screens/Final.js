@@ -1,29 +1,31 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { resolve } from 'url';
-import { ProgressContext } from '../../contexts/ProgressContext';
-import { AnswerType, answerTypes } from '../../answerTypes.config';
-import { getAnswerById } from '../../utils/getAnswerById';
 import { fade, slideDown } from '../../utils/keyframes';
-import {ShareArrow} from "../Button/ShareArrow";
-import {Logo} from "../svg/Logo";
+import { ShareArrow } from "../Button/ShareArrow";
+import { Logo } from "../svg/Logo";
+import { DesktopShare } from "../Button/DesktopShare";
+import { useResult } from '../../hocs/useResult';
+import { getShareParams, SocialNetwork } from '../../utils/getShareParams';
 
 const FinalWrapper = styled.div`
-  background-color: #1E1D1C;
+  background-color: #000000;
   height: 100vh;
   width: 100%;
-  padding: 8.3333%  0 0 6.9444% ;
+  padding: 8.3333% 0 0 6.9444% ;
   color: #FFFFFF;
-  overflow: auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr  8.25%;
+  grid-template-rows: 1fr;
+  overflow: auto;
+  position: relative;
   @media screen and (max-width: 1100px)
   { 
     padding:0;
-    grid-template-rows: 2fr 3fr  10.25%;
+    grid-template-rows: 3fr 2fr  10.25%;
     grid-template-columns: 100% ;
-
+    @media screen and (orientation: landscape) and (max-height: 400px){
+    grid-template-rows: 51% 1fr 10.25%;
+    }
   }
 `;
 
@@ -47,10 +49,10 @@ const ResultTitle = styled.h1`
     margin-bottom: 2.4971%;
     font-size: 5.6666vw;
   }
-   @media screen and (min-width: 640px) and (max-width: 1199px)
+   @media screen and (min-width: 640px) and (max-width: 1100px)
   {
     font-size: 3.809vh;
-    @media screen and (orientation: landscape) and (max-height: 700px)
+    @media screen and (orientation: landscape) and (max-height: 700px) 
     {
      font-size: 3.6596vw;
     }
@@ -64,7 +66,7 @@ const ResultTitle = styled.h1`
       }
      
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
+  @media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 1100px){
       font-size: 3.6564vw;
   }
   
@@ -89,7 +91,7 @@ const Text = styled.p`
         font-size: 2.6675vh;
       }
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
+  @media screen and (max-height: 640px) and (orientation: landscape)and (max-width: 1100px){
       font-size: 2.1341vw;
   }
   
@@ -98,22 +100,22 @@ const LogoWrapper = styled.div`
   width: 13.6111%;
   height: 6.7777%;
   position: absolute;
-  top: 6.6666%;
-  right: 3.125%;
+  top: 6.6666vh;
+  right: 3.125vw;
   animation: ${slideDown} 0.4s ease-out 0.1s both;
   
   @media screen and (max-width: 1100px){
-      width: 33.3333%;
+      width: 20.3333%;
       height: 5.7812%;
       top: 2.9687%;
       left: 3.333%;
-   }
-   @media screen and (orientation: landscape) and (max-height: 640px) {
-       width: 15.3333%;
-   }
-   @media screen and (orientation: landscape) and (max-height: 180px) {
-       width: 9.3333%;
-       top: 1.9687%;
+       @media screen and (orientation: landscape) and (max-height: 760px) {
+           width: 15.3333%;
+       }
+       @media screen and (orientation: landscape) and (max-height: 180px) {
+           width: 9.3333%;
+           top: 1.9687%;
+       }
    }
 `
 const InfoWrapper = styled.div`
@@ -149,22 +151,40 @@ const ImgWrapper = styled.div`
       overflow: hidden;
       position: relative;
       height: 89.5%;
+       @media screen and (orientation: landscape) and (max-height: 400px){
+          grid-template-rows: 51% 1fr 10.25%;
+          height:100%;
+          width: 60%;
+          margin: 0 auto;
+       }
   }
 `
 
 const ImgStyled = styled.img`
   max-width: 100%;
-  height: 100%;
-  @media screen and (max-width: 1100px)
-  { 
+  width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  
+  @media screen and (max-width: 1100px) { 
     height: auto;
+    max-height: none;
     position:absolute;
     width:100%;
     overflow: hidden;
-   }
+    object-fit: cover;
+    
+    @media screen and (orientation: landscape) and (max-height: 400px){
+      margin-top: -9.615vh;
+    }
+  }
 `
 
-const ShareLink = styled.a`
+const DesktopShareLink = styled.a`
+  text-decoration: none;
+`;
+
+const MobileShareLink = styled.a`
     padding-left: 7.5%;
     border: none;
     background: none;
@@ -181,9 +201,10 @@ const ShareLink = styled.a`
     }
     
     @media screen and (min-width: 1100px){
-         font-size: 2.5vw;
-         grid-area:2/2/2/2;
-         padding-left: 9.5798%;
+         //font-size: 2.5vw;
+         //grid-area:2/2/2/2;
+         //padding-left: 9.5798%;
+         display: none;
     }
     @media screen and (max-width: 1100px)
     {
@@ -211,7 +232,7 @@ const ShareLink = styled.a`
          font-size: 3.0003vh;
        }
     }
-    @media screen and (max-height: 640px) and (orientation: landscape){
+    @media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 1100px){
       font-size: 2.7423vw;
     }
     
@@ -220,46 +241,19 @@ const StyledLink = styled.a`
     color: white;
 `
 
-const DEFAULT_RESULT = AnswerType.Sales;
-
 export const Final = props => {
-    const { answers } = useContext(ProgressContext);
-
-    const resultPoints = Object.keys(answers).reduce((res, questionId) => {
-        const answerId = answers[questionId];
-        if (!answerId) return res;
-
-        const answer = getAnswerById(questionId, answerId);
-        const { type } = answer;
-        return { ...res, [type]: (res[type] || 0) + 1 };
-    }, {});
-
-    const maxPoints = Math.max(...Object.keys(resultPoints).map(key => resultPoints[key]));
-    const resultType = Object.keys(resultPoints).find(key => resultPoints[key] === maxPoints);
-    const result = answerTypes[resultType || DEFAULT_RESULT];
-
-    const url = [window.location.protocol, '//', window.location.host, window.location.pathname].join('');
-
-    const shareTitle = 'Лидер перемен - Северсталь';
-    const shareDescription = '#северсталь #лидерперемен';
-    const shareImage = resolve(url, result.image);
-
-    const queryParams = new URLSearchParams();
-
-    queryParams.append('url', url);
-    queryParams.append('title', shareTitle);
-    queryParams.append('description', shareDescription);
-    queryParams.append('image', shareImage);
+    const result = useResult();
+    const vkShareParams = getShareParams(SocialNetwork.vk, result);
 
     return (
         <FinalWrapper>
             <ImgWrapper>
                 <ImgStyled src={result.image} alt={''}/>
             </ImgWrapper>
+            <LogoWrapper>
+                <LogoStyled />
+            </LogoWrapper>
             <InfoWrapper>
-                <LogoWrapper>
-                    <LogoStyled />
-                </LogoWrapper>
                 <ResultTitle>Твой результат</ResultTitle>
                 <ResultText>{result.description}</ResultText>
                 <br />
@@ -269,11 +263,16 @@ export const Final = props => {
                         на лидерскую программу компании “Северсталь”
                     </StyledLink>
                 </InvitingText>
+                <DesktopShareLink href={`http://vk.com/share.php?${vkShareParams.toString()}`}>
+                    <DesktopShare />
+                </DesktopShareLink>
             </InfoWrapper>
-            <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
+            <div>
+            <MobileShareLink href={`http://vk.com/share.php?${vkShareParams.toString()}`}>
                 Поделиться
                 <ShareArrow />
-            </ShareLink>
+            </MobileShareLink>
+            </div>
         </FinalWrapper>
     );
 };

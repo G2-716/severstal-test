@@ -33,7 +33,7 @@ const LabelStyled = styled.label`
     width: 12px;
     height: 12px;
     border-radius: 50%;
-    background-color: #3D8FE3;
+    background-color: #FFFFFF;
     @media screen and (max-width: 1100px) 
       { 
         top: -1px;
@@ -41,7 +41,6 @@ const LabelStyled = styled.label`
         width: 14px;
         height: 14px;
         border: 1px solid white;
-        background-color: #FFFFFF;
         @media screen and (max-height: 250px) {
          width: 8px;
          height: 8px;

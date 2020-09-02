@@ -10,19 +10,18 @@ import {Logo} from "../svg/Logo";
 
 const IntroWrapper = styled.div`
     overflow: auto;
-    background-color: #1E1D1C;
+    background-color: #000000;
     display: grid;
     padding: 0.7% 7%;
+    height: 100vh;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 100%;
     background-image: none;
-  
   @media screen and (max-width: 1199px) 
   {
-      height: 100vh;
       width: 100%;
       color: #FFFFFF;
-      background: #090908 url(${introMobileImage}) no-repeat center;
+      background: #000000 url(${introMobileImage}) no-repeat center local;
       background-position-y: 2.890%;
       background-size: contain;
       overflow: auto;
@@ -44,6 +43,9 @@ const FirstTextParagraph = styled(Text)`
 const SecondTextParagraph = styled(Text)`
   animation: ${slideDown} 0.4s ease-out 0.4s both;
 `
+const ThirdTextParagraph = styled(Text)`
+  animation: ${slideDown} 0.4s ease-out 0.7s both;
+`
 
 const IntroTitle = styled.h1`
   font-weight: 800;
@@ -51,7 +53,7 @@ const IntroTitle = styled.h1`
   line-height: 95%;
   margin: 13.8324% 0 7.8738%;
   
-  @media screen and (max-height: 650px ) 
+  @media screen and (max-height: 650px ) and (max-width: 1199px)
   {
     margin: 5.3324% 0 3.5738%;
   }
@@ -75,7 +77,7 @@ const IntroTitle = styled.h1`
       }
      
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
+  @media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 1100px){
       font-size: 8.0441vw;
   }
 `;
@@ -88,15 +90,11 @@ const InfoWrapper = styled.div`
     position: absolute;
     z-index: 2;
     padding: 2.890% 10.4109% 11.8497% 8.7671%;
+     @media screen and (max-height: 640px) and (orientation: landscape)
+          {
+            padding-bottom: 0;
+          }
   }
-  
-  @media screen and (max-height: 640px) and (orientation: landscape) 
-  {
-    position: absolute;
-    z-index: 2;
-    padding-bottom: 0;
-  }
-
 `
 
 const ImgWrapper = styled.div`
@@ -182,16 +180,20 @@ export const Intro = props => {
                 </LogoWrapper>
                 <IntroTitle>Лидер перемен</IntroTitle>
                 <FirstTextParagraph>
-                    Кого зовут лидерами перемен? Людей, осставляющих вмятину во Вселенной.
+                    Кого зовут лидерами перемен? Людей, оставляющих вмятину во Вселенной.
                     Людей, разрушающих рамки привычного, раздвинающих границы возможного,
                     объединяющихся друг с другом и меняющих мир.
                 </FirstTextParagraph>
                 <br />
                 <SecondTextParagraph>
                     Генри Форд, Мария Кюри,
-                    Стив Джобс и принцесса Диана. Какой лидер перемен ты?
-                    Пройди тест, чтобы узнать!
+                    Стив Джобс и принцесса Диана.
                 </SecondTextParagraph>
+                <br />
+                <ThirdTextParagraph>
+                    Какой лидер перемен ты?
+                    Пройди тест, чтобы узнать!
+                </ThirdTextParagraph>
                 <DesktopButtonStyled onClick={setNext}>Пройти тест</DesktopButtonStyled>
                 <MobileButtonStyled onClick={setNext}>Пройти тест</MobileButtonStyled>
             </InfoWrapper>

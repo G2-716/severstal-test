@@ -4,70 +4,121 @@ import { questions } from '../questions.config';
 import { ProgressContext } from '../contexts/ProgressContext';
 import { QuestionLabel } from "./QuestionLabel";
 import { RadioButton } from './RadioButton';
-import { DesktopButton } from './Button/DesktopButton';
 import { shuffle } from '../utils/shuffle';
 import { fade } from '../utils/keyframes';
-import {ButtonSize} from './Button/Button';
-import { Text } from '../shared/Text';
-import {ButtonArrow} from "./Button/ButtonArrow";
+import { PreviousButton } from './Button/PreviousButton';
+import { NextButton } from './Button/NextButton';
 
 
 const QuestionWrapperStyled = styled.div`
   display: grid;
-  grid-template-columns: 11% 2fr 3fr 11%;
-  grid-template-rows: 11% 1fr 15%;
+  grid-template-columns: 7.5% 3fr 2fr;
+  grid-template-rows: 7.888% 1fr 12.037%;
   height: 100%;
   width: 100%;
-  background-color: #585858;
-  @media screen and (max-width: 1100px) 
-  {
-    background-color: #3A3939;
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr auto;
-   @media screen and (max-height: 300px) and (orientation: landscape) 
-   {
-    grid-template-rows: 1fr 1fr 40px;
-   }
+  background-color: #1E1D1C;
+
+  @media screen and (min-width: 1700px) {
+      grid-template-columns: 11% 1fr 46.25%;
+      grid-template-rows: 18.4259% 1fr 8.3333%;
   }
-  
+  @media screen and (max-width: 1100px)  
+  {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 7.8125vh 1fr auto;
+    margin: auto;
+    width: 75.5208vw;
+    @media screen and (max-height: 800px) and (orientation: landscape){
+        grid-template-columns: 1fr;
+        grid-template-rows: 40.2vh 7.8125vh 1fr auto;
+    } 
+  }
+  @media screen and (max-width: 480px) and (orientation: portrait) 
+  {
+   grid-template-rows: 39.2709vh 11.3333vh 1fr auto;
+    padding-top: 2.0935vh;
+    width: 100%;
+  }
 `;
 
 const QuestionLabelStyled = styled(QuestionLabel)`
+
   grid-area: 1/2/2/3;
   align-self: flex-end;
+  font-size: 1.1979vw;
    @media screen and (max-width: 1100px) 
   {
-   position: absolute;
-   top: 4.6875%;
-   left:8.3333%;
-   z-index: 2;
-   font-size: 2.94vw;
+   grid-area: 2/1/3/2;
+   font-size: 2.55vw;
+     @media screen and (min-width: 640px) and (max-width: 1100px)
+     {
+        font-size: 2.15vh;
+     } 
   }
     @media screen and (orientation: landscape) and (max-height: 640px) 
   {
     font-size: 2.0341vw;
   }
   
+  @media screen and (max-width: 480px) and (orientation: portrait) 
+  {
+    padding-left: 8vw;
+    font-size: 1.83vh;
+  }
+  @media screen and (max-height: 640px) and (orientation: landscape){
+      font-size: 1.8341vw;
+    }
+     
 `;
 
 const QuestionBoxStyled = styled.div`
   grid-area: 2/2/3/3;
   display: flex;
   flex-direction: column;
-  padding-top: 23%;
+  padding-right: 2.7416vw;
   @media screen and (max-width: 1100px) 
   {
-    grid-area: 2/1/3/2;
-    padding: 5% 3.888% 0;
+    grid-area: 3/1/4/2;
+    padding-top: 5%;
   }
   
   @media screen and (max-height: 700px) and (min-width: 640px)
   {
     font-size: 2.7333vw;
-    padding: 2% 3.888% 0;
+    padding-top: 3.888%;
+  }
+  @media screen and (max-width: 480px) and (orientation: portrait) 
+  {
+    padding: 6.5vw 8vw 0;
   }
 `;
 
+const Question = styled.p`
+  font-size: 1.71875vw;
+  //font-size: 33px;
+  font-weight: 600;
+  line-height: 114%;
+  letter-spacing: 0.015em;
+  padding-bottom: 9.537vh;    
+  @media screen and (min-width: 640px) and (max-width: 1100px)
+  {
+    font-size: 2.45vh;
+    @media screen and (orientation: landscape) and (max-height: 700px)
+    {
+     font-size: 2.1333vw;
+    }
+  }
+  @media screen and (max-width: 640px)
+  {
+    font-size: 2.5341vw;
+    @media screen and (min-height: 560px ) 
+      {
+        font-size: 2.0936vh;
+        padding-bottom: 13.867vw;
+      }
+  }
+  
+`
 
 const Spacer = styled.div`
   flex-grow: ${({ value }) => value || 1};
@@ -78,14 +129,19 @@ const Spacer = styled.div`
 `;
 
 const AnswersBoxStyled = styled.div`
-  padding-top: 4.2%;
+  
+  @media screen and (max-width: 480px) and (orientation: portrait) 
+  {
+    padding: 0;
+  }
 `;
 
 const RadioButtonStyled = styled(RadioButton)`
-  font-size: 1.25vw;
-   @media screen and (min-width: 640px) and (max-width: 1199px)
+  font-size: 1.5625vw;
+  //font-size: 30px;
+   @media screen and (min-width: 640px) and (max-width: 1100px)
   {
-    font-size: 2.15vw;
+    font-size: 2.15vh;
     @media screen and (orientation: landscape) and (max-height: 700px)
     {
      font-size: 2.0833vw;
@@ -96,134 +152,113 @@ const RadioButtonStyled = styled(RadioButton)`
     font-size: 2.4841vw;
     @media screen and (min-height: 560px ) 
       {
-        font-size: 2.2841vh;
+        font-size: 1.9704vh;
       }
      
     @media screen and (orientation: landscape){
       font-size: 2.0841vw;
     }
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
-      font-size: 2.0341vw;
-    }
+  //@media screen and (max-height: 640px) and (orientation: landscape){
+  //    font-size: 2.0341vw;
+  //  }
 `;
 
 const ButtonsBoxStyled = styled.div`
+  display: flex;
+  align-items: center;
   grid-area: 3/2/4/2;
-  @media screen and (max-width: 1100px) 
-  {
-    display: none;
+  //padding-right: 2.7416vw;
+  padding: 4vh 2.7416vw 4vh 0;
+  @media screen and (max-width: 1100px) {
+    grid-area: 4/1/4/2;
+    padding: 4vh 0;
   }
+  @media screen and (max-width: 480px) and (orientation: portrait) 
+  {
+    padding-left: 8vw;
+  }
+  
 `;
 
-
-const MobileButtonsBox = styled.div`
-    display: flex;
-    grid-area: 3/1/4/2;
-    padding: 5% 3.888%;
-    justify-content: space-between;
-`
+const NextButtonStyled = styled(NextButton)`
+  margin-left: auto;
+`;
 
 const ImageWrapper = styled.div`
     grid-area: 1/3/4/4;
     @media screen and (max-width: 1100px) 
-      {
+    {
         grid-area: 1/1/1/3;
         overflow: hidden;
         position: relative;
         height: 100%;
         width: 100%;
-      }
+        
+       @media screen and (max-height: 800px) and (orientation: landscape){
+        margin: auto;
+        width: 45vw;
+        }
+    } 
 `
-const ImageStyled = styled.img`
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-  grid-area: 1/3/4/4;
-  animation: ${fade} 0.3s ease-out both;
-  @media screen and (max-width: 1100px)
-    { 
-      height: auto;
-      position:absolute;
-      top:-43%;
-      width:100%;
-      overflow: hidden;
-    }
-  @media screen and (max-width: 1100px) and (min-height: 700px)
-      {
-        top:-23%;
-      }
-  
-      
-`;
+
+const Wrapper = styled.div`
+  background-color: #1E1D1C;
+  overflow-x: hidden;
+  overflow-y: auto;
+  height: 100vh;
+`
 
 export const QuestionWrapper = props => {
     const { question, image } = props;
     const [questionAnswers, setQuestionAnswers] = useState(question.answers);
-    const { answers, setAnswer, setPrev, setNext, isLocked, setIsLocked } = useContext(ProgressContext);
+    const { answers, screenDelta, setAnswer, setPrev, setNext } = useContext(ProgressContext);
 
     const questionNumber = questions.findIndex(item => item.id === question.id) + 1;
     const questionsCount = questions.length;
 
-    useLayoutEffect(() => {
-        if (!answers[question.id]) setIsLocked(true);
-        return () => setIsLocked(false);
-    }, []);
+    const isFirstQuestion = questionNumber === 1;
 
     useLayoutEffect(() => {
         setQuestionAnswers(shuffle(question.answers));
     }, [question]);
 
     const handleAnswerChange = useCallback((answerId) => {
-        setIsLocked(false);
         setAnswer(question.id, answerId);
-    }, [question, setAnswer, setIsLocked]);
+        setNext();
+    }, [question, setAnswer]);
 
     return (
-        <QuestionWrapperStyled>
-            <QuestionLabelStyled current={questionNumber} total={questionsCount} />
-            <QuestionBoxStyled>
-                <Spacer value={2} />
-                <Text>{question.text}</Text>
-                <AnswersBoxStyled>
-                    {questionAnswers.map(answer => (
-                        <RadioButtonStyled
-                            key={answer.id}
-                            name={question.id}
-                            value={answer.id}
-                            checked={answers[question.id] === answer.id}
-                            onChange={handleAnswerChange}
-                        >
-                            {answer.text}
-                        </RadioButtonStyled>
-                    ))}
-                </AnswersBoxStyled>
-                <Spacer value={1} />
+        <Wrapper>
+            <QuestionWrapperStyled>
+                <QuestionLabelStyled current={questionNumber} total={questionsCount} />
+                <QuestionBoxStyled>
+                    <Spacer value={2} />
+                    <Question>{question.text}</Question>
+                    <AnswersBoxStyled>
+                        {questionAnswers.map(answer => (
+                            <RadioButtonStyled
+                                key={answer.id}
+                                name={question.id}
+                                value={answer.id}
+                                checked={answers[question.id] === answer.id}
+                                onChange={handleAnswerChange}
+                            >
+                                {answer.text}
+                            </RadioButtonStyled>
+                        ))}
+                    </AnswersBoxStyled>
+                    <Spacer value={1} />
 
-            </QuestionBoxStyled>
-            <ButtonsBoxStyled>
-                <DesktopButton
-                    size={ButtonSize.MD}
-                    disabled={isLocked}
-                    onClick={setNext}
-                >
-                    Дальше
-                </DesktopButton>
-            </ButtonsBoxStyled>
-            <MobileButtonsBox>
-                <ButtonArrow
-                    direction={'left'}
-                    onClick={setPrev}
-                />
-                <ButtonArrow
-                    direction={'right'}
-                    onClick={setNext}
-                    disabled={isLocked}
-                />
-            </MobileButtonsBox>
-            <ImageWrapper>
-                <ImageStyled src={image} alt='' />
-            </ImageWrapper>
-        </QuestionWrapperStyled>
+                </QuestionBoxStyled>
+                <ButtonsBoxStyled>
+                    {!isFirstQuestion && <PreviousButton onClick={setPrev} />}
+                    {screenDelta < 0 && <NextButtonStyled onClick={setNext} />}
+                </ButtonsBoxStyled>
+                <ImageWrapper>
+                    {image}
+                </ImageWrapper>
+            </QuestionWrapperStyled>
+        </Wrapper>
     );
 };

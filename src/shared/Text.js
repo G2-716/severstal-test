@@ -23,7 +23,7 @@ export const Text = styled.p`
         font-size: 2.3341vh;
       }
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
+  @media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 1199px){
       font-size: 2.1341vw;
   }
 `

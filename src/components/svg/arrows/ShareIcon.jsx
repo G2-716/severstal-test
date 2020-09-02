@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Share = ( props ) =>
+export const ShareIcon = (props ) =>
 {
     const { className, ...restProps } = props;
     return (
