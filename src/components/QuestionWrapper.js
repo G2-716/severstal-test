@@ -186,20 +186,20 @@ const NextButtonStyled = styled(NextButton)`
 `;
 
 const ImageWrapper = styled.div`
-    grid-area: 1/3/4/4;
-    @media screen and (max-width: 1100px) 
-    {
-        grid-area: 1/1/1/3;
-        overflow: hidden;
-        position: relative;
-        height: 100%;
-        width: 100%;
+  grid-area: 1/3/4/4;
+  overflow: hidden;
+  
+  @media screen and (max-width: 1100px) {
+    grid-area: 1/1/1/3;
+    position: relative;
+    height: 100%;
+    width: 100%;
         
-       @media screen and (max-height: 800px) and (orientation: landscape){
-        margin: auto;
-        width: 45vw;
-        }
-    } 
+    @media screen and (max-height: 800px) and (orientation: landscape){
+      margin: auto;
+      width: 45vw;
+    }
+  } 
 `
 
 const Wrapper = styled.div`

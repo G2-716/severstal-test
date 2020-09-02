@@ -19,7 +19,6 @@ const ButtonLabel = styled.span`
   line-height: 95%;
   color: #9E9E9D;
   margin-right: 10px;
-  align-self: center;
   @media screen and (min-width: 1100px) {
       display: initial;
       @media screen and (orientation: portrait) {
@@ -29,7 +28,6 @@ const ButtonLabel = styled.span`
 `
 const Icons = styled.div`
   display: flex;
-  align-self: center;
   width: 1.8vw;
   @media screen and (max-width: 1100px) {
     width: 5vw;
@@ -49,8 +47,8 @@ export const NextButton = (props) =>
         <ButtonStyled {...props}>
             <ButtonLabel>Дальше</ButtonLabel>
             <Icons>
-                <RightArrowIcon fill={'#9E9E9D'} />
-                <RightArrowIcon fill={'#9E9E9D'} />
+                <RightArrowIcon fill={'#9E9E9D'} height={'100%'} />
+                <RightArrowIcon fill={'#9E9E9D'} height={'100%'} />
             </Icons>
 
         </ButtonStyled>
