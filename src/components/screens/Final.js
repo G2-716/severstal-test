@@ -163,18 +163,21 @@ const ImgWrapper = styled.div`
 const ImgStyled = styled.img`
   max-width: 100%;
   width: 100%;
-  //height: 100%;
-  object-fit: cover;
-  @media screen and (max-width: 1100px)
-  { 
+  max-height: 100%;
+  object-fit: contain;
+  
+  @media screen and (max-width: 1100px) { 
     height: auto;
+    max-height: none;
     position:absolute;
     width:100%;
     overflow: hidden;
-     @media screen and (orientation: landscape) and (max-height: 400px){
-        margin-top: -9.615vh;
-     }
-   }
+    object-fit: cover;
+    
+    @media screen and (orientation: landscape) and (max-height: 400px){
+      margin-top: -9.615vh;
+    }
+  }
 `
 
 const DesktopShareLink = styled.a`
