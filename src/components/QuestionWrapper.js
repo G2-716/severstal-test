@@ -203,10 +203,9 @@ const ImageWrapper = styled.div`
 `
 
 const Wrapper = styled.div`
+  height: 100%;
   background-color: #1E1D1C;
   overflow-x: hidden;
-  min-height: 100vh;
-  height: 1px;
 `
 
 export const QuestionWrapper = props => {
