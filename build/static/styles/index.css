@@ -4,7 +4,21 @@
   box-sizing: border-box;
 }
 
-html, body, #root {
+html {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+body {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  overflow: auto;
+}
+
+#root {
+  position: absolute;
   height: 100%;
   width: 100%;
 }
