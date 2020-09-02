@@ -16,8 +16,8 @@ const NextButton = styled(Button)`
   }
 `
 const RightArrowStyled = styled(RightArrowLongIcon)`
-  margin-left: 43px;
-  max-width: 15%;
+  margin-left: 50px;
+  width: 2vw;
   vertical-align: middle;
 `
 

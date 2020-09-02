@@ -168,7 +168,6 @@ const ButtonsBoxStyled = styled.div`
   display: flex;
   align-items: center;
   grid-area: 3/2/4/2;
-  //padding-right: 2.7416vw;
   padding: 4vh 2.7416vw 4vh 0;
   @media screen and (max-width: 1100px) {
     grid-area: 4/1/4/2;
@@ -177,6 +176,7 @@ const ButtonsBoxStyled = styled.div`
   @media screen and (max-width: 480px) and (orientation: portrait) 
   {
     padding-left: 8vw;
+    padding-right: 8vw;
   }
   
 `;
