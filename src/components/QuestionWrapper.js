@@ -17,8 +17,7 @@ const QuestionWrapperStyled = styled.div`
   height: 100%;
   width: 100%;
   background-color: #1E1D1C;
-  overflow-x: hidden;
-  overflow: initial;
+
   @media screen and (min-width: 1700px) {
       grid-template-columns: 11% 1fr 46.25%;
       grid-template-rows: 18.4259% 1fr 8.3333%;
@@ -201,7 +200,8 @@ const ImageWrapper = styled.div`
 
 const Wrapper = styled.div`
   background-color: #1E1D1C;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   height: 100vh;
 `
 

@@ -1,16 +1,14 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import styled from 'styled-components';
-import { resolve } from 'url';
-import { ProgressContext } from '../../contexts/ProgressContext';
-import { AnswerType, answerTypes } from '../../answerTypes.config';
-import { getAnswerById } from '../../utils/getAnswerById';
 import { fade, slideDown } from '../../utils/keyframes';
-import {ShareArrow} from "../Button/ShareArrow";
-import {Logo} from "../svg/Logo";
-import {DesktopShare} from "../Button/DesktopShare";
+import { ShareArrow } from "../Button/ShareArrow";
+import { Logo } from "../svg/Logo";
+import { DesktopShare } from "../Button/DesktopShare";
+import { useResult } from '../../hocs/useResult';
+import { getShareParams, SocialNetwork } from '../../utils/getShareParams';
 
 const FinalWrapper = styled.div`
-  background-color: #1E1D1C;
+  background-color: #000000;
   height: 100vh;
   width: 100%;
   padding: 8.3333%  0 0 6.9444% ;
@@ -178,7 +176,11 @@ const ImgStyled = styled.img`
    }
 `
 
-const ShareLink = styled.a`
+const DesktopShareLink = styled.a`
+  text-decoration: none;
+`;
+
+const MobileShareLink = styled.a`
     padding-left: 7.5%;
     border: none;
     background: none;
@@ -235,36 +237,9 @@ const StyledLink = styled.a`
     color: white;
 `
 
-const DEFAULT_RESULT = AnswerType.Purchases;
-
 export const Final = props => {
-    const { answers } = useContext(ProgressContext);
-
-    const resultPoints = Object.keys(answers).reduce((res, questionId) => {
-        const answerId = answers[questionId];
-        if (!answerId) return res;
-
-        const answer = getAnswerById(questionId, answerId);
-        const { type } = answer;
-        return { ...res, [type]: (res[type] || 0) + 1 };
-    }, {});
-
-    const maxPoints = Math.max(...Object.keys(resultPoints).map(key => resultPoints[key]));
-    const resultType = Object.keys(resultPoints).find(key => resultPoints[key] === maxPoints);
-    const result = answerTypes[resultType || DEFAULT_RESULT];
-
-    const url = [window.location.protocol, '//', window.location.host, window.location.pathname].join('');
-
-    const shareTitle = 'Лидер перемен - Северсталь';
-    const shareDescription = '#северсталь #лидерперемен';
-    const shareImage = resolve(url, result.image);
-
-    const queryParams = new URLSearchParams();
-
-    queryParams.append('url', url);
-    queryParams.append('title', shareTitle);
-    queryParams.append('description', shareDescription);
-    queryParams.append('image', shareImage);
+    const result = useResult();
+    const vkShareParams = getShareParams(SocialNetwork.vk, result);
 
     return (
         <FinalWrapper>
@@ -284,13 +259,15 @@ export const Final = props => {
                         на лидерскую программу компании “Северсталь”
                     </StyledLink>
                 </InvitingText>
-                <DesktopShare onClick={()=>window.location = `http://vk.com/share.php?${queryParams.toString()}`} />
+                <DesktopShareLink href={`http://vk.com/share.php?${vkShareParams.toString()}`}>
+                    <DesktopShare />
+                </DesktopShareLink>
             </InfoWrapper>
             <div>
-            <ShareLink href={`http://vk.com/share.php?${queryParams.toString()}`}>
+            <MobileShareLink href={`http://vk.com/share.php?${vkShareParams.toString()}`}>
                 Поделиться
                 <ShareArrow />
-            </ShareLink>
+            </MobileShareLink>
             </div>
         </FinalWrapper>
     );

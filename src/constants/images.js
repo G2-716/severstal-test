@@ -27,10 +27,24 @@ const question10Image2 = process.env.PUBLIC_URL + '/static/images/Question10/bot
 const question10gif = process.env.PUBLIC_URL + '/static/images/Question10/question10.gif';
 
 const elonMuskImage = process.env.PUBLIC_URL + '/static/images/elon-musk.png';
+const elonMuskFacebookShareImage = process.env.PUBLIC_URL + '/static/images/elon-musk-facebook-share.png';
+const elonMuskInstagramVKShareImage = process.env.PUBLIC_URL + '/static/images/elon-musk-instagram-vk-share.png';
+
 const peterDruckerImage = process.env.PUBLIC_URL + '/static/images/peter-drucker.png';
+const peterDruckerFacebookShareImage = process.env.PUBLIC_URL + '/static/images/peter-drucker-facebook-share.png';
+const peterDruckerInstagramVKShareImage = process.env.PUBLIC_URL + '/static/images/peter-drucker-instagram-vk-share.png';
+
 const warrenBuffettImage = process.env.PUBLIC_URL + '/static/images/warren-buffett.png';
+const warrenBuffettFacebookShareImage = process.env.PUBLIC_URL + '/static/images/warren-buffett-facebook-share.png';
+const warrenBuffettInstagramVKShareImage = process.env.PUBLIC_URL + '/static/images/warren-buffett-instagram-vk-share.png';
+
 const tonyRobbinsImage = process.env.PUBLIC_URL + '/static/images/tony-robbins.png';
+const tonyRobbinsFacebookShareImage = process.env.PUBLIC_URL + '/static/images/tony-robbins-facebook-share.png';
+const tonyRobbinsInstagramVKShareImage = process.env.PUBLIC_URL + '/static/images/tony-robbins-instagram-vk-share.png';
+
 const jackMaImage = process.env.PUBLIC_URL + '/static/images/jack-ma.png';
+const jackMaFacebookShareImage = process.env.PUBLIC_URL + '/static/images/jack-ma-facebook-share.png';
+const jackMaInstagramVKShareImage = process.env.PUBLIC_URL + '/static/images/jack-ma-instagram-vk-share.png';
 
 const introImage = process.env.PUBLIC_URL + '/static/images/intro.png';
 const introMobileImage = process.env.PUBLIC_URL + '/static/images/intro_mobile.png';
@@ -72,4 +86,14 @@ export {
     logoImage,
     introImage,
     introMobileImage,
+    elonMuskFacebookShareImage,
+    elonMuskInstagramVKShareImage,
+    jackMaFacebookShareImage,
+    jackMaInstagramVKShareImage,
+    peterDruckerFacebookShareImage,
+    peterDruckerInstagramVKShareImage,
+    tonyRobbinsFacebookShareImage,
+    tonyRobbinsInstagramVKShareImage,
+    warrenBuffettFacebookShareImage,
+    warrenBuffettInstagramVKShareImage,
 };
