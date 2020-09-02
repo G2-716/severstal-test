@@ -11,14 +11,15 @@ const FinalWrapper = styled.div`
   background-color: #000000;
   height: 100vh;
   width: 100%;
-  padding: 8.3333%  0 0 6.9444% ;
+  padding: 8.3333% 0 0 6.9444% ;
   color: #FFFFFF;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 100%;
+  grid-template-rows: 1fr;
+  overflow: auto;
+  position: relative;
   @media screen and (max-width: 1100px)
   { 
-    overflow: auto;
     padding:0;
     grid-template-rows: 3fr 2fr  10.25%;
     grid-template-columns: 100% ;
@@ -48,10 +49,10 @@ const ResultTitle = styled.h1`
     margin-bottom: 2.4971%;
     font-size: 5.6666vw;
   }
-   @media screen and (min-width: 640px) and (max-width: 1199px)
+   @media screen and (min-width: 640px) and (max-width: 1100px)
   {
     font-size: 3.809vh;
-    @media screen and (orientation: landscape) and (max-height: 700px)
+    @media screen and (orientation: landscape) and (max-height: 700px) 
     {
      font-size: 3.6596vw;
     }
@@ -65,7 +66,7 @@ const ResultTitle = styled.h1`
       }
      
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
+  @media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 1100px){
       font-size: 3.6564vw;
   }
   
@@ -90,7 +91,7 @@ const Text = styled.p`
         font-size: 2.6675vh;
       }
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
+  @media screen and (max-height: 640px) and (orientation: landscape)and (max-width: 1100px){
       font-size: 2.1341vw;
   }
   
@@ -99,8 +100,8 @@ const LogoWrapper = styled.div`
   width: 13.6111%;
   height: 6.7777%;
   position: absolute;
-  top: 6.6666%;
-  right: 3.125%;
+  top: 6.6666vh;
+  right: 3.125vw;
   animation: ${slideDown} 0.4s ease-out 0.1s both;
   
   @media screen and (max-width: 1100px){
@@ -108,13 +109,13 @@ const LogoWrapper = styled.div`
       height: 5.7812%;
       top: 2.9687%;
       left: 3.333%;
-   }
-   @media screen and (orientation: landscape) and (max-height: 760px) {
-       width: 15.3333%;
-   }
-   @media screen and (orientation: landscape) and (max-height: 180px) {
-       width: 9.3333%;
-       top: 1.9687%;
+       @media screen and (orientation: landscape) and (max-height: 760px) {
+           width: 15.3333%;
+       }
+       @media screen and (orientation: landscape) and (max-height: 180px) {
+           width: 9.3333%;
+           top: 1.9687%;
+       }
    }
 `
 const InfoWrapper = styled.div`
@@ -228,7 +229,7 @@ const MobileShareLink = styled.a`
          font-size: 3.0003vh;
        }
     }
-    @media screen and (max-height: 640px) and (orientation: landscape){
+    @media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 1100px){
       font-size: 2.7423vw;
     }
     
@@ -246,10 +247,10 @@ export const Final = props => {
             <ImgWrapper>
                 <ImgStyled src={result.image} alt={''}/>
             </ImgWrapper>
+            <LogoWrapper>
+                <LogoStyled />
+            </LogoWrapper>
             <InfoWrapper>
-                <LogoWrapper>
-                    <LogoStyled />
-                </LogoWrapper>
                 <ResultTitle>Твой результат</ResultTitle>
                 <ResultText>{result.description}</ResultText>
                 <br />

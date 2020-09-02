@@ -53,7 +53,7 @@ const IntroTitle = styled.h1`
   line-height: 95%;
   margin: 13.8324% 0 7.8738%;
   
-  @media screen and (max-height: 650px ) 
+  @media screen and (max-height: 650px ) and (max-width: 1199px)
   {
     margin: 5.3324% 0 3.5738%;
   }
@@ -77,7 +77,7 @@ const IntroTitle = styled.h1`
       }
      
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
+  @media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 1100px){
       font-size: 8.0441vw;
   }
 `;
@@ -90,15 +90,11 @@ const InfoWrapper = styled.div`
     position: absolute;
     z-index: 2;
     padding: 2.890% 10.4109% 11.8497% 8.7671%;
+     @media screen and (max-height: 640px) and (orientation: landscape)
+          {
+            padding-bottom: 0;
+          }
   }
-  
-  @media screen and (max-height: 640px) and (orientation: landscape) 
-  {
-    position: absolute;
-    z-index: 2;
-    padding-bottom: 0;
-  }
-
 `
 
 const ImgWrapper = styled.div`

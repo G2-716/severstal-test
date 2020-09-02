@@ -7,7 +7,7 @@ const ButtonStyled = styled(Button)`
   display: flex;
   align-items: baseline;
   align-self: flex-start;
-  @media screen and (max-height: 640px) and (orientation: landscape){
+  @media screen and (max-height: 640px) and (max-width: 1100px) and (orientation: landscape){
       align-self: flex-end;
   }
 `
@@ -31,6 +31,9 @@ const Icons = styled.div`
   display: flex;
   align-self: center;
   width: 1.8vw;
+  @media screen and (max-width: 1100px) {
+    width: 5vw;
+  }
   @media screen and (max-height: 640px) and (max-width: 1100px) and (orientation: landscape){
     width: 5vw;
   }

@@ -45,11 +45,15 @@ const QuestionLabelStyled = styled(QuestionLabel)`
 
   grid-area: 1/2/2/3;
   align-self: flex-end;
-  font-size: 23px;
+  font-size: 1.1979vw;
    @media screen and (max-width: 1100px) 
   {
    grid-area: 2/1/3/2;
    font-size: 2.55vw;
+     @media screen and (min-width: 640px) and (max-width: 1100px)
+     {
+        font-size: 2.15vh;
+     } 
   }
     @media screen and (orientation: landscape) and (max-height: 640px) 
   {
@@ -64,6 +68,7 @@ const QuestionLabelStyled = styled(QuestionLabel)`
   @media screen and (max-height: 640px) and (orientation: landscape){
       font-size: 1.8341vw;
     }
+     
 `;
 
 const QuestionBoxStyled = styled.div`
@@ -89,15 +94,15 @@ const QuestionBoxStyled = styled.div`
 `;
 
 const Question = styled.p`
- // font-size: 1.71875vw;
-  font-size: 33px;
+  font-size: 1.71875vw;
+  //font-size: 33px;
   font-weight: 600;
   line-height: 114%;
   letter-spacing: 0.015em;
   padding-bottom: 9.537vh;    
-  @media screen and (min-width: 640px) and (max-width: 1199px)
+  @media screen and (min-width: 640px) and (max-width: 1100px)
   {
-    font-size: 3.26vw;
+    font-size: 2.45vh;
     @media screen and (orientation: landscape) and (max-height: 700px)
     {
      font-size: 2.1333vw;
@@ -111,9 +116,6 @@ const Question = styled.p`
         font-size: 2.0936vh;
         padding-bottom: 13.867vw;
       }
-  }
-  @media screen and (max-height: 640px) and (orientation: landscape){
-      font-size: 2.1341vw;
   }
   
 `
@@ -135,11 +137,11 @@ const AnswersBoxStyled = styled.div`
 `;
 
 const RadioButtonStyled = styled(RadioButton)`
-  //font-size: 1.5625vw;
-  font-size: 30px;
-   @media screen and (min-width: 640px) and (max-width: 1199px)
+  font-size: 1.5625vw;
+  //font-size: 30px;
+   @media screen and (min-width: 640px) and (max-width: 1100px)
   {
-    font-size: 2.85vw;
+    font-size: 2.15vh;
     @media screen and (orientation: landscape) and (max-height: 700px)
     {
      font-size: 2.0833vw;
@@ -157,24 +159,26 @@ const RadioButtonStyled = styled(RadioButton)`
       font-size: 2.0841vw;
     }
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
-      font-size: 2.0341vw;
-    }
+  //@media screen and (max-height: 640px) and (orientation: landscape){
+  //    font-size: 2.0341vw;
+  //  }
 `;
 
 const ButtonsBoxStyled = styled.div`
   display: flex;
   align-items: center;
   grid-area: 3/2/4/2;
-  padding-right: 2.7416vw;
+  //padding-right: 2.7416vw;
+  padding: 4vh 2.7416vw 4vh 0;
   @media screen and (max-width: 1100px) {
     grid-area: 4/1/4/2;
-    padding: 2% 0 5%;
+    padding: 4vh 0;
   }
   @media screen and (max-width: 480px) and (orientation: portrait) 
   {
     padding-left: 8vw;
   }
+  
 `;
 
 const NextButtonStyled = styled(NextButton)`
