@@ -185,7 +185,7 @@ const DesktopShareLink = styled.a`
 `;
 
 const MobileShareLink = styled.a`
-    padding-left: 7.5%;
+    padding:  0 0 10vh 7.5%;
     border: none;
     background: none;
     color: white;
@@ -201,9 +201,6 @@ const MobileShareLink = styled.a`
     }
     
     @media screen and (min-width: 1100px){
-         //font-size: 2.5vw;
-         //grid-area:2/2/2/2;
-         //padding-left: 9.5798%;
          display: none;
     }
     @media screen and (max-width: 1100px)
