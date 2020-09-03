@@ -10,19 +10,7 @@ import {IntroImage} from "./IntroImage";
 const IntroWrapper = styled.div`
     overflow: auto;
     background-color: #000000;
-    padding: 14.5vh 13.75vw;
     height: 100%;
-  @media screen and (max-width: 1199px) 
-  {
-      padding: 36.5234vh 6.5104vw 0;
-      width: 100%;
-  }
-  
-  @media screen and (max-width: 640px) 
-  {
-      padding: 45.9359vh 9.6vw 0 6.1576vh;
-  }
-  
 `;
 
 const FirstTextParagraph = styled(Text)`
@@ -57,17 +45,23 @@ const IntroTitle = styled.h1`
 `;
 
 const InfoWrapper = styled.div`
- //grid-area:1/1/1/1;
- position: relative;
- width: 46%;
- z-index: 4;
- @media screen and (max-width: 1199px)
-  { 
+  //grid-area:1/1/1/1;
+  position: relative;
+  width: 46%;
+  padding: 14.5vh 13.75vw;
+  z-index: 4;
+ 
+  @media screen and (max-width: 1199px) { 
     width: 100%;
-     @media screen and (max-height: 640px) and (orientation: landscape)
-          {
-            padding-bottom: 0;
-          }
+    padding: 36.5234vh 6.5104vw 0;
+    
+    @media screen and (max-height: 640px) and (orientation: landscape) {
+      padding-bottom: 0;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    padding: 45.9359vh 9.6vw 0 6.1576vh;
   }
 `
 
