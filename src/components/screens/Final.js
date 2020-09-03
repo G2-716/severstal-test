@@ -198,18 +198,15 @@ const ImgStyled = styled.img`
   
 `
 
-const ShareText = styled.span`
-  text-decoration: none;
-  border: none;
-  background: none;   
+const ShareBox = styled.div`
   color: white;
-  font-size: 1.3203vw;
   display: flex;
   margin-top: 10.2777vh;
   align-items: center;
-  @media screen and (max-width: 1100px){
-      display: none;
-    }
+`;
+
+const ShareText = styled(Text)`
+
 `;
 
 const StyledLink = styled.a`
@@ -253,14 +250,14 @@ export const Final = props => {
                         на лидерскую программу компании “Северсталь”
                     </StyledLink>
                 </InvitingText>
-                <ShareText>
-                    Поделиться
+                <ShareBox>
+                    <ShareText>Поделиться</ShareText>
                     <Icons>
                         <VKShareButton shareParams={vkShareParams} />
                         <FacebookShareButton shareParams={facebookShareParams} />
                         <InstagramShareButton shareParams={instagramShareParams} />
                     </Icons>
-                </ShareText>
+                </ShareBox>
             </InfoWrapper>
         </FinalWrapper>
     );
