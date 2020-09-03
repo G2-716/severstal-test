@@ -9,6 +9,7 @@ const ScreenWrapperStyled = styled.div`
   width: 100%;
   height: 100%;
   overflow: auto;
+  overflow-x: hidden;
 `;
 
 const DEFAULT_ANSWERS = questions.reduce((res, question) => ({ ...res, [question.id]: null }), {});
