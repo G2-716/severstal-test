@@ -47,12 +47,12 @@ const IntroTitle = styled.h1`
 const InfoWrapper = styled.div`
   //grid-area:1/1/1/1;
   position: relative;
-  width: 46%;
-  padding: 14.5vh 13.75vw;
+  width: 100%;
+  padding: 14.5vh 43.75vw 14.5vh 13.75vw;
   z-index: 4;
+  height: 100%;
  
   @media screen and (max-width: 1199px) { 
-    width: 100%;
     padding: 36.5234vh 6.5104vw 0;
     
     @media screen and (max-height: 640px) and (orientation: landscape) {
