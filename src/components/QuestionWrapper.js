@@ -76,6 +76,7 @@ const QuestionBoxStyled = styled.div`
   display: flex;
   flex-direction: column;
   padding-right: 2.7416vw;
+  flex-shrink: 0;
   @media screen and (max-width: 1100px) 
   {
     grid-area: 3/1/4/2;
@@ -159,9 +160,6 @@ const RadioButtonStyled = styled(RadioButton)`
       font-size: 2.0841vw;
     }
   }
-  //@media screen and (max-height: 640px) and (orientation: landscape){
-  //    font-size: 2.0341vw;
-  //  }
 `;
 
 const ButtonsBoxStyled = styled.div`
