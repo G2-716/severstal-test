@@ -11,15 +11,13 @@ import { InstagramShareButton } from '../Button/sharing/InstagramShareButton';
 
 const FinalWrapper = styled.div`
   background-color: #000000;
-  min-height: 100vh;
-  height: 100%;
   width: 100%;
+  min-height: 100%;
   padding-left: 13.6979vw ;
   color: #FFFFFF;
   display: grid;
   grid-template-columns: 1fr 1.25fr;
   grid-template-rows: 1fr;
-  overflow: auto;
   position: relative;
   @media screen and (max-width: 1100px)
   { 

@@ -8,9 +8,11 @@ import {Logo} from "../../svg/Logo";
 import {IntroImage} from "./IntroImage";
 
 const IntroWrapper = styled.div`
-    overflow: auto;
-    background-color: #000000;
-    height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  background-color: #000000;
+  min-height: 100%;
 `;
 
 const FirstTextParagraph = styled(Text)`

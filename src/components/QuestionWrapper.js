@@ -201,7 +201,10 @@ const ImageWrapper = styled.div`
 `
 
 const Wrapper = styled.div`
-  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  min-height: 100%;
   background-color: #1E1D1C;
   overflow-x: hidden;
 `
