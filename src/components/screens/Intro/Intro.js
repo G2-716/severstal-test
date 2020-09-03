@@ -50,7 +50,6 @@ const InfoWrapper = styled.div`
   width: 100%;
   padding: 14.5vh 43.75vw 14.5vh 13.75vw;
   z-index: 4;
-  height: 100%;
  
   @media screen and (max-width: 1199px) { 
     padding: 36.5234vh 6.5104vw 0;
