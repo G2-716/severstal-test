@@ -1,4 +1,4 @@
-import { Intro } from './components/screens/Intro';
+import { Intro } from './components/screens/Intro/Intro';
 import { Question1 } from './components/screens/questions/Question1';
 import { Question2 } from './components/screens/questions/Question2';
 import { Question3 } from './components/screens/questions/Question3';

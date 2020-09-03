@@ -46,8 +46,9 @@ const jackMaImage = process.env.PUBLIC_URL + '/static/images/jack-ma.png';
 const jackMaFacebookShareImage = process.env.PUBLIC_URL + '/static/images/jack-ma-facebook-share.png';
 const jackMaInstagramVKShareImage = process.env.PUBLIC_URL + '/static/images/jack-ma-instagram-vk-share.png';
 
-const introImage = process.env.PUBLIC_URL + '/static/images/intro.png';
-const introMobileImage = process.env.PUBLIC_URL + '/static/images/intro_mobile.png';
+const elonMuskIntro = process.env.PUBLIC_URL + '/static/images/elon-musk-intro.png';
+const gagarinIntro = process.env.PUBLIC_URL + '/static/images/gagarin-intro.png';
+const introGif = process.env.PUBLIC_URL + '/static/images/intro.gif';
 const logoImage = process.env.PUBLIC_URL + '/static/images/logo.svg';
 
 export {
@@ -84,8 +85,9 @@ export {
     warrenBuffettImage,
     peterDruckerImage,
     logoImage,
-    introImage,
-    introMobileImage,
+    elonMuskIntro,
+    gagarinIntro,
+    introGif,
     elonMuskFacebookShareImage,
     elonMuskInstagramVKShareImage,
     jackMaFacebookShareImage,

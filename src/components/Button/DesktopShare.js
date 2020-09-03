@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import {Button} from "./Button";
-import { ShareIconDesk } from "../svg/ShareIconDesk";
+import { ShareIcon } from "../svg/ShareIcon";
 
 const ButtonStyled = styled(Button)`
   display: flex;
@@ -32,7 +32,7 @@ export const DesktopShare = (props) =>
     return (
         <ButtonStyled {...props}>
             <ButtonLabel>Поделиться</ButtonLabel>
-            <ShareIconDesk />
+            <ShareIcon />
         </ButtonStyled>
     );
 }
