@@ -24,7 +24,6 @@ const IntroWrapper = styled.div`
       background: #000000 url(${introMobileImage}) no-repeat center local;
       background-position-y: 2.890%;
       background-size: contain;
-      overflow: auto;
       position:absolute;
       top:0;
       right:0;
