@@ -5,9 +5,6 @@ import { Logo } from "../svg/Logo";
 import { useResult } from '../../hocs/useResult';
 import { getShareParams, SocialNetwork } from '../../utils/getShareParams';
 import {ShareIcon} from "../svg/ShareIcon";
-import {VkIcon} from "../svg/SocialMediaIcons/VkIcon";
-import {FbIcon} from "../svg/SocialMediaIcons/FbIcon";
-import {IgIcon} from "../svg/SocialMediaIcons/IgIcon";
 import { VKShareButton } from '../Button/sharing/VKShareButton';
 import { FacebookShareButton } from '../Button/sharing/FacebookShareButton';
 import { InstagramShareButton } from '../Button/sharing/InstagramShareButton';
@@ -37,7 +34,6 @@ const FinalWrapper = styled.div`
 const ResultTitle = styled.h1`
   font-weight: 800;
   font-size: 1.71875vw;
-  line-height: 2.5vw;
   letter-spacing: 0.015em;
   margin-bottom: 8.4259vh;
   
@@ -128,7 +124,7 @@ const InfoWrapper = styled.div`
   @media screen and (max-width: 640px)
   { 
       padding-left: 8.5333vw;
-      padding-right: 3vw;
+      padding-right: 8.5333vw;
   }
   
 `
