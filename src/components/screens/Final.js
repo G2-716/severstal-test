@@ -8,6 +8,9 @@ import {ShareIcon} from "../svg/ShareIcon";
 import {VkIcon} from "../svg/SocialMediaIcons/VkIcon";
 import {FbIcon} from "../svg/SocialMediaIcons/FbIcon";
 import {IgIcon} from "../svg/SocialMediaIcons/IgIcon";
+import { VKShareButton } from '../Button/sharing/VKShareButton';
+import { FacebookShareButton } from '../Button/sharing/FacebookShareButton';
+import { InstagramShareButton } from '../Button/sharing/InstagramShareButton';
 
 const FinalWrapper = styled.div`
   background-color: #000000;
@@ -195,7 +198,7 @@ const ImgStyled = styled.img`
   
 `
 
-const DesktopShareLink = styled.a`
+const ShareText = styled.span`
   text-decoration: none;
   border: none;
   background: none;   
@@ -209,55 +212,6 @@ const DesktopShareLink = styled.a`
     }
 `;
 
-const MobileShareLink = styled.a`
-    border: none;
-    background: none;
-    color: #9E9E9D;
-    font-size: 5vw;
-    font-weight: 800;
-    outline: none;
-    text-decoration: none;
-    padding-left: 12.36872vw;
-    @media screen and (min-width: 1100px){
-         display: none;
-    }
-    @media screen and (max-width: 1100px)
-    {
-        font-size: 4.9999vw;
-        @media screen and (orientation: landscape)
-        {
-          font-size: 4.8vw;
-          bottom: 2.5%;
-        }
-    }
-  
-    @media screen and (max-width: 1100px) and (orientation: landscape)
-    {
-      font-size: 4.2496vw;
-    }
-     @media screen and (min-width: 640px) and (max-width: 1199px)
-    {
-           font-size: 2.86458vw;
-      @media screen and (orientation: landscape) and (max-height: 700px)
-     {
-       font-size: 2.7447vw;
-     } 
-    }
-    
-    @media screen and (max-width: 640px)
-    {
-       font-size: 3.2604vw;
-       padding-left: 8.5333vw;
-       @media screen and (min-height: 560px ) 
-       {
-         font-size: 3.0003vh;
-       }
-    }
-    @media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 1100px){
-      font-size: 2.7423vw;
-    }
-    
-`
 const StyledLink = styled.a`
     color: white;
 `
@@ -277,6 +231,8 @@ const Icons = styled.div`
 export const Final = props => {
     const result = useResult();
     const vkShareParams = getShareParams(SocialNetwork.vk, result);
+    const facebookShareParams = getShareParams(SocialNetwork.facebook, result);
+    const instagramShareParams = getShareParams(SocialNetwork.instagram, result);
 
     return (
         <FinalWrapper>
@@ -293,31 +249,19 @@ export const Final = props => {
                 <br />
                 <InvitingText>
                     Хочешь, чтобы было так? Проходи отбор &nbsp;
-                    <StyledLink href={'http://fut.ru/grp/severstal_grp'}>
+                    <StyledLink href={'http://fut.ru/grp/severstal_grp'} target={'_blank'}>
                         на лидерскую программу компании “Северсталь”
                     </StyledLink>
                 </InvitingText>
-                <DesktopShareLink
-                    target={'_blank'}
-                    href={`http://vk.com/share.php?${vkShareParams.toString()}`}
-                >
+                <ShareText>
                     Поделиться
                     <Icons>
-                        <VkIcon />
-                        <FbIcon />
-                        <IgIcon />
+                        <VKShareButton shareParams={vkShareParams} />
+                        <FacebookShareButton shareParams={facebookShareParams} />
+                        <InstagramShareButton shareParams={instagramShareParams} />
                     </Icons>
-                </DesktopShareLink>
+                </ShareText>
             </InfoWrapper>
-            <div>
-            <MobileShareLink
-                target={'_blank'}
-                href={`http://vk.com/share.php?${vkShareParams.toString()}`}
-            >
-                Поделиться
-                <ShareMobile />
-            </MobileShareLink>
-            </div>
         </FinalWrapper>
     );
 };

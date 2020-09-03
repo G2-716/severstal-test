@@ -12,6 +12,7 @@ const StartButtonStyled = styled(Button)`
   color: #9E9E9D;
   align-items: center;
   margin-top: 6.6666vh;
+  margin-bottom: 6.6666vh;
   font-weight: 800;
   &.${ButtonSize.MD} {
     font-size: 1.4583vw;
@@ -22,6 +23,7 @@ const StartButtonStyled = styled(Button)`
   @media screen and (max-width: 640px) {
       font-size: 4.8vw;
       margin-top: 4.064vh;
+      margin-bottom: 4.064vh;
    }
 `
 const Icons = styled.div`

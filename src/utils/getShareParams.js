@@ -13,12 +13,10 @@ export const getShareParams = (socialNetwork, result) => {
     const shareDescription = '#северсталь #лидерперемен';
     const shareImage = resolve(url, result.shareImage[socialNetwork]);
 
-    const queryParams = new URLSearchParams();
-
-    queryParams.append('url', url);
-    queryParams.append('title', shareTitle);
-    queryParams.append('description', shareDescription);
-    queryParams.append('image', shareImage);
-
-    return queryParams;
+    return {
+        url,
+        title: shareTitle,
+        description: shareDescription,
+        image: shareImage,
+    };
 };
