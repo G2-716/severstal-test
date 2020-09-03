@@ -11,7 +11,8 @@ import { InstagramShareButton } from '../Button/sharing/InstagramShareButton';
 
 const FinalWrapper = styled.div`
   background-color: #000000;
-  height: 100vh;
+  min-height: 100vh;
+  height: 100%;
   width: 100%;
   padding-left: 13.6979vw ;
   color: #FFFFFF;
