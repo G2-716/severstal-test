@@ -1,40 +1,42 @@
 import React from 'react';
 import styled from 'styled-components';
 import { fade, slideDown } from '../../utils/keyframes';
-import { ShareArrow } from "../Button/ShareArrow";
 import { Logo } from "../svg/Logo";
-import { DesktopShare } from "../Button/DesktopShare";
 import { useResult } from '../../hocs/useResult';
 import { getShareParams, SocialNetwork } from '../../utils/getShareParams';
+import {ShareIcon} from "../svg/ShareIcon";
+import {VkIcon} from "../svg/SocialMediaIcons/VkIcon";
+import {FbIcon} from "../svg/SocialMediaIcons/FbIcon";
+import {IgIcon} from "../svg/SocialMediaIcons/IgIcon";
 
 const FinalWrapper = styled.div`
   background-color: #000000;
   height: 100vh;
   width: 100%;
-  padding: 8.3333% 0 0 6.9444% ;
+  padding-left: 13.6979vw ;
   color: #FFFFFF;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1.25fr;
   grid-template-rows: 1fr;
   overflow: auto;
   position: relative;
   @media screen and (max-width: 1100px)
   { 
-    padding:0;
-    grid-template-rows: 3fr 2fr  10.25%;
-    grid-template-columns: 100% ;
-    @media screen and (orientation: landscape) and (max-height: 400px){
-    grid-template-rows: 51% 1fr 10.25%;
+    padding-left: 0;
+    padding-bottom: 15vh;
+    display: inline-block;
+    @media screen and (orientation: landscape) {
+       padding-bottom: 0;
     }
   }
 `;
 
 const ResultTitle = styled.h1`
   font-weight: 800;
-  font-size: 2.5vw;
+  font-size: 1.71875vw;
   line-height: 2.5vw;
   letter-spacing: 0.015em;
-  margin-bottom: 4.4444%;
+  margin-bottom: 8.4259vh;
   
   @media screen and (max-width: 1100px)
   {
@@ -51,7 +53,7 @@ const ResultTitle = styled.h1`
   }
    @media screen and (min-width: 640px) and (max-width: 1100px)
   {
-    font-size: 3.809vh;
+    font-size: 2.44141vh;
     @media screen and (orientation: landscape) and (max-height: 700px) 
     {
      font-size: 3.6596vw;
@@ -72,7 +74,7 @@ const ResultTitle = styled.h1`
   
 `
 const Text = styled.p`
-  font-size: 1.6666vw;
+  font-size: 1.5625vw;
   line-height: 113%;
   
   @media screen and (min-width: 640px) and (max-width: 1100px)
@@ -97,37 +99,49 @@ const Text = styled.p`
   
 `
 const LogoWrapper = styled.div`
-  width: 13.6111%;
+  width: 9.0104vw;
   height: 6.7777%;
   position: absolute;
-  top: 6.6666vh;
-  right: 3.125vw;
+  top: 6.7592vh;
+  left: 13.6979vw;
   animation: ${slideDown} 0.4s ease-out 0.1s both;
   
   @media screen and (max-width: 1100px){
-      width: 20.3333%;
-      height: 5.7812%;
-      top: 2.9687%;
-      left: 3.333%;
-       @media screen and (orientation: landscape) and (max-height: 760px) {
-           width: 15.3333%;
-       }
-       @media screen and (orientation: landscape) and (max-height: 180px) {
-           width: 9.3333%;
-           top: 1.9687%;
-       }
+     display: none;
    }
 `
 const InfoWrapper = styled.div`
-  padding: 20% 10.9234% 0 9.5798%;
-  grid-area:1/2/2/2;
+  padding-top: 36.3888vh;
+  grid-area:1/1/2/2;
   @media screen and (max-width: 1100px)
-  {
-    grid-area: 2/1/3/1;
-    padding: 5.6% 7.5%;
+  { 
+    position: relative;
+    padding: 68.9453vh 15.2343vw 0 12.36872vw;
+    margin: -3.6133vh 0 3.125vh 0;
+    z-index: 3;
+    color: white;
+  }
+  
+  @media screen and (max-width: 640px)
+  { 
+      padding-left: 8.5333vw;
+      padding-right: 3vw;
   }
   
 `
+const Blackout = styled.div`
+  position: absolute;
+  top: 31.9335vh;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.55) 100%);
+  @media screen and (min-width: 1100px){
+    display: none;
+  }
+`
+
 
 const ResultText = styled(Text)`
   animation: ${slideDown} 0.4s ease-out 0.1s both;
@@ -143,20 +157,21 @@ const LogoStyled = styled(Logo)`
 
 const ImgWrapper = styled.div`
   animation: ${fade} 0.4s ease-out 0.1s both;
-  grid-area:1/1/3/2;
-
+  grid-area: 1/2/2/2;
+  padding-top: 10vh;
  @media screen and (max-width: 1100px)
   { 
-      grid-area:1/1/2/1;
+      padding: 0;
+      grid-area:none;
       overflow: hidden;
-      position: relative;
-      height: 89.5%;
-       @media screen and (orientation: landscape) and (max-height: 400px){
-          grid-template-rows: 51% 1fr 10.25%;
-          height:100%;
-          width: 60%;
-          margin: 0 auto;
-       }
+      position: absolute;
+      top:0;
+      left:0;
+      bottom: 16.5898vh;
+      right:0;
+      @media screen and (orientation: landscape) {
+         bottom: 0;
+      }
   }
 `
 
@@ -165,50 +180,55 @@ const ImgStyled = styled.img`
   width: 100%;
   max-height: 100%;
   object-fit: contain;
-  
   @media screen and (max-width: 1100px) { 
-    height: auto;
     max-height: none;
     position:absolute;
     width:100%;
     overflow: hidden;
     object-fit: cover;
-    
-    @media screen and (orientation: landscape) and (max-height: 400px){
-      margin-top: -9.615vh;
+    height: 100%;
+    @media screen and (orientation: landscape) {
+      height: auto;
     }
   }
+  
+  
 `
 
 const DesktopShareLink = styled.a`
   text-decoration: none;
+  border: none;
+  background: none;   
+  color: white;
+  font-size: 1.3203vw;
+  display: flex;
+  margin-top: 10.2777vh;
+  align-items: center;
+  @media screen and (max-width: 1100px){
+      display: none;
+    }
 `;
 
 const MobileShareLink = styled.a`
-    padding-left: 7.5%;
     border: none;
     background: none;
-    color: white;
+    color: #9E9E9D;
     font-size: 5vw;
     font-weight: 800;
     outline: none;
     text-decoration: none;
-    grid-area:3/1/3/1;
-    
-    @media screen and (orientation: landscape) and (max-width: 1100px){
-      font-size: 4.8vw;
-      bottom: 2.5%;
-    }
-    
+    padding-left: 12.36872vw;
     @media screen and (min-width: 1100px){
-         //font-size: 2.5vw;
-         //grid-area:2/2/2/2;
-         //padding-left: 9.5798%;
          display: none;
     }
     @media screen and (max-width: 1100px)
     {
         font-size: 4.9999vw;
+        @media screen and (orientation: landscape)
+        {
+          font-size: 4.8vw;
+          bottom: 2.5%;
+        }
     }
   
     @media screen and (max-width: 1100px) and (orientation: landscape)
@@ -217,7 +237,7 @@ const MobileShareLink = styled.a`
     }
      @media screen and (min-width: 640px) and (max-width: 1199px)
     {
-       font-size: 2.8568vh;
+           font-size: 2.86458vw;
       @media screen and (orientation: landscape) and (max-height: 700px)
      {
        font-size: 2.7447vw;
@@ -227,6 +247,7 @@ const MobileShareLink = styled.a`
     @media screen and (max-width: 640px)
     {
        font-size: 3.2604vw;
+       padding-left: 8.5333vw;
        @media screen and (min-height: 560px ) 
        {
          font-size: 3.0003vh;
@@ -240,6 +261,18 @@ const MobileShareLink = styled.a`
 const StyledLink = styled.a`
     color: white;
 `
+const ShareMobile = styled(ShareIcon)`
+      margin-left: 2.3vw;
+      margin-bottom: -0.5em;
+`
+const Icons = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 7.03125vw;
+  margin-left: 2.8646vw;
+`
+
 
 export const Final = props => {
     const result = useResult();
@@ -249,11 +282,12 @@ export const Final = props => {
         <FinalWrapper>
             <ImgWrapper>
                 <ImgStyled src={result.image} alt={''}/>
+                <Blackout />
             </ImgWrapper>
-            <LogoWrapper>
-                <LogoStyled />
-            </LogoWrapper>
             <InfoWrapper>
+                <LogoWrapper>
+                    <LogoStyled />
+                </LogoWrapper>
                 <ResultTitle>Твой результат</ResultTitle>
                 <ResultText>{result.description}</ResultText>
                 <br />
@@ -263,14 +297,25 @@ export const Final = props => {
                         на лидерскую программу компании “Северсталь”
                     </StyledLink>
                 </InvitingText>
-                <DesktopShareLink href={`http://vk.com/share.php?${vkShareParams.toString()}`}>
-                    <DesktopShare />
+                <DesktopShareLink
+                    target={'_blank'}
+                    href={`http://vk.com/share.php?${vkShareParams.toString()}`}
+                >
+                    Поделиться
+                    <Icons>
+                        <VkIcon />
+                        <FbIcon />
+                        <IgIcon />
+                    </Icons>
                 </DesktopShareLink>
             </InfoWrapper>
             <div>
-            <MobileShareLink href={`http://vk.com/share.php?${vkShareParams.toString()}`}>
+            <MobileShareLink
+                target={'_blank'}
+                href={`http://vk.com/share.php?${vkShareParams.toString()}`}
+            >
                 Поделиться
-                <ShareArrow />
+                <ShareMobile />
             </MobileShareLink>
             </div>
         </FinalWrapper>
