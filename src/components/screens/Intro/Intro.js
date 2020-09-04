@@ -26,11 +26,11 @@ const TextStyled = styled(Text)`
   @media screen and (max-width: 640px)
   {
     padding-right: 8%;
-    @media screen and (min-height: 560px ) 
-      {
-            font-size: 1.72414vh;
-      }
   }
+   @media screen and (min-height: 560px )  and (max-width: 400px)
+      {
+         font-size: 1.72414vh;
+      }
   
 `
 
@@ -89,23 +89,21 @@ const LogoStyled = styled(Logo)`
 `
 
 const LogoWrapper = styled.div`
-  max-width: 24.23%;
+  max-width: 11.1458vw;
+ 
   @media screen and (max-width: 1100px)
     {
-      max-width: 23.698%;
+      max-width: 23.6979vw;
     }
-  @media screen and (min-width: 800px) and (max-width: 1100px) and (max-height: 950px )
+ 
+  @media screen and (max-width: 640px)
     {
-     width: 13%;
+         max-width: 28vw;
     }
 
-  @media screen and (max-height: 700px) and (min-width: 640px) and (max-width: 800px) 
-    {
-      max-width: 20%;
-    }
-   @media screen and (max-width: 640px) and (orientation: landscape)
+   @media screen and (max-height: 1100px) and (orientation: landscape)
    {
-      max-width: 25%
+          max-width: 17vw;
    }
 `
 

@@ -156,23 +156,33 @@ const ShareBox = styled.div`
   align-items: center;
 `;
 
-const ShareText = styled(Text)`
+const ShareText = styled.p`
+    font-size: 1.30208vw;
+    color: #9E9E9D;
+    font-weight: 800;
+    
+    @media screen and (max-width: 640px){
+       font-size: 2.46305vh;
+    }
+    @media screen and (max-width: 1100px){
+        font-size: 1.953123vh;
+        
+        @media screen and (orientation: landscape) and (max-height: 640px){
+         font-size: 1.8341vw;
+        }
+    } 
 
+    
 `;
 
 const StyledLink = styled.a`
     color: white;
 `
-const ShareMobile = styled(ShareIcon)`
-      margin-left: 2.3vw;
-      margin-bottom: -0.5em;
-`
+
 const Icons = styled.div`
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 7.03125vw;
-  margin-left: 2.8646vw;
+  margin-left: 1vw;
 `
 
 
@@ -206,7 +216,6 @@ export const Final = props => {
                     <Icons>
                         <VKShareButton shareParams={vkShareParams} />
                         <FacebookShareButton shareParams={facebookShareParams} />
-                        <InstagramShareButton shareParams={instagramShareParams} />
                     </Icons>
                 </ShareBox>
             </InfoWrapper>
