@@ -8,6 +8,7 @@ import { shuffle } from '../utils/shuffle';
 import { fade } from '../utils/keyframes';
 import { PreviousButton } from './Button/PreviousButton';
 import { NextButton } from './Button/NextButton';
+import {Subtitle} from "../shared/Subtitle";
 
 const Wrapper = styled.div`
   display: flex;
@@ -98,33 +99,6 @@ const QuestionBoxStyled = styled.div`
   }
 `;
 
-const Question = styled.p`
-  font-size: 1.71875vw;
-  //font-size: 33px;
-  font-weight: 600;
-  line-height: 114%;
-  letter-spacing: 0.015em;
-  padding-bottom: 9.537vh;    
-  @media screen and (min-width: 640px) and (max-width: 1100px)
-  {
-    font-size: 2.45vh;
-    @media screen and (orientation: landscape) and (max-height: 700px)
-    {
-     font-size: 2.1333vw;
-    }
-  }
-  @media screen and (max-width: 640px)
-  {
-    font-size: 2.5341vw;
-    @media screen and (min-height: 560px ) 
-      {
-        font-size: 2.0936vh;
-        padding-bottom: 13.867vw;
-      }
-  }
-  
-`
-
 const Spacer = styled.div`
   flex-grow: ${({ value }) => value || 1};
   @media screen and (max-width: 1100px) 
@@ -138,31 +112,6 @@ const AnswersBoxStyled = styled.div`
   @media screen and (max-width: 480px) and (orientation: portrait) 
   {
     padding: 0;
-  }
-`;
-
-const RadioButtonStyled = styled(RadioButton)`
-  font-size: 1.5625vw;
-  //font-size: 30px;
-   @media screen and (min-width: 640px) and (max-width: 1100px)
-  {
-    font-size: 2.15vh;
-    @media screen and (orientation: landscape) and (max-height: 700px)
-    {
-     font-size: 2.0833vw;
-    }
-  }
-  @media screen and (max-width: 640px)
-  {
-    font-size: 2.4841vw;
-    @media screen and (min-height: 560px ) 
-      {
-        font-size: 1.9704vh;
-      }
-     
-    @media screen and (orientation: landscape){
-      font-size: 2.0841vw;
-    }
   }
 `;
 
@@ -229,10 +178,10 @@ export const QuestionWrapper = props => {
                 <QuestionLabelStyled current={questionNumber} total={questionsCount} />
                 <QuestionBoxStyled>
                     <Spacer value={2} />
-                    <Question>{question.text}</Question>
+                    <Subtitle>{question.text}</Subtitle>
                     <AnswersBoxStyled>
                         {questionAnswers.map(answer => (
-                            <RadioButtonStyled
+                            <RadioButton
                                 key={answer.id}
                                 name={question.id}
                                 value={answer.id}
@@ -240,7 +189,7 @@ export const QuestionWrapper = props => {
                                 onChange={handleAnswerChange}
                             >
                                 {answer.text}
-                            </RadioButtonStyled>
+                            </RadioButton>
                         ))}
                     </AnswersBoxStyled>
                     <Spacer value={1} />

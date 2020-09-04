@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Text } from '../shared/Text'
 
 const InputStyled = styled.input`
   display: none;
@@ -55,7 +56,7 @@ const TextWrapperStyled = styled.div`
   min-height: 100%;
 `;
 
-const TextStyled = styled.span`
+const TextStyled = styled(Text)`
   margin-top: 2px;
 `;
 

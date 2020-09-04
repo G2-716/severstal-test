@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import styled from 'styled-components';
 import {ProgressContext} from "../../../contexts/ProgressContext";
 import {StartButton} from "../../Button/StartButton";
-import {Text} from "../../../shared/Text";
 import { fade, slideDown } from '../../../utils/keyframes';
 import {Logo} from "../../svg/Logo";
 import {IntroImage} from "./IntroImage";
+import {Text} from "../../../shared/Text";
 
 const IntroWrapper = styled.div`
   position: relative;
@@ -13,11 +13,30 @@ const IntroWrapper = styled.div`
   background-color: #000000;
 `;
 
-const FirstTextParagraph = styled(Text)`
+const TextStyled = styled(Text)`
+  font-size: 1.4063vw;
+  line-height: 113%;
+  letter-spacing: 0.01em;
+  @media screen and (min-width: 640px) and (max-width: 1100px)
+  {
+    padding-right: 15%;
+  }
+  @media screen and (max-width: 640px)
+  {
+    padding-right: 8%;
+  }
+   @media screen and (min-height: 560px )  and (max-width: 400px)
+      {
+         font-size: 1.72414vh;
+      }
+  
+`
+
+const FirstTextParagraph = styled(TextStyled)`
   animation: ${slideDown} 0.4s ease-out 0.1s both;
 `
 
-const SecondTextParagraph = styled(Text)`
+const SecondTextParagraph = styled(TextStyled)`
   animation: ${slideDown} 0.4s ease-out 0.4s both;
 `
 
@@ -27,7 +46,7 @@ const IntroTitle = styled.h1`
   line-height: 95%;
   margin: 7.8703vh 7.8738vw 6.0185vh 0;
   
-   @media screen and (max-width: 1199px)
+   @media screen and (max-width: 1100px)
   {
     font-size: 11.71875vw;
     margin: 5.2734vh 40vw 2.3437vh 0;
@@ -45,13 +64,12 @@ const IntroTitle = styled.h1`
 `;
 
 const InfoWrapper = styled.div`
-  //grid-area:1/1/1/1;
   position: relative;
   width: 100%;
   padding: 14.5vh 43.75vw 0 13.75vw;
   z-index: 4;
  
-  @media screen and (max-width: 1199px) { 
+  @media screen and (max-width: 1100px) { 
     padding: 36.5234vh 6.5104vw 0;
     
     @media screen and (max-height: 640px) and (orientation: landscape) {
@@ -69,23 +87,21 @@ const LogoStyled = styled(Logo)`
 `
 
 const LogoWrapper = styled.div`
-  max-width: 24.23%;
-  @media screen and (max-width: 1199px)
+  max-width: 11.1458vw;
+ 
+  @media screen and (max-width: 1100px)
     {
-      max-width: 23.698%;
+      max-width: 23.6979vw;
     }
-  @media screen and (min-width: 800px) and (max-width: 1199px) and (max-height: 950px )
+ 
+  @media screen and (max-width: 640px)
     {
-     width: 13%;
+         max-width: 28vw;
     }
 
-  @media screen and (max-height: 700px) and (min-width: 640px) and (max-width: 800px) 
-    {
-      max-width: 20%;
-    }
-   @media screen and (max-width: 640px) and (orientation: landscape)
+   @media screen and (max-height: 1100px) and (orientation: landscape)
    {
-      max-width: 25%
+          max-width: 17vw;
    }
 `
 

@@ -8,7 +8,7 @@ const ImageWrapper = styled.div`
   bottom:0;
   right: 0;
   left: 0;
-  @media screen and (max-width: 1199px)
+  @media screen and (max-width: 1100px)
   {
       bottom: auto;
       height: 59.8632vh;
@@ -35,7 +35,7 @@ const GagarinImg = styled.img`
   bottom: 0;
   height: 49.7222vh;
   z-index: 2;
-  @media screen and (max-width: 1199px)
+  @media screen and (max-width: 1100px)
   {
      height: 36.4257vh;
   }
@@ -51,7 +51,7 @@ const Gif = styled.img`
   left: 35.8854vw;
   height: 85vh;
   z-index: 1;
-  @media screen and (max-width: 1199px)
+  @media screen and (max-width: 1100px)
       { 
          top: 9.5703vh;
          left: 13.5416vw;
@@ -71,7 +71,7 @@ const ElonImg = styled.img`
   top: 0;
   height: 52.1296vh;
   z-index: 2;
-  @media screen and (max-width: 1199px)
+  @media screen and (max-width: 1100px)
       { 
          height: 34.9609vh;
       }  
