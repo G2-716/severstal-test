@@ -41,9 +41,10 @@ const ResultTitle = styled(Subtitle)`
     //margin-top: -2%;
     margin-bottom: 2.4971%;
   }
-  @media screen and (max-width: 640px)
+  @media screen and (max-width: 640px) and (orientation: portrait)
   {
         padding: 0;
+        margin-bottom: 4.9261vh;
   }
    
   
@@ -83,6 +84,7 @@ const InfoWrapper = styled.div`
   @media screen and (max-width: 640px)
   { 
       padding:0 7.5333vw 0 8.5333vw; 
+      margin-top: 0;
   }
   
   
@@ -159,6 +161,8 @@ const ImgStyled = styled.img`
   @media screen and (max-width: 640px) and (orientation: portrait) {
       height: auto;
       transform: translate(-15%, 0);
+      max-height: 100%;
+      object-fit: contain;
   }
   
 `
