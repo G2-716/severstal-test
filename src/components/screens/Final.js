@@ -7,7 +7,6 @@ import { getShareParams, SocialNetwork } from '../../utils/getShareParams';
 import {ShareIcon} from "../svg/ShareIcon";
 import { VKShareButton } from '../Button/sharing/VKShareButton';
 import { FacebookShareButton } from '../Button/sharing/FacebookShareButton';
-import { InstagramShareButton } from '../Button/sharing/InstagramShareButton';
 
 const FinalWrapper = styled.div`
   background-color: #000000;
@@ -155,6 +154,7 @@ const ImgWrapper = styled.div`
   animation: ${fade} 0.4s ease-out 0.1s both;
   grid-area: 1/2/2/2;
   padding-top: 10vh;
+  height: 100vh;
  @media screen and (max-width: 1100px)
   { 
       padding: 0;
@@ -194,7 +194,7 @@ const ImgStyled = styled.img`
 const ShareBox = styled.div`
   color: white;
   display: flex;
-  margin-top: 10.2777vh;
+  margin: 10.2777vh 0 4vh 0;
   align-items: center;
 `;
 
@@ -248,7 +248,6 @@ export const Final = props => {
                     <Icons>
                         <VKShareButton shareParams={vkShareParams} />
                         <FacebookShareButton shareParams={facebookShareParams} />
-                        <InstagramShareButton shareParams={instagramShareParams} />
                     </Icons>
                 </ShareBox>
             </InfoWrapper>

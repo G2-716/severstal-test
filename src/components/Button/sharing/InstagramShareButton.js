@@ -11,7 +11,7 @@ export const InstagramShareButton = ({ shareParams }) => {
     queryParams.append('image', image);
 
     return (
-        <ShareButton href={`http://vk.com/share.php?${shareParams.toString()}`}>
+        <ShareButton href={`http://instagram.com/share.php?${shareParams.toString()}`}>
             <IgIcon />
         </ShareButton>
     );
