@@ -8,6 +8,8 @@ import {ShareIcon} from "../svg/ShareIcon";
 import { VKShareButton } from '../Button/sharing/VKShareButton';
 import { FacebookShareButton } from '../Button/sharing/FacebookShareButton';
 import { InstagramShareButton } from '../Button/sharing/InstagramShareButton';
+import {Text} from "../../shared/Text";
+import {Subtitle} from "../../shared/Subtitle";
 
 const FinalWrapper = styled.div`
   background-color: #000000;
@@ -30,16 +32,11 @@ const FinalWrapper = styled.div`
   }
 `;
 
-const ResultTitle = styled.h1`
-  font-weight: 800;
-  font-size: 1.71875vw;
-  letter-spacing: 0.015em;
+const ResultTitle = styled(Subtitle)`
   margin-bottom: 8.4259vh;
-  
+  padding: 0;
   @media screen and (max-width: 1100px)
   {
-    padding: 0;
-    font-size: 6.6666vw;
     margin-bottom: 6.4971%;
   }
   
@@ -47,53 +44,12 @@ const ResultTitle = styled.h1`
   {
     margin-top: -2%;
     margin-bottom: 2.4971%;
-    font-size: 5.6666vw;
-  }
-   @media screen and (min-width: 640px) and (max-width: 1100px)
-  {
-    font-size: 2.44141vh;
-    @media screen and (orientation: landscape) and (max-height: 700px) 
-    {
-     font-size: 3.6596vw;
-    }
   }
   @media screen and (max-width: 640px)
   {
-    font-size: 4.3472vw;
-    @media screen and (min-height: 560px ) 
-      {
-        font-size: 4.0041vh;
-      }
-     
+        padding: 0;
   }
-  @media screen and (max-height: 640px) and (orientation: landscape) and (max-width: 1100px){
-      font-size: 3.6564vw;
-  }
-  
-`
-const Text = styled.p`
-  font-size: 1.5625vw;
-  line-height: 113%;
-  
-  @media screen and (min-width: 640px) and (max-width: 1100px)
-  {
-    font-size: 2.5428vw;
-    @media screen and (orientation: landscape) and (max-height: 700px)
-    {
-     font-size: 2.438vw;
-    }
-  }
-  @media screen and (max-width: 640px)
-  {
-    font-size: 2.9064vw;
-    @media screen and (min-height: 520px ) 
-      {
-        font-size: 2.6675vh;
-      }
-  }
-  @media screen and (max-height: 640px) and (orientation: landscape)and (max-width: 1100px){
-      font-size: 2.1341vw;
-  }
+   
   
 `
 const LogoWrapper = styled.div`

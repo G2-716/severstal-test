@@ -17,7 +17,7 @@ const StartButtonStyled = styled(Button)`
   &.${ButtonSize.MD} {
     font-size: 1.4583vw;
   }
-  @media screen and (max-width: 1199px) {
+  @media screen and (max-width: 1100px) {
     font-size: 3.90625vw;
   }
   @media screen and (max-width: 640px) {
@@ -30,7 +30,7 @@ const Icons = styled.div`
   display: flex;
   width: 1.8vw;
   margin-left: 24px;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1100px) {
     width: 5vw;
   }
   @media screen and (max-width: 640px) {
