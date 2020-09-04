@@ -6,9 +6,8 @@ import { preloadImage } from '../utils/preloadImage';
 import { ProgressProvider } from '../contexts/ProgressContext';
 
 const ScreenWrapperStyled = styled.div`
-  width: 100%;
-  height: 100%;
-  overflow: auto;
+  display: flex;
+  flex-grow: 1;
   overflow-x: hidden;
 `;
 

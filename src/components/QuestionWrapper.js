@@ -9,14 +9,18 @@ import { fade } from '../utils/keyframes';
 import { PreviousButton } from './Button/PreviousButton';
 import { NextButton } from './Button/NextButton';
 
+const Wrapper = styled.div`
+  display: flex;
+  flex-grow: 1;
+  background-color: #1E1D1C;
+  overflow-x: hidden;
+`
 
 const QuestionWrapperStyled = styled.div`
   display: grid;
   grid-template-columns: 7.5% 3fr 2fr;
   grid-template-rows: 7.888% 1fr 12.037%;
-  height: 100%;
   width: 100%;
-  background-color: #1E1D1C;
 
   @media screen and (min-width: 1700px) {
       grid-template-columns: 11% 1fr 46.25%;
@@ -198,15 +202,6 @@ const ImageWrapper = styled.div`
       width: 45vw;
     }
   } 
-`
-
-const Wrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
-  min-height: 100%;
-  background-color: #1E1D1C;
-  overflow-x: hidden;
 `
 
 export const QuestionWrapper = props => {

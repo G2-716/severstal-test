@@ -8,11 +8,9 @@ import {Logo} from "../../svg/Logo";
 import {IntroImage} from "./IntroImage";
 
 const IntroWrapper = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 1fr;
+  position: relative;
+  display: flex;
   background-color: #000000;
-  min-height: 100%;
 `;
 
 const FirstTextParagraph = styled(Text)`
@@ -50,7 +48,7 @@ const InfoWrapper = styled.div`
   //grid-area:1/1/1/1;
   position: relative;
   width: 100%;
-  padding: 14.5vh 43.75vw 14.5vh 13.75vw;
+  padding: 14.5vh 43.75vw 0 13.75vw;
   z-index: 4;
  
   @media screen and (max-width: 1199px) { 

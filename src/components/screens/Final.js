@@ -12,7 +12,6 @@ import { InstagramShareButton } from '../Button/sharing/InstagramShareButton';
 const FinalWrapper = styled.div`
   background-color: #000000;
   width: 100%;
-  min-height: 100%;
   padding-left: 13.6979vw ;
   color: #FFFFFF;
   display: grid;
@@ -22,7 +21,7 @@ const FinalWrapper = styled.div`
   @media screen and (max-width: 1100px)
   { 
     padding-left: 0;
-    padding-bottom: 15vh;
+    //padding-bottom: 15vh;
     display: inline-block;
     @media screen and (orientation: landscape) {
        padding-bottom: 0;
@@ -75,26 +74,25 @@ const Text = styled.p`
   font-size: 1.5625vw;
   line-height: 113%;
   
-  @media screen and (min-width: 640px) and (max-width: 1100px)
-  {
+  @media screen and (min-width: 640px) and (max-width: 1100px) {
     font-size: 2.5428vw;
-    @media screen and (orientation: landscape) and (max-height: 700px)
-    {
-     font-size: 2.438vw;
+    
+    @media screen and (orientation: landscape) and (max-height: 700px) {
+      font-size: 2.438vw;
     }
   }
-  @media screen and (max-width: 640px)
-  {
+  
+  @media screen and (max-width: 640px) {
     font-size: 2.9064vw;
-    @media screen and (min-height: 520px ) 
-      {
-        font-size: 2.6675vh;
-      }
-  }
-  @media screen and (max-height: 640px) and (orientation: landscape)and (max-width: 1100px){
-      font-size: 2.1341vw;
+    
+    @media screen and (min-height: 520px ) {
+      font-size: 2.6675vh;
+    }
   }
   
+  @media screen and (max-height: 640px) and (orientation: landscape)and (max-width: 1100px) {
+    font-size: 2.1341vw;
+  }
 `
 const LogoWrapper = styled.div`
   width: 9.0104vw;
