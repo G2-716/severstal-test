@@ -7,8 +7,7 @@ const LoaderStyled = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
+  flex-grow: 1;
   background-color: #000000;
 `;
 
