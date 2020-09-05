@@ -191,7 +191,6 @@ export const Final = props => {
     const result = useResult();
     const vkShareParams = getShareParams(SocialNetwork.vk, result);
     const facebookShareParams = getShareParams(SocialNetwork.facebook, result);
-    const instagramShareParams = getShareParams(SocialNetwork.instagram, result);
 
     return (
         <FinalWrapper>
