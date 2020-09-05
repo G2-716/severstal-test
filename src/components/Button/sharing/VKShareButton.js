@@ -2,7 +2,7 @@ import React from 'react';
 import { VkIcon } from '../../svg/SocialMediaIcons/VkIcon';
 import { ShareButton } from './ShareButton';
 
-export const VKShareButton = ({ shareParams }) => {
+export const VKShareButton = ({ shareParams, className, width, height }) => {
     const { url, title, description, image } = shareParams;
     const queryParams = new URLSearchParams();
     queryParams.append('url', url);
@@ -11,8 +11,11 @@ export const VKShareButton = ({ shareParams }) => {
     queryParams.append('image', image);
 
     return (
-        <ShareButton href={`http://vk.com/share.php?${queryParams.toString()}`}>
-            <VkIcon />
+        <ShareButton
+            className={className}
+            href={`http://vk.com/share.php?${queryParams.toString()}`}
+        >
+            <VkIcon width={width} height={height} />
         </ShareButton>
     );
 };

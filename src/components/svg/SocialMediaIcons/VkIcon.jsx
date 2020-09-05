@@ -1,9 +1,9 @@
 import React from "react";
 
 export const VkIcon = (props) => {
-    const { className, ...rest } = props;
-    return <svg width="32" height="auto" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <rect width="32" height="32" fill="url(#pattern5)"/>
+    const { className, width = '100%', height = '100%', ...rest } = props;
+    return <svg width={width} height={height} viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width={width} height={height} fill="url(#pattern5)"/>
         <defs>
             <pattern id="pattern5" patternContentUnits="objectBoundingBox" width="1" height="1">
                 <use href="#image5" transform="scale(0.00195312)"/>

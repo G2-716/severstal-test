@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { ShareButton } from './ShareButton';
 import { FbIcon } from '../../svg/SocialMediaIcons/FbIcon';
 
-export const FacebookShareButton = ({ shareParams }) => {
+export const FacebookShareButton = ({ shareParams, className, width, height }) => {
     const { url, title, description, image } = shareParams;
     const queryParams = new URLSearchParams();
     queryParams.append('u', url);
@@ -16,8 +16,11 @@ export const FacebookShareButton = ({ shareParams }) => {
     });
 
     return (
-        <ShareButton href={`https://www.facebook.com/sharer/sharer.php?${queryParams.toString()}`}>
-            <FbIcon />
+        <ShareButton
+            className={className}
+            href={`https://www.facebook.com/sharer/sharer.php?${queryParams.toString()}`}
+        >
+            <FbIcon width={width} height={height} />
         </ShareButton>
     );
 };

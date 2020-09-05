@@ -84,7 +84,6 @@ const InfoWrapper = styled.div`
   @media screen and (max-width: 640px)
   { 
       padding:0 7.5333vw 0 8.5333vw; 
-      margin-top: 0;
   }
   
   
@@ -170,48 +169,88 @@ const ImgStyled = styled.img`
 const ShareBox = styled.div`
   color: white;
   display: flex;
-  margin: 10.2777vh 0 4vh 0;
   align-items: center;
+  margin: 10.2777vh 0 4vh 0;
+  
   @media screen and (max-width: 1100px) { 
      margin-top: 4.78516vh;
   }
 `;
 
 const ShareText = styled.p`
-    font-size: 1.30208vw;
-    color: #9E9E9D;
-    font-weight: 800;
+  font-size: 1.30208vw;
+  color: #9E9E9D;
+  font-weight: 800;
     
-    @media screen and (max-width: 640px){
-       font-size: 2.46305vh;
-    }
-    @media screen and (max-width: 1100px){
-        font-size: 1.953123vh;
+  @media screen and (max-width: 640px) {
+    font-size: 2.46305vh;
+  }
+    
+  @media screen and (max-width: 1100px) {
+    font-size: 1.953123vh;
         
-        @media screen and (orientation: landscape) and (max-height: 640px){
-         font-size: 1.8341vw;
-        }
-    } 
-
-    
+    @media screen and (orientation: landscape) and (max-height: 640px) {
+      font-size: 1.8341vw;
+    }
+  }
 `;
 
 const StyledLink = styled.a`
-    color: white;
+  color: white;
 `
 
-const Icons = styled.div`
+const ShareIcons = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 1vw;
+  margin-left: 4.4vw;
 `
+
+const ShareButtonSizeMixin = (props) => `
+  width: 3.8vw;
+    
+  @media screen and (min-width: 640px) and (max-width: 1100px) {
+    width: 6.2vw;
+    
+    @media screen and (orientation: landscape) and (max-height: 800px) {
+      width: 4.4vw;
+    }
+    
+    @media screen and (orientation: landscape) and (max-height: 700px) {
+      width: 5.8vw;
+    }
+    
+    @media screen and (orientation: landscape) and (max-height: 400px) {
+      width: 5.2vw;
+    }
+  }
+  
+  @media screen and (max-width: 640px) {
+    width: 5.4vw;
+    
+    @media screen and (min-height: 560px) {
+      width: 10.4vw;
+    }
+     
+    @media screen and (orientation: landscape) {
+      width: 6.4vw;
+    }
+  }
+`;
+
+const VKShareButtonStyled = styled(VKShareButton)`
+  ${ShareButtonSizeMixin};
+`;
+
+const FacebookShareButtonStyled = styled(FacebookShareButton)`
+  ${ShareButtonSizeMixin};
+  margin-left: 1.4vw;
+`;
 
 
 export const Final = props => {
     const result = useResult();
     const vkShareParams = getShareParams(SocialNetwork.vk, result);
     const facebookShareParams = getShareParams(SocialNetwork.facebook, result);
-    const instagramShareParams = getShareParams(SocialNetwork.instagram, result);
 
     return (
         <FinalWrapper>
@@ -228,15 +267,16 @@ export const Final = props => {
                 <br />
                 <InvitingText>
                     Хочешь, чтобы было так? Проходи отбор&nbsp;
-                    <StyledLink href={'http://fut.ru/grp/severstal_grp'} target={'_blank'}>на лидерскую программу компании Северсталь
+                    <StyledLink href={'http://fut.ru/grp/severstal_grp'} target={'_blank'}>
+                        на лидерскую программу компании Северсталь
                     </StyledLink>
                 </InvitingText>
                 <ShareBox>
                     <ShareText>Поделиться</ShareText>
-                    <Icons>
-                        <VKShareButton shareParams={vkShareParams} />
-                        <FacebookShareButton shareParams={facebookShareParams} />
-                    </Icons>
+                    <ShareIcons>
+                        <VKShareButtonStyled shareParams={vkShareParams} />
+                        <FacebookShareButtonStyled shareParams={facebookShareParams} />
+                    </ShareIcons>
                 </ShareBox>
             </InfoWrapper>
         </FinalWrapper>
