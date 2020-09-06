@@ -21,5 +21,9 @@ export const Subtitle = styled.p`
         font-size: 2.0936vh;
         padding-bottom: 9.6vw;
       }
+      
+    @media screen and (orientation: landscape){
+      font-size: 2.12604vw;
+    }
   }
 `
