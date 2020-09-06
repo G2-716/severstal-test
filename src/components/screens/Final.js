@@ -11,18 +11,20 @@ import {Text} from "../../shared/Text";
 import {Subtitle} from "../../shared/Subtitle";
 
 const FinalWrapper = styled.div`
-  background-color: #000000;
-  width: 100%;
-  padding-left: 13.6979vw ;
-  color: #FFFFFF;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1.25fr;
   grid-template-rows: 1fr;
-  position: relative;
-  @media screen and (max-width: 1100px)
-  { 
+  width: 100%;
+  padding-left: 13.6979vw ;
+  color: #FFFFFF;
+  background-color: #000000;
+  overflow: hidden;
+
+  @media screen and (max-width: 1100px) { 
     padding-left: 0;
     display: inline-block;
+    
     @media screen and (orientation: landscape) {
        padding-bottom: 0;
     }
