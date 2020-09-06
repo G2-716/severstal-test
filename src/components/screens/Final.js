@@ -8,6 +8,7 @@ import { VKShareButton } from '../Button/sharing/VKShareButton';
 import { FacebookShareButton } from '../Button/sharing/FacebookShareButton';
 import {Text} from "../../shared/Text";
 import {Subtitle} from "../../shared/Subtitle";
+import { ImageRectangle } from './ImageRectangle';
 
 const FinalWrapper = styled.div`
   background-color: #000000;
@@ -268,6 +269,7 @@ export const Final = props => {
     return (
         <FinalWrapper>
             <ImgWrapper>
+                <ImageRectangle resultType={result.type} />
                 <ImgStyled src={result.image} alt={''}/>
                 <Blackout />
             </ImgWrapper>
