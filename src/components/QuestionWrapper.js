@@ -9,6 +9,7 @@ import { fade } from '../utils/keyframes';
 import { PreviousButton } from './Button/PreviousButton';
 import { NextButton } from './Button/NextButton';
 import {Subtitle} from "../shared/Subtitle";
+import { useBodyBackgroundColor } from '../hocs/useBodyBackgroundColor';
 
 const Wrapper = styled.div`
   display: flex;
@@ -142,6 +143,8 @@ export const QuestionWrapper = props => {
     const { question, image } = props;
     const [questionAnswers, setQuestionAnswers] = useState(question.answers);
     const { answers, screenDelta, setAnswer, setPrev, setNext } = useContext(ProgressContext);
+
+    useBodyBackgroundColor('#1E1D1C');
 
     const questionNumber = questions.findIndex(item => item.id === question.id) + 1;
     const questionsCount = questions.length;

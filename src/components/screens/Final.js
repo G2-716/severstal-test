@@ -9,6 +9,7 @@ import { VKShareButton } from '../Button/sharing/VKShareButton';
 import { FacebookShareButton } from '../Button/sharing/FacebookShareButton';
 import {Text} from "../../shared/Text";
 import {Subtitle} from "../../shared/Subtitle";
+import { useBodyBackgroundColor } from '../../hocs/useBodyBackgroundColor';
 
 const FinalWrapper = styled.div`
   position: relative;
@@ -198,6 +199,7 @@ const Icons = styled.div`
 
 export const Final = props => {
     const result = useResult();
+    useBodyBackgroundColor('#000000');
     const vkShareParams = getShareParams(SocialNetwork.vk, result);
     const facebookShareParams = getShareParams(SocialNetwork.facebook, result);
 

@@ -6,6 +6,7 @@ import { fade, slideDown } from '../../../utils/keyframes';
 import {Logo} from "../../svg/Logo";
 import {IntroImage} from "./IntroImage";
 import {Text} from "../../../shared/Text";
+import { useBodyBackgroundColor } from '../../../hocs/useBodyBackgroundColor';
 
 const IntroWrapper = styled.div`
   position: relative;
@@ -107,6 +108,8 @@ const LogoWrapper = styled.div`
 
 export const Intro = props => {
     const { setNext } = useContext(ProgressContext);
+    useBodyBackgroundColor('#000000');
+
     return (
         <IntroWrapper>
             <IntroImage />
