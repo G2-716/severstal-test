@@ -102,18 +102,16 @@ const AnswersBoxStyled = styled.div`
 
 const ButtonsBoxStyled = styled.div`
   display: flex;
-  align-items: center;
-  //grid-area: 3/2/4/2;
   align-items: flex-end;
   padding: 4vh 2.7416vw 4vh 0;
+  grid-area: 2/2/3/2;
+  align-self: flex-end;
   @media screen and (max-width: 1100px) {
     grid-area: 4/1/4/2;
-    padding: 4vh 0;
+    padding: 4vh 0 2vh 0;
   }
-  @media screen and (max-width: 480px) and (orientation: portrait) 
-  {
-    padding-left: 8vw;
-    padding-right: 8vw;
+  @media screen and (max-width: 480px) and (orientation: portrait){
+      padding: 4vh 8% 2vh 8%;
   }
   
 `;
@@ -163,7 +161,7 @@ export const QuestionWrapper = props => {
             <QuestionWrapperStyled>
                 <QuestionLabelStyled current={questionNumber} total={questionsCount} />
                 <QuestionBoxStyled>
-                    <Spacer value={2} />
+                    <Spacer value={1} />
                     <Subtitle>{question.text}</Subtitle>
                     <AnswersBoxStyled>
                         {questionAnswers.map(answer => (
@@ -179,12 +177,12 @@ export const QuestionWrapper = props => {
                         ))}
                     </AnswersBoxStyled>
                     <Spacer value={1} />
-                    <ButtonsBoxStyled>
-                        {!isFirstQuestion && <PreviousButton onClick={setPrev} />}
-                        {screenDelta < 0 && <NextButtonStyled onClick={setNext} />}
-                    </ButtonsBoxStyled>
-                </QuestionBoxStyled>
 
+                </QuestionBoxStyled>
+                <ButtonsBoxStyled>
+                    {!isFirstQuestion && <PreviousButton onClick={setPrev} />}
+                    {screenDelta < 0 && <NextButtonStyled onClick={setNext} />}
+                </ButtonsBoxStyled>
                 <ImageWrapper>
                     {image}
                 </ImageWrapper>

@@ -226,14 +226,14 @@ const ShareButtonSizeMixin = (props) => `
           width: 6.2354vw;
           
           @media screen and (min-height: 1000px){
-              width: 5.2354vh;
+              width: 4.8354vh;
             }
         }
        
   }
     
   @media screen and (max-width: 640px){
-        width: 5.8425vh;
+        width: 4.8425vh;
         
         @media screen and (orientation: landscape){
                 width: 6.2437vw;
@@ -241,10 +241,26 @@ const ShareButtonSizeMixin = (props) => `
                     width: 7vw;
                 }
         }
-        @media screen and (min-height: 700px) and (min-height: 500px) {
-             width: 5.3084vh;
+        
+        @media (min-width: 400px){
+            width: 7.6123vw;
         }
-         @media screen and (max-height: 550px) and (orientation: portrait) {
+        
+        @media (max-width: 350px) and (orientation: portrait) and (max-height:500px){
+           width: 6.101vh;
+            @media (max-height: 400px){
+                width: 7.401vh;
+            }
+        }
+        
+        @media (min-height: 770px){
+            width: 4.8235vh;
+            
+            @media(min-width: 600px) and (max-height: 1000px){
+                width: 5.8235vh;
+            }
+        }
+         @media screen and (min-width:450px) and (max-height: 500px) and (orientation: portrait) {
              width: 8.3084vh;
         }
   }
@@ -257,7 +273,6 @@ const VKShareButtonStyled = styled(VKShareButton)`
 
 const FacebookShareButtonStyled = styled(FacebookShareButton)`
   ${ShareButtonSizeMixin};
-  //margin-left: 1.4vw;
 `;
 
 
