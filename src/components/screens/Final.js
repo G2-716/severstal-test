@@ -38,7 +38,6 @@ const ResultTitle = styled(Subtitle)`
   
   @media screen and (max-width: 1100px) and (orientation: landscape)
   {
-    //margin-top: -2%;
     margin-bottom: 2.4971%;
   }
   @media screen and (max-width: 640px) and (orientation: portrait)
@@ -81,12 +80,10 @@ const InfoWrapper = styled.div`
     }
   }
   
-  @media screen and (max-width: 640px)
+  @media screen and (max-width: 640px) and (orientation: portrait)
   { 
-      padding:0 7.5333vw 0 8.5333vw; 
+      padding: 0 7.5333vw 0 8.5333vw; 
   }
-  
-  
   
 `
 const Blackout = styled.div`
@@ -138,8 +135,6 @@ const ImgWrapper = styled.div`
          width: 100%;
       }
   }
-  
-  
 `
 
 const ImgStyled = styled.img`
@@ -182,15 +177,22 @@ const ShareText = styled.p`
   color: #9E9E9D;
   font-weight: 800;
     
-  @media screen and (max-width: 640px) {
-    font-size: 2.46305vh;
+  @media screen and (min-width: 640px) and (max-width: 1100px) {
+    font-size: 1.9545vh;
+        @media screen and (orientation: landscape) and (max-height: 700px)
+        {
+         font-size: 1.8939vw;
+        }
   }
     
-  @media screen and (max-width: 1100px) {
-    font-size: 1.953123vh;
+  @media screen and (max-width: 640px){
+        font-size: 2.3184vw;
+        @media screen and (min-height: 560px) {
+    font-size: 1.6092vh;
+          }
         
-    @media screen and (orientation: landscape) and (max-height: 640px) {
-      font-size: 1.8341vw;
+    @media screen and (orientation: landscape)  {
+      font-size: 1.94515vw;
     }
   }
 `;
