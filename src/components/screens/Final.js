@@ -76,7 +76,7 @@ const InfoWrapper = styled.div`
     color: white;
   }
   
-  @media screen and (max-width: 640px)
+  @media screen and (max-width: 640px) and (orientation: portrait)
   { 
       padding-left: 8.5333vw;
       padding-right: 8.5333vw;
@@ -161,16 +161,23 @@ const ShareText = styled.p`
     color: #9E9E9D;
     font-weight: 800;
     
-    @media screen and (max-width: 640px){
-       font-size: 2.46305vh;
-    }
-    @media screen and (max-width: 1100px){
-        font-size: 1.953123vh;
-        
-        @media screen and (orientation: landscape) and (max-height: 640px){
-         font-size: 1.8341vw;
+    @media screen and (min-width: 640px) and (max-width: 1100px){
+        font-size: 1.9545vh;
+        @media screen and (orientation: landscape) and (max-height: 700px)
+        {
+         font-size: 1.8939vw;
         }
-    } 
+    }
+    @media screen and (max-width: 640px){
+        font-size: 2.3184vw;
+        @media screen and (min-height: 560px){
+                font-size: 1.6092vh;
+          }
+         
+        @media screen and (orientation: landscape){
+          font-size: 1.94515vw;
+        }
+    }
 
     
 `;
