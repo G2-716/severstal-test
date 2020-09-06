@@ -24,7 +24,7 @@ const FinalWrapper = styled.div`
 
   @media screen and (max-width: 1100px) { 
     padding-left: 0;
-    display: inline-block;
+    display: flex;
     
     @media screen and (orientation: landscape) {
        padding-bottom: 0;
@@ -73,6 +73,7 @@ const InfoWrapper = styled.div`
   @media screen and (max-width: 1100px)
   { 
     position: relative;
+    max-height: 100%;
     padding: 68.9453vh 15.2343vw 0 12.36872vw;
     margin: -3.6133vh 0 3.125vh 0;
     z-index: 3;
