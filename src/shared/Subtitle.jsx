@@ -19,7 +19,11 @@ export const Subtitle = styled.p`
     @media screen and (min-height: 560px ) 
       {
         font-size: 2.0936vh;
-        padding-bottom: 13.867vw;
+        padding-bottom: 9.6vw;
       }
+      
+    @media screen and (orientation: landscape){
+      font-size: 2.12604vw;
+    }
   }
 `

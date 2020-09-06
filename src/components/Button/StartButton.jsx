@@ -8,7 +8,7 @@ const StartButtonStyled = styled(Button)`
   background: none;
   display: flex;
   border: none;
-  font-size: 1.822vw;
+  font-size: 1.8229vw;
   color: #9E9E9D;
   align-items: center;
   margin-top: 6.6666vh;
@@ -18,22 +18,27 @@ const StartButtonStyled = styled(Button)`
     font-size: 1.4583vw;
   }
   
-  @media screen and (max-width: 640px) {
-      font-size: 4.8vw;
-      margin-top: 4.064vh;
-      margin-bottom: 4.064vh;
-   }
-   
-  @media screen and (max-width: 1100px) {
-    font-size: 3.90625vw;
+  @media screen and (min-width: 640px) and (max-width: 1100px){
+    font-size: 2.93181vh;
     
-    @media screen and (orientation: landscape) {
-      font-size: 2.40625vw;
+    @media screen and (orientation: landscape) and (max-height: 700px){
+      font-size: 2.84086vw;
     }
   }
   
-   
+  @media screen and (max-width: 640px){
+    font-size: 3.19384vw;
+    margin: 4.064vh 0;
+    @media screen and (min-height: 560px){
+        font-size: 2.21675vh;
+    }
+     
+    @media screen and (orientation: landscape){
+      font-size: 2.67955vw;
+    }
+  }
 `
+
 const Icons = styled.div`
   display: flex;
   width: 1.8vw;

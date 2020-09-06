@@ -27,20 +27,22 @@ const QuestionWrapperStyled = styled.div`
       grid-template-columns: 11% 1fr 46.25%;
       grid-template-rows: 18.4259% 1fr 8.3333%;
   }
+  
   @media screen and (max-width: 1100px)  
   {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 7.8125vh 1fr auto;
     margin: auto;
     width: 75.5208vw;
+    
     @media screen and (max-height: 800px) and (orientation: landscape){
         grid-template-columns: 1fr;
         grid-template-rows: 40.2vh 7.8125vh 1fr auto;
     } 
   }
-  @media screen and (max-width: 480px) and (orientation: portrait) 
-  {
-   grid-template-rows: 39.2709vh 11.3333vh 1fr auto;
+  
+  @media screen and (max-width: 480px) and (orientation: portrait){
+    grid-template-rows: 40.8867vh 8.3743vh 1fr auto;
     padding-top: 2.0935vh;
     width: 100%;
   }
@@ -50,30 +52,15 @@ const QuestionLabelStyled = styled(QuestionLabel)`
 
   grid-area: 1/2/2/3;
   align-self: flex-end;
-  font-size: 1.1979vw;
    @media screen and (max-width: 1100px) 
   {
    grid-area: 2/1/3/2;
-   font-size: 2.55vw;
-     @media screen and (min-width: 640px) and (max-width: 1100px)
-     {
-        font-size: 2.15vh;
-     } 
+     
   }
-    @media screen and (orientation: landscape) and (max-height: 640px) 
-  {
-    font-size: 2.0341vw;
-  }
-  
   @media screen and (max-width: 480px) and (orientation: portrait) 
   {
     padding-left: 8vw;
-    font-size: 1.83vh;
   }
-  @media screen and (max-height: 640px) and (orientation: landscape){
-      font-size: 1.8341vw;
-    }
-     
 `;
 
 const QuestionBoxStyled = styled.div`
@@ -82,27 +69,25 @@ const QuestionBoxStyled = styled.div`
   flex-direction: column;
   padding-right: 2.7416vw;
   flex-shrink: 0;
-  @media screen and (max-width: 1100px) 
-  {
+  @media screen and (max-width: 1100px){
     grid-area: 3/1/4/2;
     padding-top: 5%;
   }
   
-  @media screen and (max-height: 700px) and (min-width: 640px)
-  {
+  @media screen and (max-height: 700px) and (min-width: 640px){
     font-size: 2.7333vw;
     padding-top: 3.888%;
   }
-  @media screen and (max-width: 480px) and (orientation: portrait) 
-  {
-    padding: 6.5vw 8vw 0;
+  
+  @media screen and (max-width: 480px) and (orientation: portrait){
+    padding: 6.5vh 4vw 0 8vw;
   }
 `;
 
 const Spacer = styled.div`
   flex-grow: ${({ value }) => value || 1};
-  @media screen and (max-width: 1100px) 
-  {
+  
+  @media screen and (max-width: 1100px){
     display: none;
   }
 `;
