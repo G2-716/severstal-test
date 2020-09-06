@@ -15,15 +15,12 @@ const ButtonStyled = styled(Button)`
 const ButtonLabel = styled.span`
   display: none;
   font-weight: 800;
-  font-size: 1.502vw;
+  font-size: 1.30208vw;
   line-height: 95%;
   color: #9E9E9D;
   margin-right: 10px;
   @media screen and (min-width: 1100px) {
       display: initial;
-      @media screen and (orientation: portrait) {
-                  font-size: 1.5vh;
-          }
   }
 `
 const Icons = styled.div`

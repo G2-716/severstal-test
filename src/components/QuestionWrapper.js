@@ -20,19 +20,19 @@ const Wrapper = styled.div`
 const QuestionWrapperStyled = styled.div`
   display: grid;
   grid-template-columns: 7.5% 3fr 2fr;
-  grid-template-rows: 7.888% 1fr 12.037%;
+  grid-template-rows: 7.888vh 1fr auto;
   width: 100%;
 
   @media screen and (min-width: 1700px) {
       grid-template-columns: 11% 1fr 46.25%;
-      grid-template-rows: 18.4259% 1fr 8.3333%;
+      grid-template-rows: 18.4259% 1fr auto;
   }
   
   @media screen and (max-width: 1100px)  
   {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 7.8125vh 1fr auto;
-    margin: auto;
+    margin:  0 auto;
     width: 75.5208vw;
     
     @media screen and (max-height: 800px) and (orientation: landscape){
@@ -103,7 +103,8 @@ const AnswersBoxStyled = styled.div`
 const ButtonsBoxStyled = styled.div`
   display: flex;
   align-items: center;
-  grid-area: 3/2/4/2;
+  //grid-area: 3/2/4/2;
+  align-items: flex-end;
   padding: 4vh 2.7416vw 4vh 0;
   @media screen and (max-width: 1100px) {
     grid-area: 4/1/4/2;
@@ -178,12 +179,12 @@ export const QuestionWrapper = props => {
                         ))}
                     </AnswersBoxStyled>
                     <Spacer value={1} />
-
+                    <ButtonsBoxStyled>
+                        {!isFirstQuestion && <PreviousButton onClick={setPrev} />}
+                        {screenDelta < 0 && <NextButtonStyled onClick={setNext} />}
+                    </ButtonsBoxStyled>
                 </QuestionBoxStyled>
-                <ButtonsBoxStyled>
-                    {!isFirstQuestion && <PreviousButton onClick={setPrev} />}
-                    {screenDelta < 0 && <NextButtonStyled onClick={setNext} />}
-                </ButtonsBoxStyled>
+
                 <ImageWrapper>
                     {image}
                 </ImageWrapper>

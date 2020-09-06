@@ -204,39 +204,50 @@ const StyledLink = styled.a`
 const ShareIcons = styled.div`
   display: flex;
   align-items: center;
-  margin-left: 4.4vw;
+  margin-left: 1.77vw;
 `
 
 const ShareButtonSizeMixin = (props) => `
-  width: 3.8vw;
+  width: 3.212vw;
     
   @media screen and (min-width: 640px) and (max-width: 1100px) {
-    width: 6.2vw;
-    
-    @media screen and (orientation: landscape) and (max-height: 800px) {
-      width: 4.4vw;
-    }
-    
-    @media screen and (orientation: landscape) and (max-height: 700px) {
-      width: 5.8vw;
-    }
-    
-    @media screen and (orientation: landscape) and (max-height: 400px) {
-      width: 5.2vw;
-    }
+    width: 4.5031vh;
+        @media screen and (orientation: landscape) and (max-height: 750px)
+        {
+         width: 5.3635vw;
+        }
+        @media screen and (orientation: landscape) and (min-width: 800px)
+        {
+         width: 4.8635vw;
+        }
+        @media screen and (orientation: portrait) and (min-height: 640px)
+        {
+          width: 6.2354vw;
+          
+          @media screen and (min-height: 1000px){
+              width: 5.2354vh;
+            }
+        }
+       
   }
-  
-  @media screen and (max-width: 640px) {
-    width: 5.4vw;
     
-    @media screen and (min-height: 560px) {
-      width: 10.4vw;
-    }
-     
-    @media screen and (orientation: landscape) {
-      width: 6.4vw;
-    }
+  @media screen and (max-width: 640px){
+        width: 5.8425vh;
+        
+        @media screen and (orientation: landscape){
+                width: 6.2437vw;
+                @media screen and (max-height: 500px) {
+                    width: 7vw;
+                }
+        }
+        @media screen and (min-height: 700px) and (min-height: 500px) {
+             width: 5.3084vh;
+        }
+         @media screen and (max-height: 550px) and (orientation: portrait) {
+             width: 8.3084vh;
+        }
   }
+   
 `;
 
 const VKShareButtonStyled = styled(VKShareButton)`
@@ -245,7 +256,7 @@ const VKShareButtonStyled = styled(VKShareButton)`
 
 const FacebookShareButtonStyled = styled(FacebookShareButton)`
   ${ShareButtonSizeMixin};
-  margin-left: 1.4vw;
+  //margin-left: 1.4vw;
 `;
 
 

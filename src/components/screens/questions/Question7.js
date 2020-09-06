@@ -20,6 +20,10 @@ export const Question7 = (props) => {
              right: 0;
              height: 22.4609vh;
           } 
+      @media screen and (max-width: 640px) { 
+             height: auto;
+             width: 65.86666vw;
+      }    
     `
     const YellowRectangle = styled.div`
       position: absolute;
@@ -36,7 +40,14 @@ export const Question7 = (props) => {
              left: 49.1228%;
              height: 3.22vh;
              width: 20.7031vw;
-          } 
+          }
+          
+      @media screen and (max-width: 640px) { 
+             top: 32.8817vh;
+             height: 2.7093vh;
+             left: 50.1333vw;
+             width: 28.2666vw;
+      }      
     `
     const SecondImg = styled.img`
       position: absolute;
@@ -48,7 +59,12 @@ export const Question7 = (props) => {
              top: 23.6328vh;
              left: 0;
              height: 20.4101vh;
-          } 
+          }
+          
+      @media screen and (max-width: 640px) { 
+             height: auto;
+             width: 65.86666vw;
+      }      
     `
     const BlueRectangle = styled.div`
       position: absolute;
@@ -66,6 +82,12 @@ export const Question7 = (props) => {
              height: 5.664vh;
              width: 44.6614vw;
           } 
+       @media screen and (max-width: 640px) { 
+             top: 12.0689vh;
+             height: 4.8029vh;
+             left: 10.9333vw;
+             width: 61.33333vw;
+      }    
     `
     const GrayRectangle = styled.div`
       position: absolute;
@@ -83,6 +105,14 @@ export const Question7 = (props) => {
              height: 3.22vh;
              width: 20.7031vw;
           } 
+       @media screen and (max-width: 640px) { 
+             left: 56.2666vw;
+             top: 28.8177vh;
+             height: 2.7093vh;
+             width: 28.2666vw;
+       }   
+                    
+   
     `
     const createImage = () => {
         return (

@@ -18,7 +18,10 @@ export const Question4 = (props) => {
              top: 0;
              left: 0;
              height: 33.0078vh;
-          }      
+          }
+      @media screen and (max-width: 640px){ 
+         height: 26.6009vh;
+      }               
 
     `
     const YellowRectangle = styled.div`
@@ -30,14 +33,19 @@ export const Question4 = (props) => {
       height: 39.074vh;
       mix-blend-mode: lighten;
       z-index: 2;
-       @media screen and (max-width: 1100px)
-          { 
+       @media screen and (max-width: 1100px){ 
              top: 7.5195vh;
              left: auto;
              right: 6.1403%;
              height: 23.7304vh;
              width: 9.1145vw;
-          }  
+       }  
+       
+       @media screen and (max-width: 640px){ 
+            width: 12vw;
+            top: 8.2512vh;
+            height: 19.2118vh;
+       } 
     `
     const SecondImg = styled.img`
       position: absolute;
@@ -51,6 +59,11 @@ export const Question4 = (props) => {
              right: 0;
              height: 25.9765vh;
           }    
+          
+      @media screen and (max-width: 640px){ 
+        bottom: 0;
+        height: 21.0591vh;
+       } 
     `
     const BlueRectangle = styled.div`
       position: absolute;
@@ -67,7 +80,13 @@ export const Question4 = (props) => {
              left: 0;
              height: 8.8867vh;
              width: 35.4166vw;
-          }    
+          }  
+          
+      @media screen and (max-width: 640px){ 
+            width: 47.2vw;
+            top: 30.4187vh;
+            height: 7.26601vh;
+      }   
     `
 
     const createImage = () => {

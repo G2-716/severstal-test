@@ -21,9 +21,6 @@ const ButtonLabel = styled.span`
   margin-left: 10px;
   @media screen and (min-width: 1100px) {
       display: initial;
-          //@media screen and (orientation: portrait) {
-          //        font-size: 2.3148vh;
-          //}
   }
 `
 

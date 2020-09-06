@@ -4,7 +4,7 @@ import styled from 'styled-components';
 const ShareButtonStyled = styled.a`
   display: flex;
   text-decoration: none;
-  padding: 8px;
+  padding: 10px;
 `;
 
 export const ShareButton = (props) => {
