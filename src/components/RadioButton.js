@@ -14,10 +14,19 @@ const RadioIconStyled = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.57);
   border-radius: 50%;
   margin-right: 12px;
-  @media screen and (max-height: 250px) {
-    width: 10px;
-    height: 10px;
+  
+  @media screen and (max-width: 1100px){ 
+         margin-right: 2vw;
   }
+      
+   @media screen and (max-width: 640px) {
+      width: 14px;
+      height: 14px;
+      @media screen and (max-height: 560px) {
+        width: 9px;
+        height: 9px;
+      }
+   }
 `;
 
 const LabelStyled = styled.label`
@@ -42,9 +51,10 @@ const LabelStyled = styled.label`
         width: 14px;
         height: 14px;
         border: 1px solid white;
-        @media screen and (max-height: 250px) {
-         width: 8px;
-         height: 8px;
+        
+        @media screen and (max-height: 400px) {
+             width: 8px;
+             height: 8px;
         }
       }
   }
