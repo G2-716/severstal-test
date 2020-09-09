@@ -10,6 +10,7 @@ import {Text} from "../../shared/Text";
 import {Subtitle} from "../../shared/Subtitle";
 import { ImageRectangle } from './ImageRectangle';
 import { useBodyBackgroundColor } from '../../hocs/useBodyBackgroundColor';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 
 const FinalWrapper = styled.div`
   position: relative;
@@ -287,6 +288,10 @@ export const Final = props => {
     const vkShareParams = getShareParams(SocialNetwork.vk, result);
     const facebookShareParams = getShareParams(SocialNetwork.facebook, result);
 
+    const handleLandingLinkClick = () => {
+        reachMetrikaGoal('catalog');
+    };
+
     return (
         <FinalWrapper>
             <ImgWrapper>
@@ -303,7 +308,11 @@ export const Final = props => {
                 <br />
                 <InvitingText>
                     Хочешь, чтобы было так? Проходи отбор&nbsp;
-                    <StyledLink href={SEVERSTAL_LINK} target={'_blank'}>
+                    <StyledLink
+                        href={SEVERSTAL_LINK}
+                        target={'_blank'}
+                        onClick={handleLandingLinkClick}
+                    >
                         на лидерскую программу компании Северсталь
                     </StyledLink>
                 </InvitingText>
