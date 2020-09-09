@@ -11,8 +11,8 @@ const StartButtonStyled = styled(Button)`
   font-size: 1.8229vw;
   color: #9E9E9D;
   align-items: center;
-  margin-top: 6.6666vh;
-  margin-bottom: 6.6666vh;
+  margin-top: 5.6666vh;
+  margin-bottom: 5.6666vh;
   font-weight: 800;
   &.${ButtonSize.MD} {
     font-size: 1.4583vw;

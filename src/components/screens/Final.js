@@ -120,6 +120,7 @@ const ImgWrapper = styled.div`
   animation: ${fade} 0.4s ease-out 0.1s both;
   grid-area: 1/2/2/2;
   padding-top: 10vh;
+  max-height: 100vh;
   
   @media screen and (max-width: 640px) and (orientation: portrait) {
       width: 375px;
