@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { AnswerType } from '../../answerTypes.config';
+import { AnswerType } from '../../../answerTypes.config';
 
 const ImageRectangleStyled = styled.div`
   position: absolute;

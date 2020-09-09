@@ -9,7 +9,7 @@ import { Question7 } from './components/screens/questions/Question7';
 import { Question8 } from './components/screens/questions/Question8';
 import { Question9 } from './components/screens/questions/Question9';
 import { Question10 } from './components/screens/questions/Question10';
-import { Final } from './components/screens/Final';
+import { Final } from './components/screens/Final/Final';
 import { Loading } from './components/screens/Loading';
 
 import {

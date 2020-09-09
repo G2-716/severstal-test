@@ -7,7 +7,18 @@ import styled from "styled-components";
 export const Question5 = (props) => {
     const ImageWrapper = styled.div`
       position: relative;
+      height: 100%;
     `
+    const SecondImgWrapper = styled.div`
+       position: absolute;
+       overflow: hidden;
+       left: 0;
+       top: 0;
+       height: 31.09375vh;
+       width: 45.8333vw;
+       z-index: 2; 
+    `
+
     const FirstImg = styled.img`
       position: absolute;
       left: 3.9299vw;
@@ -21,7 +32,7 @@ export const Question5 = (props) => {
           }  
           
        @media screen and (max-width: 640px) { 
-             height: 18.7192vh;
+           display: none;
        }    
     `
     const YellowRectangle = styled.div`
@@ -42,10 +53,10 @@ export const Question5 = (props) => {
              width: 8.0729vw;
           } 
       @media screen and (max-width: 640px) { 
-             top: 7.1428vh;
-             height: 6.0344vh;
-             width: 10.6666vw;
-             left: 83.2vw;
+             top: 5vh;
+             height: 28.59375vh;
+             width: 65vw;
+             left: 17.5vw;
       }     
 
     `
@@ -62,7 +73,10 @@ export const Question5 = (props) => {
       }
        
       @media screen and (max-width: 640px) { 
-             height: 18.7192vh;
+          position: static;
+          height: 31.5625vh;
+          width: 101.3888vw;
+          margin-left: -6.6666vw;
       }     
     `
     const Gif = styled.img`
@@ -77,9 +91,13 @@ export const Question5 = (props) => {
              height: 22.3632vh;
           }
       @media screen and (max-width: 640px) { 
-             top: 17.9802vh;
-             left: 7.46666vw;
-             height: 18.7192vh;
+             top: auto;
+             bottom: 0;
+             left: auto;
+             right: 0;
+             width: 60.2777vw;
+             height: 25.625vh;
+             z-index: 3; 
       }    
     `
     const createImage = () => {
@@ -87,8 +105,10 @@ export const Question5 = (props) => {
             <ImageWrapper>
                 <FirstImg src={question5Image1}/>
                 <YellowRectangle/>
-                <SecondImg src={question5Image2}/>
                 <Gif src={question5gif} />
+                <SecondImgWrapper>
+                    <SecondImg src={question5Image2}/>
+                </SecondImgWrapper>
             </ImageWrapper>
         );
     }
