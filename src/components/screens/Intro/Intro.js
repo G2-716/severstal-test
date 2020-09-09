@@ -7,6 +7,7 @@ import {Logo} from "../../svg/Logo";
 import {IntroImage} from "./IntroImage";
 import {Text} from "../../../shared/Text";
 import { useBodyBackgroundColor } from '../../../hocs/useBodyBackgroundColor';
+import { reachMetrikaGoal } from '../../../utils/reachMetrikaGoal';
 
 const IntroWrapper = styled.div`
   position: relative;
@@ -110,6 +111,11 @@ export const Intro = props => {
     const { setNext } = useContext(ProgressContext);
     useBodyBackgroundColor('#000000');
 
+    const handleStart = () => {
+        reachMetrikaGoal('starttest');
+        setNext();
+    };
+
     return (
         <IntroWrapper>
             <IntroImage />
@@ -130,7 +136,7 @@ export const Intro = props => {
                     Пройди тест, чтобы узнать!
                 </SecondTextParagraph>
                 <br />
-                <StartButton onClick={setNext} />
+                <StartButton onClick={handleStart} />
             </InfoWrapper>
         </IntroWrapper>
     );
