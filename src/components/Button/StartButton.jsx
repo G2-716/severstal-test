@@ -41,22 +41,22 @@ const StartButtonStyled = styled(Button)`
 
 const Icons = styled.div`
   display: flex;
-  width: 1.8vw;
+  width: 2.1875vw;
   margin-left: 24px;
-  @media screen and (max-width: 1100px) {
-    width: 5vw;
-  }
+  
   @media screen and (max-width: 640px) {
+     width: 6.4vw;
     margin-left: 18px;
   }
-  @media screen and (max-width: 480px) and (orientation: portrait) 
-  {
-      width: 3.6vh;
-      
+  
+  @media screen and (max-width: 1100px) {
+    width: 4.6785vw;
+    @media (orientation: landscape){
+        width: 3.6785vw;
+    }
   }
-  @media screen and (max-width: 1100px) and (min-width: 640px) {
-      width: 4.8vh;
-  }
+  
+  
 `
 
 export const StartButton = props => {

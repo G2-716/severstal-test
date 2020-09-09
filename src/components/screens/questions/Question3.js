@@ -7,6 +7,7 @@ import styled from "styled-components";
 export const Question3 = (props) => {
     const ImageWrapper = styled.div`
       position: relative;
+      height: 100%;
     `
     const FirstImg = styled.img`
       position: absolute;
@@ -18,6 +19,11 @@ export const Question3 = (props) => {
          top: 0;
          left: 0;
          height: 19.1406vh;
+      }
+       @media screen and (max-width: 640px){ 
+         top: 0;
+         left: -4.5333vw;
+         height: 15.8867vh;
       }
     `
     const YellowRectangle = styled.div`
@@ -36,6 +42,13 @@ export const Question3 = (props) => {
          height: 45.8984vh;
          width: 15.3645vw;
       }
+      @media screen and (max-width: 640px){ 
+         top: 0;
+         bottom: 0;
+         height: auto;
+         left: 67.46666vw;
+         width: 20.85vw;
+      }
     `
     const SecondImg = styled.img`
       position: absolute;
@@ -47,6 +60,12 @@ export const Question3 = (props) => {
          top: 7.3242vh;
          left: 38.5964%;
          height: 23.4375vh;
+      }
+      
+      @media screen and (max-width: 640px){ 
+         top: 8.128079vh;
+         left: 34.6666vw;
+         height: 19.5812vh;
       }
     `
     const Gif = styled.img`
@@ -61,6 +80,11 @@ export const Question3 = (props) => {
              left: 0;
              height: 16.6015vh;
           }
+      @media screen and (max-width: 640px){ 
+         top: auto;
+         bottom: 0;
+         height: 13.7931vh;
+      }    
     `
 
     const createImage = () => {

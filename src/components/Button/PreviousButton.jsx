@@ -21,25 +21,29 @@ const ButtonLabel = styled.span`
   margin-left: 10px;
   @media screen and (min-width: 1100px) {
       display: initial;
-          //@media screen and (orientation: portrait) {
-          //        font-size: 2.3148vh;
-          //}
   }
 `
 
 const Icons = styled.div`
   display: flex;
-  width: 1.8vw;
-  @media screen and (max-width: 1100px) {
-    width: 5vw;
+  width: 1.4583vw;
+  
+  @media screen and (max-width: 640px) {
+      width: 3.9113vh;
   }
+  
+  @media screen and (min-width:640px) and (max-width: 1100px) {
+    width: 5.2083vw;
+    @media (orientation: landscape) {
+      width: 3.2083vw;
+    }
+  }
+  
   @media screen and (max-width: 480px) and (orientation: portrait) 
   {
-      width: 5vh;
+      width: 4.302vh;
   }
-  @media screen and (max-width: 1100px) and (min-width: 640px) {
-      width: 4.8vh;
-  }
+  
 `
 
 export const PreviousButton = (props) =>

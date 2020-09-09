@@ -13,13 +13,16 @@ export const Question1 = (props) => {
       left: 12.95%;
       top: 1.574vh;
       height: 51.3889vh;
-      @media screen and (max-width: 1100px)
-        { 
+      @media screen and (max-width: 1100px){ 
           left: auto;
           right:0;
           top: 0;
           height: 35.8398vh;
         }
+        
+      @media screen and (max-width: 640px){ 
+          height: 29.433498vh;
+      }
     `
     const YellowRectangle = styled.div`
       position: absolute;
@@ -37,6 +40,11 @@ export const Question1 = (props) => {
           height: 4.0003vh;
           width: 55.0877%;
         }
+        
+        @media screen and (max-width: 640px) {
+         height: 3.3251vh;
+         top: 34.1133vh;
+        }
     `
     const SecondImg = styled.img`
       position: absolute;
@@ -48,6 +56,12 @@ export const Question1 = (props) => {
           left: 0;
           top: 22.4609vh;
           height: 23.8281vh;
+
+        }
+        @media screen and (max-width: 640px)
+        { 
+          top: 20.5665vh;
+          height: 19.5812vh;
         }
     `
     const Gif = styled.img`
@@ -57,10 +71,15 @@ export const Question1 = (props) => {
       height: 19.8148vh;
       @media screen and (max-width: 1100px)
           { 
-             top: 4.6875vh;
-             left: 5.7894%;
              height: 14.746vh;
           }
+      
+      @media screen and (max-width: 1100px)
+          { 
+             top: 4.6875vh;
+             left: 5.7894%;
+             height: 12.192vh;
+          }    
     `
 
     const createImage = () => {

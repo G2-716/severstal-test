@@ -2,20 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 const ShareButtonStyled = styled.a`
+  display: flex;
   text-decoration: none;
-  height: 5vh;
-  margin-left: 1.0416vw;
-  
-  @media screen and (max-width: 1100px){
-      height: 3.5vh;
-      margin-left: 3.0416vw;
-      
-      @media screen and (orientation: landscape) and (max-height: 640px){
-         margin-left: 0.7532vw;
-         height: 2.5vw;
-      }  
+  padding: 0.5208vw;
+  @media screen and (max-width: 1100px) {
+    padding: 1.302vw;
   }
-   
+  @media screen and (max-width: 640px) {
+     padding: 2.1333vw;
+  }
 `;
 
 export const ShareButton = (props) => {
