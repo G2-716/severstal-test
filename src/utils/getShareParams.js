@@ -9,8 +9,8 @@ export const SocialNetwork = {
 export const getShareParams = (socialNetwork, result) => {
     const url = [window.location.protocol, '//', window.location.host, window.location.pathname].join('');
 
-    const shareTitle = 'Лидер перемен - Северсталь';
-    const shareDescription = '#северсталь #лидерперемен';
+    const shareTitle = 'Лидер перемен #какойтылидер #северсталь';
+    const shareDescription = '#какойтылидер #северсталь';
     const shareImage = resolve(url, result.shareImage[socialNetwork]);
 
     return {

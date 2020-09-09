@@ -15,7 +15,7 @@ const ShareButtonStyled = styled.a`
 
 export const ShareButton = (props) => {
     return (
-        <ShareButtonStyled {...props}>
+        <ShareButtonStyled {...props} target="_blank">
             {props.children}
         </ShareButtonStyled>
     );

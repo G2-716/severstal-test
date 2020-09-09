@@ -279,6 +279,7 @@ const FacebookShareButtonStyled = styled(FacebookShareButton)`
   ${ShareButtonSizeMixin};
 `;
 
+const SEVERSTAL_LINK = 'http://fut.ru/grp/severstal_grp?utm_source=fut&utm_medium=wowproject&utm_campaign=severstal';
 
 export const Final = props => {
     const result = useResult();
@@ -302,7 +303,7 @@ export const Final = props => {
                 <br />
                 <InvitingText>
                     Хочешь, чтобы было так? Проходи отбор&nbsp;
-                    <StyledLink href={'http://fut.ru/grp/severstal_grp'} target={'_blank'}>
+                    <StyledLink href={SEVERSTAL_LINK} target={'_blank'}>
                         на лидерскую программу компании Северсталь
                     </StyledLink>
                 </InvitingText>
