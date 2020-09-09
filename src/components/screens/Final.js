@@ -23,7 +23,7 @@ const FinalWrapper = styled.div`
   @media screen and (max-width: 1100px)
   { 
     padding-left: 0;
-    display: flex;
+    display: inline-block;
     @media screen and (orientation: landscape) {
        padding-bottom: 0;
     }
