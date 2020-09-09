@@ -8,6 +8,10 @@ export const Question1 = (props) => {
     const ImageWrapper = styled.div`
       position: relative;
     `
+    const FirstImgWrapper = styled.div`
+
+    `
+
     const FirstImg = styled.img`
       position: absolute;
       left: 12.95%;
@@ -42,8 +46,7 @@ export const Question1 = (props) => {
         }
         
         @media screen and (max-width: 640px) {
-         height: 3.3251vh;
-         top: 34.1133vh;
+           display: none;
         }
     `
     const SecondImg = styled.img`

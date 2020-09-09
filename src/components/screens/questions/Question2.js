@@ -7,6 +7,7 @@ import styled from "styled-components";
 export const Question2 = (props) => {
     const ImageWrapper = styled.div`
       position: relative;
+      height: 100%;
     `
     const FirstImg = styled.img`
       position: absolute;
@@ -19,8 +20,11 @@ export const Question2 = (props) => {
          height: 40.8203vh;
       }
       @media screen and (max-width: 640px){ 
-          height: 34.605911vh;
-          left: -5.8666vw;
+          height: 34.53125vh;
+          top: -2.1875vh;
+          width: 50vw;
+          z-index: 1;
+          left: -7.2222vw;
       }
     `
     const BlueRectangle = styled.div`
@@ -41,11 +45,12 @@ export const Question2 = (props) => {
       }
       
       @media screen and (max-width: 640px){ 
-         top: 31.2807vh;
-         left: 42.9333vw;
-         right: 0;
-         width: auto;
-         height: 6.034483vh;
+         top: auto;
+         left: 6.3888vw;
+         z-index: 0;
+         bottom: 0;
+         width: 43.8888vw;
+         height: 30.46875vh;
       }
     `
     const SecondImg = styled.img`
@@ -60,9 +65,9 @@ export const Question2 = (props) => {
          height: 24.0234vh;
       }
       @media screen and (max-width: 640px){ 
-          height: 20.44335vh;
-          left: 25.0666vw;
-          top: 21.059113vh;
+          height: 41.5625vh;
+          left: 53.3333vw;
+          top: -4.6875vh;
       }
     `
     const Gif = styled.img`
@@ -78,7 +83,12 @@ export const Question2 = (props) => {
              height: 17.0898vh;
           }
       @media screen and (max-width: 640px){ 
-          height: 14.53202vh;
+          top: auto;
+          z-index: 2;
+          bottom: 0;
+          left: 21.3888vw;
+          height: 15.78125vh;
+          width: 45vw;
       }
           
     `

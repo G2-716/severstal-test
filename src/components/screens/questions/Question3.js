@@ -21,9 +21,7 @@ export const Question3 = (props) => {
          height: 19.1406vh;
       }
        @media screen and (max-width: 640px){ 
-         top: 0;
-         left: -4.5333vw;
-         height: 15.8867vh;
+         display: none;
       }
     `
     const YellowRectangle = styled.div`
@@ -46,7 +44,8 @@ export const Question3 = (props) => {
          top: 0;
          bottom: 0;
          height: auto;
-         left: 67.46666vw;
+         left: auto;
+         right: 0;
          width: 20.85vw;
       }
     `
@@ -63,9 +62,10 @@ export const Question3 = (props) => {
       }
       
       @media screen and (max-width: 640px){ 
-         top: 8.128079vh;
-         left: 34.6666vw;
-         height: 19.5812vh;
+         top: -1.3543vh;
+         left: 9.1666vw;
+         height: 28.125vh;
+         width: 90.8333vw;
       }
     `
     const Gif = styled.img`
@@ -83,7 +83,7 @@ export const Question3 = (props) => {
       @media screen and (max-width: 640px){ 
          top: auto;
          bottom: 0;
-         height: 13.7931vh;
+         height: 17.8125vh;
       }    
     `
 

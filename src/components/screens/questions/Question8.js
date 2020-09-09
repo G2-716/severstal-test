@@ -7,6 +7,7 @@ import styled from "styled-components";
 export const Question8 = (props) => {
     const ImageWrapper = styled.div`
       position: relative;
+      height: 100%;
     `
     const FirstImg = styled.img`
       position: absolute;
@@ -22,9 +23,11 @@ export const Question8 = (props) => {
           } 
           
       @media screen and (max-width: 640px) { 
-             top: 5.91133vh;
-             left: -1.6vw;
-             height: 17.3645vh;
+             top: 4.84275vh;
+             left: -2.2222vw;
+             height: 20vh;
+             z-index: 3;
+             width: 64.1666vw;
       }        
     `
     const YellowRectangle = styled.div`
@@ -44,10 +47,10 @@ export const Question8 = (props) => {
              width: 46.4843vw;
           } 
       @media screen and (max-width: 640px) { 
-             top: 30.4187vh;
-             left: 11.7333vw;
-             height: 6.6502vh;
-             width: 63.4666vw;
+             top: 14.84375vh;
+             left: 4.7222vw;
+             height: 16.875vh;
+             width: 66.1111vw;
       }      
     `
     const SecondImg = styled.img`
@@ -63,7 +66,9 @@ export const Question8 = (props) => {
              height: 45.6954vh;
           } 
       @media screen and (max-width: 640px) { 
-             height: 38.3004vh;
+             height: 51.25vh;
+             width: 63.8888vw;
+             top: -14.0625vh;
              right: -1.6vw;
       }    
     `
@@ -85,10 +90,7 @@ export const Question8 = (props) => {
              width: 6.9335vh;
           } 
       @media screen and (max-width: 640px) { 
-             height: 5.7881vh;
-             width: 5.7881vh;
-             top: 20.3201vh;
-             left: 11.7333vw;
+            display: none;
       }       
     `
 

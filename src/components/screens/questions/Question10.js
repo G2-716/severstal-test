@@ -7,6 +7,7 @@ import styled from "styled-components";
 export const Question10 = (props) => {
     const ImageWrapper = styled.div`
       position: relative;
+      height: 100%;
     `
     const FirstImg = styled.img`
       position: absolute;
@@ -20,7 +21,7 @@ export const Question10 = (props) => {
              height: 23.7304vh;
           } 
       @media screen and (max-width: 640px) { 
-             height: 19.9507vh;
+            display: none;
       }     
     `
     const YellowRectangle = styled.div`
@@ -40,11 +41,11 @@ export const Question10 = (props) => {
              width: 19.6614vw;
           }
       @media screen and (max-width: 640px) {
-             height: 3.8177vh;
-             width: 26.9333vw;
-             top: 12.068966vh;
-             left: auto;
-             right: 22.1333vw;
+             height: 5.15625vh;
+             top: 5.625vh;
+             left: 0;
+             width: auto;
+             right: 19.7222vw;
       }       
     `
     const SecondImg = styled.img`
@@ -60,9 +61,10 @@ export const Question10 = (props) => {
           } 
       @media screen and (max-width: 640px) {
              left: auto; 
-             top: 9.3596vh;
-             height: 22.4137vh;
-             right: -9.0666vw;
+             top: -4.6875vh;
+             height: 31.09375vh;
+             width: 62.5vw;
+             right: -10vw;
       } 
     `
     const BlueRectangle = styled.div`
@@ -81,11 +83,11 @@ export const Question10 = (props) => {
              width: 12.7604vw;
           } 
       @media screen and (max-width: 640px) {
-             height: 10.2216vh;
-             width: 17.3333vw;
-             top: 26.10837vh;
+             height: 14.21875vh;
+             width: 19.7222vw;
+             top: 19.375vh;
              left: auto;
-             right: 8vw;
+             right: 11.6666vw;
       }     
     `
     const Gif = styled.img`
@@ -101,7 +103,11 @@ export const Question10 = (props) => {
           }
           
       @media screen and (max-width: 640px) {
-             height: 16.5024vh;
+             height: auto;
+             top: 16.09375vh;
+             bottom: 0;
+             left: 0;
+             width: 49.4444vw;
       }    
     `
     const createImage = () => {

@@ -21,8 +21,9 @@ export const Question7 = (props) => {
              height: 22.4609vh;
           } 
       @media screen and (max-width: 640px) { 
-             height: auto;
-             width: 65.86666vw;
+             height: 24.0625vh;
+             top: -1.25vh;
+             width: 69.1666vw;
       }    
     `
     const YellowRectangle = styled.div`
@@ -43,10 +44,7 @@ export const Question7 = (props) => {
           }
           
       @media screen and (max-width: 640px) { 
-             top: 32.8817vh;
-             height: 2.7093vh;
-             left: 50.1333vw;
-             width: 28.2666vw;
+             display: none;
       }      
     `
     const SecondImg = styled.img`
@@ -62,8 +60,11 @@ export const Question7 = (props) => {
           }
           
       @media screen and (max-width: 640px) { 
-             height: auto;
-             width: 65.86666vw;
+             height: 21.875vh;
+             top: 15.15625vh;
+             z-index: 3;
+             left: -3.0555vw;
+             width: 68.6111vw;
       }      
     `
     const BlueRectangle = styled.div`
@@ -83,11 +84,11 @@ export const Question7 = (props) => {
              width: 44.6614vw;
           } 
        @media screen and (max-width: 640px) { 
-             top: 12.0689vh;
-             height: 4.8029vh;
+             top: 9.0625vh;
+             height: 18.59375vh;
              left: 10.9333vw;
-             width: 61.33333vw;
-      }    
+             width: 66.38888vw;
+      }   
     `
     const GrayRectangle = styled.div`
       position: absolute;
@@ -106,10 +107,7 @@ export const Question7 = (props) => {
              width: 20.7031vw;
           } 
        @media screen and (max-width: 640px) { 
-             left: 56.2666vw;
-             top: 28.8177vh;
-             height: 2.7093vh;
-             width: 28.2666vw;
+            display: none;
        }   
                     
    

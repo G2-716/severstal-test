@@ -131,7 +131,7 @@ const ImgWrapper = styled.div`
       padding: 0;
       grid-area: 1/1/1/3;
       width: 556px;
-      height: 64.5vh;
+      height: 60.5vh;
       margin: 0 auto;
       overflow: hidden;
       @media screen and (orientation: landscape) {
