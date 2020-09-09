@@ -9,19 +9,20 @@ import { FacebookShareButton } from '../Button/sharing/FacebookShareButton';
 import {Text} from "../../shared/Text";
 import {Subtitle} from "../../shared/Subtitle";
 import { ImageRectangle } from './ImageRectangle';
+import { useBodyBackgroundColor } from '../../hocs/useBodyBackgroundColor';
 
 const FinalWrapper = styled.div`
-  background-color: #000000;
-  width: 100%;
-  padding-left: 13.6979vw ;
-  color: #FFFFFF;
+  position: relative;
   display: grid;
   grid-template-columns: 1fr 1.25fr;
   grid-template-rows: 1fr;
-  position: relative;
+  width: 100%;
+  padding-left: 13.6979vw ;
+  color: #FFFFFF;
+  background-color: #000000;
   overflow: hidden;
-  @media screen and (max-width: 1100px)
-  { 
+
+  @media screen and (max-width: 1100px) { 
     padding-left: 0;
     display: inline-block;
     @media screen and (orientation: landscape) {
@@ -72,6 +73,7 @@ const InfoWrapper = styled.div`
   { 
     position: relative;
     grid-area: 1/1/1/3;
+    max-height: 100%;
     padding: 0 15.2343vw 0 12.36872vw;
     margin: -3.6133vh 0 3.125vh 0;
     z-index: 3;
@@ -279,6 +281,7 @@ const FacebookShareButtonStyled = styled(FacebookShareButton)`
 
 export const Final = props => {
     const result = useResult();
+    useBodyBackgroundColor('#000000');
     const vkShareParams = getShareParams(SocialNetwork.vk, result);
     const facebookShareParams = getShareParams(SocialNetwork.facebook, result);
 
