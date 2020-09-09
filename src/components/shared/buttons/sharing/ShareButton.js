@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { reachMetrikaGoal } from '../../../../utils/reachMetrikaGoal';
 
 const ShareButtonStyled = styled.a`
   display: flex;
@@ -14,8 +15,16 @@ const ShareButtonStyled = styled.a`
 `;
 
 export const ShareButton = (props) => {
+    const handleClick = () => {
+        reachMetrikaGoal('share');
+    };
+
     return (
-        <ShareButtonStyled {...props}>
+        <ShareButtonStyled
+            {...props}
+            target="_blank"
+            onClick={handleClick}
+        >
             {props.children}
         </ShareButtonStyled>
     );

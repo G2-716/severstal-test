@@ -49,7 +49,6 @@ const jackMaInstagramVKShareImage = process.env.PUBLIC_URL + '/static/images/jac
 const elonMuskIntro = process.env.PUBLIC_URL + '/static/images/elon-musk-intro.png';
 const gagarinIntro = process.env.PUBLIC_URL + '/static/images/gagarin-intro.png';
 const introGif = process.env.PUBLIC_URL + '/static/images/intro.gif';
-const logoImage = process.env.PUBLIC_URL + '/static/images/logo.svg';
 
 export {
     question1Image1,
@@ -84,7 +83,6 @@ export {
     tonyRobbinsImage,
     warrenBuffettImage,
     peterDruckerImage,
-    logoImage,
     elonMuskIntro,
     gagarinIntro,
     introGif,

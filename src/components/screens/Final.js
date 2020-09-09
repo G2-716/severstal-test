@@ -1,15 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
 import { fade, slideDown } from '../../utils/keyframes';
-import { Logo } from "../svg/Logo";
+import { Logo } from "../shared/svg/Logo";
 import { useResult } from '../../hocs/useResult';
 import { getShareParams, SocialNetwork } from '../../utils/getShareParams';
-import { VKShareButton } from '../Button/sharing/VKShareButton';
-import { FacebookShareButton } from '../Button/sharing/FacebookShareButton';
-import {Text} from "../../shared/Text";
-import {Subtitle} from "../../shared/Subtitle";
+import { VKShareButton } from '../shared/buttons/sharing/VKShareButton';
+import { FacebookShareButton } from '../shared/buttons/sharing/FacebookShareButton';
+import {Text} from "../shared/Text";
+import {Subtitle} from "../shared/Subtitle";
 import { ImageRectangle } from './ImageRectangle';
 import { useBodyBackgroundColor } from '../../hocs/useBodyBackgroundColor';
+import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
 
 const FinalWrapper = styled.div`
   position: relative;
@@ -279,12 +280,17 @@ const FacebookShareButtonStyled = styled(FacebookShareButton)`
   ${ShareButtonSizeMixin};
 `;
 
+const SEVERSTAL_LINK = 'http://fut.ru/grp/severstal_grp?utm_source=fut&utm_medium=wowproject&utm_campaign=severstal';
 
 export const Final = props => {
     const result = useResult();
     useBodyBackgroundColor('#000000');
     const vkShareParams = getShareParams(SocialNetwork.vk, result);
     const facebookShareParams = getShareParams(SocialNetwork.facebook, result);
+
+    const handleLandingLinkClick = () => {
+        reachMetrikaGoal('catalog');
+    };
 
     return (
         <FinalWrapper>
@@ -302,7 +308,11 @@ export const Final = props => {
                 <br />
                 <InvitingText>
                     Хочешь, чтобы было так? Проходи отбор&nbsp;
-                    <StyledLink href={'http://fut.ru/grp/severstal_grp'} target={'_blank'}>
+                    <StyledLink
+                        href={SEVERSTAL_LINK}
+                        target={'_blank'}
+                        onClick={handleLandingLinkClick}
+                    >
                         на лидерскую программу компании Северсталь
                     </StyledLink>
                 </InvitingText>
