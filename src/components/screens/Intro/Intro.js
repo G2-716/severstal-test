@@ -1,11 +1,11 @@
 import React, { useContext } from 'react';
 import styled from 'styled-components';
 import {ProgressContext} from "../../../contexts/ProgressContext";
-import {StartButton} from "../../Button/StartButton";
+import {StartButton} from "../../shared/buttons/StartButton";
 import { fade, slideDown } from '../../../utils/keyframes';
-import {Logo} from "../../svg/Logo";
+import {Logo} from "../../shared/svg/Logo";
 import {IntroImage} from "./IntroImage";
-import {Text} from "../../../shared/Text";
+import {Text} from "../../shared/Text";
 import { useBodyBackgroundColor } from '../../../hocs/useBodyBackgroundColor';
 import { reachMetrikaGoal } from '../../../utils/reachMetrikaGoal';
 

@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button, ButtonSize } from './Button';
-import {RightArrowLongIcon} from "../svg/arrows/RightArrowLongIcon";
 import {RightArrowIcon} from "../svg/arrows/RightArrowIcon";
 
 const StartButtonStyled = styled(Button)`
