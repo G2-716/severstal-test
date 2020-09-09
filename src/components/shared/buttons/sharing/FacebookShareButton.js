@@ -1,6 +1,6 @@
 import React from 'react';
 import { ShareButton } from './ShareButton';
-import { FbIcon } from '../../svg/SocialMediaIcons/FbIcon';
+import { FbIcon } from '../../svg/socialMediaIcons/FbIcon';
 
 export const FacebookShareButton = ({ shareParams, className, width, height }) => {
     const { url } = shareParams;

@@ -3,12 +3,12 @@ import styled from 'styled-components';
 import { questions } from '../questions.config';
 import { ProgressContext } from '../contexts/ProgressContext';
 import { QuestionLabel } from "./QuestionLabel";
-import { RadioButton } from './RadioButton';
+import { RadioButton } from './shared/RadioButton';
 import { shuffle } from '../utils/shuffle';
 import { fade } from '../utils/keyframes';
-import { PreviousButton } from './Button/PreviousButton';
-import { NextButton } from './Button/NextButton';
-import {Subtitle} from "../shared/Subtitle";
+import { PreviousButton } from './shared/buttons/PreviousButton';
+import { NextButton } from './shared/buttons/NextButton';
+import {Subtitle} from "./shared/Subtitle";
 import { useBodyBackgroundColor } from '../hocs/useBodyBackgroundColor';
 import { reachMetrikaGoal } from '../utils/reachMetrikaGoal';
 

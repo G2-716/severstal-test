@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { reachMetrikaGoal } from '../../../utils/reachMetrikaGoal';
+import { reachMetrikaGoal } from '../../../../utils/reachMetrikaGoal';
 
 const ShareButtonStyled = styled.a`
   display: flex;

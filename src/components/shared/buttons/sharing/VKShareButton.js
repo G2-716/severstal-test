@@ -1,5 +1,5 @@
 import React from 'react';
-import { VkIcon } from '../../svg/SocialMediaIcons/VkIcon';
+import { VkIcon } from '../../svg/socialMediaIcons/VkIcon';
 import { ShareButton } from './ShareButton';
 
 export const VKShareButton = ({ shareParams, className, width, height }) => {

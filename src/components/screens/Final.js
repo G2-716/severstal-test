@@ -1,13 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { fade, slideDown } from '../../utils/keyframes';
-import { Logo } from "../svg/Logo";
+import { Logo } from "../shared/svg/Logo";
 import { useResult } from '../../hocs/useResult';
 import { getShareParams, SocialNetwork } from '../../utils/getShareParams';
-import { VKShareButton } from '../Button/sharing/VKShareButton';
-import { FacebookShareButton } from '../Button/sharing/FacebookShareButton';
-import {Text} from "../../shared/Text";
-import {Subtitle} from "../../shared/Subtitle";
+import { VKShareButton } from '../shared/buttons/sharing/VKShareButton';
+import { FacebookShareButton } from '../shared/buttons/sharing/FacebookShareButton';
+import {Text} from "../shared/Text";
+import {Subtitle} from "../shared/Subtitle";
 import { ImageRectangle } from './ImageRectangle';
 import { useBodyBackgroundColor } from '../../hocs/useBodyBackgroundColor';
 import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
