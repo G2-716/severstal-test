@@ -19,10 +19,11 @@ const FinalWrapper = styled.div`
   grid-template-columns: 1fr 1.25fr;
   grid-template-rows: 1fr;
   position: relative;
+  overflow: hidden;
   @media screen and (max-width: 1100px)
   { 
     padding-left: 0;
-    display: inline-block;
+    display: flex;
     @media screen and (orientation: landscape) {
        padding-bottom: 0;
     }
