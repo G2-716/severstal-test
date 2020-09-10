@@ -7,9 +7,6 @@ const ButtonStyled = styled(Button)`
   display: flex;
   align-items: baseline;
   align-self: flex-start;
-  @media screen and (max-height: 640px) and (max-width: 1100px) and (orientation: landscape){
-      align-self: flex-end;
-  }
 `
 
 const ButtonLabel = styled.span`

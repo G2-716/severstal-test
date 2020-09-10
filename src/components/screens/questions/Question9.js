@@ -22,7 +22,8 @@ export const Question9 = (props) => {
              height: 26.0742vh;
           } 
       @media screen and (max-width: 640px) { 
-             height: 22.1674vh;
+             height: 28.125vh;
+             width: 70.5555vw;
       }    
     `
     const SecondImg = styled.img`
@@ -39,8 +40,8 @@ export const Question9 = (props) => {
       @media screen and (max-width: 640px) {
              top: auto;
              bottom: 0;
-             height: 11.6995vh;
-             left: -2.9333vw;
+             height: 14.6875vh;
+             left: -1.1111vw;
       }       
     `
     const BlueRectangle = styled.div`
@@ -60,8 +61,8 @@ export const Question9 = (props) => {
              width: 16.5364vw;
           } 
       @media screen and (max-width: 640px) { 
-             right: 5.0666vw;
-             width: 22.6666vw;
+             right: 0;
+             width: 23.6111vw;
       }      
     `
 
@@ -77,7 +78,10 @@ export const Question9 = (props) => {
              height: 13.7695vh;
           }
       @media screen and (max-width: 640px) { 
-             height: 11.6995vh;
+             top: 10.78125vh;
+             left: 7.7777vw;
+             height: 14.84375vh;
+             width: 60vw;
       }     
     `
     const createImage = () => {

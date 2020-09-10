@@ -72,7 +72,7 @@ const InfoWrapper = styled.div`
   z-index: 4;
  
   @media screen and (max-width: 1100px) { 
-    padding: 36.5234vh 6.5104vw 0;
+    padding: 30.8544vh 6.5104vw 0;
     
     @media screen and (max-height: 640px) and (orientation: landscape) {
       padding-bottom: 0;
@@ -80,7 +80,7 @@ const InfoWrapper = styled.div`
   }
   
   @media screen and (max-width: 640px) {
-    padding: 45.9359vh 9.6vw 0 6.1576vh;
+    padding: 36.1359vh 9.6vw 0 6.1576vh;
   }
 `
 
