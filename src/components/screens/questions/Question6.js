@@ -18,14 +18,13 @@ export const Question6 = (props) => {
       left: 18.803vw;
       top: 1.4814vh;
       height: 66.9444vh;
-      @media screen and (max-width: 1100px)
-          { 
+      @media screen and (max-width: 1100px){ 
              top: 0;
              left: auto;
              right: 0;
              height: 32.3242vh;
           }
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              height: 33.75vh;
       }     
     `
@@ -45,7 +44,7 @@ export const Question6 = (props) => {
              height: 5.4687vh;
              width: 33.7239vw;
           }
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              top: 6.25vh;
              bottom: 0;
              left: 50vw;
@@ -63,8 +62,13 @@ export const Question6 = (props) => {
              top: 17.2851vh;
              left: -7.6822vw;
              height: 30.0781vh;
+             
+             @media (max-height: 480px) and (orientation: landscape){ 
+                top: 10vh;
+                left: -10%;
+             }
           } 
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              left: -18.3333vw;
              top: 1.25vh;
              height: 31.71875vh;
@@ -82,7 +86,7 @@ export const Question6 = (props) => {
              left: 19.7917vw;
              height: 17.0898vh;
           }
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              top: auto;
              bottom: 2.1875vh;
              height: 17.8125vh;

@@ -10,13 +10,15 @@ export const Question5 = (props) => {
       height: 100%;
     `
     const SecondImgWrapper = styled.div`
-       position: absolute;
-       overflow: hidden;
-       left: 0;
-       top: 0;
-       height: 31.09375vh;
-       width: 45.8333vw;
-       z-index: 2; 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
+           position: absolute;
+           overflow: hidden;
+           left: 0;
+           top: 0;
+           height: 31.09375vh;
+           width: 45.8333vw;
+           z-index: 2; 
+      }
     `
 
     const FirstImg = styled.img`
@@ -31,7 +33,7 @@ export const Question5 = (props) => {
              height: 22.8515vh;
           }  
           
-       @media screen and (max-width: 640px) { 
+       @media screen and (max-width: 640px) and (orientation: portrait){ 
            display: none;
        }    
     `
@@ -52,7 +54,7 @@ export const Question5 = (props) => {
              height: 7.4218vh;
              width: 8.0729vw;
           } 
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              top: 5vh;
              height: 28.59375vh;
              width: 65vw;
@@ -72,7 +74,7 @@ export const Question5 = (props) => {
              height: 22.8515vh;
       }
        
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
           position: static;
           height: 31.5625vh;
           width: 101.3888vw;
@@ -84,20 +86,21 @@ export const Question5 = (props) => {
       top: 33.9814vh;
       left: 10.879vw;
       height: 33.3333vh;
+      z-index: 4; 
+
       @media screen and (max-width: 1100px)
           { 
              top: 19.4335vh;
              left: 7.5438%;
              height: 22.3632vh;
           }
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              top: auto;
              bottom: 0;
              left: auto;
              right: 0;
              width: 60.2777vw;
              height: 25.625vh;
-             z-index: 3; 
       }    
     `
     const createImage = () => {

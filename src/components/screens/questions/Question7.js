@@ -20,7 +20,7 @@ export const Question7 = (props) => {
              right: 0;
              height: 22.4609vh;
           } 
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              height: 24.0625vh;
              top: -1.25vh;
              width: 69.1666vw;
@@ -43,7 +43,7 @@ export const Question7 = (props) => {
              width: 20.7031vw;
           }
           
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              display: none;
       }      
     `
@@ -59,7 +59,7 @@ export const Question7 = (props) => {
              height: 20.4101vh;
           }
           
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              height: 21.875vh;
              top: 15.15625vh;
              z-index: 3;
@@ -83,7 +83,7 @@ export const Question7 = (props) => {
              height: 5.664vh;
              width: 44.6614vw;
           } 
-       @media screen and (max-width: 640px) { 
+       @media screen and (max-width: 640px) and (orientation: portrait){ 
              top: 9.0625vh;
              height: 18.59375vh;
              left: 10.9333vw;
@@ -106,7 +106,7 @@ export const Question7 = (props) => {
              height: 3.22vh;
              width: 20.7031vw;
           } 
-       @media screen and (max-width: 640px) { 
+       @media screen and (max-width: 640px) and (orientation: portrait){ 
             display: none;
        }   
                     
