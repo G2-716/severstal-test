@@ -30,6 +30,7 @@ const StartButtonStyled = styled(Button)`
     margin: 4.064vh 0;
     @media screen and (min-height: 560px){
         font-size: 2.21675vh;
+        margin-bottom: 0;
     }
      
     @media screen and (orientation: landscape){
