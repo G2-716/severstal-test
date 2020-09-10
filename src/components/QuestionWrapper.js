@@ -41,6 +41,10 @@ const QuestionWrapperStyled = styled.div`
         grid-template-columns: 1fr;
         grid-template-rows: 40.2vh 7.8125vh 1fr auto;
     } 
+    
+     @media screen and (max-height: 480px) and (orientation: landscape){
+         grid-template-rows: 40.2vh 7.8125vh 64vh 10vh;
+      } 
   }
   
   @media screen and (max-width: 640px) and (orientation: portrait){
@@ -120,7 +124,7 @@ const ButtonsBoxStyled = styled.div`
   @media screen and (max-width: 1100px) {
     grid-area: 4/1/4/2;
     align-self: start;
-    padding: 2vh 0 0;
+    padding: 2vh 0;
   }
   @media screen and (max-width: 640px) and (orientation: portrait){
       padding: 0 8% ;
