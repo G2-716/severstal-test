@@ -21,7 +21,7 @@ export const Question9 = (props) => {
              right: 0;
              height: 26.0742vh;
           } 
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              height: 28.125vh;
              width: 70.5555vw;
       }    
@@ -37,7 +37,7 @@ export const Question9 = (props) => {
              left: -2.9333vw;
              height: 13.6718vh;
           }
-      @media screen and (max-width: 640px) {
+      @media screen and (max-width: 640px) and (orientation: portrait){
              top: auto;
              bottom: 0;
              height: 14.6875vh;
@@ -60,7 +60,7 @@ export const Question9 = (props) => {
              right: 4.9122%;
              width: 16.5364vw;
           } 
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              right: 0;
              width: 23.6111vw;
       }      
@@ -77,7 +77,7 @@ export const Question9 = (props) => {
              left: 0;
              height: 13.7695vh;
           }
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              top: 10.78125vh;
              left: 7.7777vw;
              height: 14.84375vh;

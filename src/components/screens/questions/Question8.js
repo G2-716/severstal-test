@@ -22,7 +22,7 @@ export const Question8 = (props) => {
              height: 20.6054vh;
           } 
           
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              top: 4.84275vh;
              left: -2.2222vw;
              height: 20vh;
@@ -46,7 +46,7 @@ export const Question8 = (props) => {
              height: 7.9101vh;
              width: 46.4843vw;
           } 
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              top: 14.84375vh;
              left: 4.7222vw;
              height: 16.875vh;
@@ -65,7 +65,7 @@ export const Question8 = (props) => {
              right: 0;
              height: 45.6954vh;
           } 
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
              height: 51.25vh;
              width: 63.8888vw;
              top: -14.0625vh;
@@ -89,7 +89,7 @@ export const Question8 = (props) => {
              height: 6.9335vh;
              width: 6.9335vh;
           } 
-      @media screen and (max-width: 640px) { 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
             display: none;
       }       
     `

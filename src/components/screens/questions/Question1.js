@@ -39,7 +39,7 @@ export const Question1 = (props) => {
           height: 35.8398vh;
         }
         
-      @media screen and (max-width: 640px){ 
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
           position: static;
           height: 90vh;
           width: 135.2777vw;
@@ -64,7 +64,7 @@ export const Question1 = (props) => {
           width: 55.0877%;
         }
         
-        @media screen and (max-width: 640px) {
+        @media screen and (max-width: 640px) and (orientation: portrait) {
            display: none;
         }
     `
@@ -80,7 +80,7 @@ export const Question1 = (props) => {
           height: 23.8281vh;
 
         }
-        @media screen and (max-width: 640px)
+        @media screen and (max-width: 640px) and (orientation: portrait)
         { 
           position: static;
           height: 33.59375vh;
@@ -96,15 +96,19 @@ export const Question1 = (props) => {
       @media screen and (max-width: 1100px)
           { 
              height: 14.746vh;
+             
+             @media (max-height: 480px) and (orientation: landscape){ 
+                 top: 6vh;
+                 left: 23%;
+             }
           }
       
-      @media screen and (max-width: 1100px)
+      @media screen and (max-width: 640px) and (orientation: portrait)
           { 
              top: 14.6875vh;
              left: auto;
              right: 9.1666vw;
              height: 16.875vh;
-             width: 53.0555vw;
           }    
     `
 

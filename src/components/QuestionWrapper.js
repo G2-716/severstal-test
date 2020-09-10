@@ -33,17 +33,12 @@ const QuestionWrapperStyled = styled.div`
   @media screen and (max-width: 1100px)  
   {
     grid-template-columns: 1fr;
-    grid-template-rows: 40.8984vh 7.8125vh 1fr 5.46875vh;
+    grid-template-rows: 46.8101vh 3.8125vh 1fr 6.46875vh;
     margin:  0 auto;
     width: 75.5208vw;
     
-    @media screen and (max-height: 800px) and (orientation: landscape){
-        grid-template-columns: 1fr;
-        grid-template-rows: 40.2vh 7.8125vh 1fr auto;
-    } 
-    
-     @media screen and (max-height: 480px) and (orientation: landscape){
-         grid-template-rows: 40.2vh 7.8125vh 64vh 10vh;
+     @media screen and (max-height: 640px) and (orientation: landscape){
+         grid-template-rows: 40.2vh 7.8125vh 70vh 10vh;
       } 
   }
   
@@ -80,7 +75,7 @@ const QuestionBoxStyled = styled.div`
   @media screen and (max-width: 1100px){
     display: grid;
     grid-area: 3/1/4/2;
-    padding-top: 4.8828vh;
+    padding-top:  3.8828vh;
     grid-template-rows: 12.6953vh 20.996vh;
   }
   
@@ -147,9 +142,15 @@ const ImageWrapper = styled.div`
     width: 100%;
         
     @media screen and (max-height: 800px) and (orientation: landscape){
-      margin: auto;
+      margin: 0 auto;
       width: 45vw;
     }
+    
+    @media screen and (min-width:640px) and (max-height: 480px) and (orientation: landscape){
+      width: 33vw;
+    }
+    
+    
   } 
 `
 
