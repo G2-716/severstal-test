@@ -46,6 +46,9 @@ const QuestionWrapperStyled = styled.div`
   @media screen and (max-width: 640px) and (orientation: portrait){
     grid-template-rows: 37.03125vh 8.3743vh 1fr 5.46875vh;
     width: 100%;
+     @media (min-height: 560px) {
+        grid-template-rows: 37.03125vh 5.3743vh 1fr 5.46875vh;
+     }
   }
 `;
 
@@ -85,6 +88,10 @@ const QuestionBoxStyled = styled.div`
   @media screen and (max-width: 640px) and (orientation: portrait){
     grid-template-rows: 8.33vh 20.996vh;
     padding: 6.5vh 4vw 0 8vw;
+    @media (min-height: 560px) {
+        grid-template-rows: 8.5683vh 19.996vh;
+        padding: 3.7vh 4vw 0 8vw;
+    }
   }
 `;
 

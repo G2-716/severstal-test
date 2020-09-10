@@ -135,6 +135,9 @@ const ImgWrapper = styled.div`
       height: 60.5vh;
       margin: 0 auto;
       overflow: hidden;
+      @media screen and (max-width: 640px) and (orientation: portrait) {
+          height: 55.2414vh;
+      }
       @media screen and (orientation: landscape) {
          height: 100vh;
          position: absolute;
@@ -176,6 +179,9 @@ const ShareBox = styled.div`
   @media screen and (max-width: 1100px) { 
      margin-top: 4.78516vh;
   }
+  @media screen and (max-width: 640px) and (min-height: 560px) {
+        margin-bottom: 0;
+    }
 `;
 
 const ShareText = styled.p`
