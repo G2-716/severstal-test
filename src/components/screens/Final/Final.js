@@ -136,7 +136,7 @@ const ImgWrapper = styled.div`
       margin: 0 auto;
       overflow: hidden;
       @media screen and (max-width: 640px) and (orientation: portrait) {
-          height: 55.2414vh;
+          height: 52.2414vh;
       }
       @media screen and (orientation: landscape) {
          height: 100vh;

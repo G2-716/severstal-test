@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-grow: 1;
   background-color: #1E1D1C;
-  overflow-x: hidden;
+  overflow: hidden;
 `
 
 const QuestionWrapperStyled = styled.div`
@@ -38,7 +38,7 @@ const QuestionWrapperStyled = styled.div`
     width: 75.5208vw;
     
      @media screen and (max-height: 640px) and (orientation: landscape){
-         grid-template-rows: 40.2vh 7.8125vh 70vh 10vh;
+         grid-template-rows: 40.2vh 7.8125vh 1fr 10vh;
       } 
   }
   
@@ -76,7 +76,7 @@ const QuestionBoxStyled = styled.div`
     display: grid;
     grid-area: 3/1/4/2;
     padding-top:  3.8828vh;
-    grid-template-rows: 12.6953vh 20.996vh;
+    grid-template-rows: 12.6953vh 1fr;
   }
   
   @media screen and (max-height: 700px) and (min-width: 640px){
@@ -85,10 +85,10 @@ const QuestionBoxStyled = styled.div`
   }
   
   @media screen and (max-width: 640px) and (orientation: portrait){
-    grid-template-rows: 8.33vh 20.996vh;
+    grid-template-rows: 8.33vh 1fr;
     padding: 6.5vh 4vw 0 8vw;
     @media (min-height: 560px) {
-        grid-template-rows: 8.5683vh 19.996vh;
+        grid-template-rows: 8.5683vh 1fr;
         padding: 3.7vh 4vw 0 8vw;
     }
   }

@@ -11,7 +11,7 @@ const StartButtonStyled = styled(Button)`
   color: #9E9E9D;
   align-items: center;
   margin-top: 5.6666vh;
-  margin-bottom: 0.6666vh;
+  margin-bottom: 5.6666vh;
   font-weight: 800;
   &.${ButtonSize.MD} {
     font-size: 1.4583vw;
@@ -31,7 +31,6 @@ const StartButtonStyled = styled(Button)`
     @media screen and (min-height: 560px){
         font-size: 2.21675vh;
         margin-top: 2.364vh;
-        margin-bottom: 1.264vh;
     }
      
     @media screen and (orientation: landscape){

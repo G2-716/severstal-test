@@ -13,6 +13,7 @@ const IntroWrapper = styled.div`
   position: relative;
   display: flex;
   background-color: #000000;
+  overflow: hidden;
 `;
 
 const TextStyled = styled(Text)`
@@ -80,7 +81,7 @@ const InfoWrapper = styled.div`
   }
   
   @media screen and (max-width: 640px) {
-    padding: 36.1359vh 9.6vw 0 6.1576vh;
+    padding: 31.1359vh 9.6vw 0 6.1576vh;
   }
 `
 
