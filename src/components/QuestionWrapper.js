@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   display: flex;
   flex-grow: 1;
   background-color: #1E1D1C;
-  overflow-x: hidden;
+  overflow: hidden;
 `
 
 const QuestionWrapperStyled = styled.div`
@@ -33,20 +33,21 @@ const QuestionWrapperStyled = styled.div`
   @media screen and (max-width: 1100px)  
   {
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 7.8125vh 1fr auto;
+    grid-template-rows: 46.8101vh 3.8125vh 1fr 6.46875vh;
     margin:  0 auto;
     width: 75.5208vw;
     
-    @media screen and (max-height: 800px) and (orientation: landscape){
-        grid-template-columns: 1fr;
-        grid-template-rows: 40.2vh 7.8125vh 1fr auto;
-    } 
+     @media screen and (max-height: 640px) and (orientation: landscape){
+         grid-template-rows: 40.2vh 7.8125vh 1fr 10vh;
+      } 
   }
   
-  @media screen and (max-width: 480px) and (orientation: portrait){
-    grid-template-rows: 40.8867vh 8.3743vh 1fr auto;
-    padding-top: 2.0935vh;
+  @media screen and (max-width: 640px) and (orientation: portrait){
+    grid-template-rows: 37.03125vh 8.3743vh 1fr 5.46875vh;
     width: 100%;
+     @media (min-height: 560px) {
+        grid-template-rows: 37.03125vh 5.3743vh 1fr 5.46875vh;
+     }
   }
 `;
 
@@ -59,7 +60,7 @@ const QuestionLabelStyled = styled(QuestionLabel)`
    grid-area: 2/1/3/2;
      
   }
-  @media screen and (max-width: 480px) and (orientation: portrait) 
+  @media screen and (max-width: 640px) and (orientation: portrait) 
   {
     padding-left: 8vw;
   }
@@ -72,8 +73,10 @@ const QuestionBoxStyled = styled.div`
   padding-right: 2.7416vw;
   flex-shrink: 0;
   @media screen and (max-width: 1100px){
+    display: grid;
     grid-area: 3/1/4/2;
-    padding-top: 5%;
+    padding-top:  3.8828vh;
+    grid-template-rows: 12.6953vh 1fr;
   }
   
   @media screen and (max-height: 700px) and (min-width: 640px){
@@ -81,8 +84,13 @@ const QuestionBoxStyled = styled.div`
     padding-top: 3.888%;
   }
   
-  @media screen and (max-width: 480px) and (orientation: portrait){
+  @media screen and (max-width: 640px) and (orientation: portrait){
+    grid-template-rows: 8.33vh 1fr;
     padding: 6.5vh 4vw 0 8vw;
+    @media (min-height: 560px) {
+        grid-template-rows: 8.5683vh 1fr;
+        padding: 3.7vh 4vw 0 8vw;
+    }
   }
 `;
 
@@ -96,7 +104,7 @@ const Spacer = styled.div`
 
 const AnswersBoxStyled = styled.div`
   
-  @media screen and (max-width: 480px) and (orientation: portrait) 
+  @media screen and (max-width: 640px) and (orientation: portrait) 
   {
     padding: 0;
   }
@@ -110,10 +118,11 @@ const ButtonsBoxStyled = styled.div`
   align-self: flex-end;
   @media screen and (max-width: 1100px) {
     grid-area: 4/1/4/2;
-    padding: 4vh 0 2vh 0;
+    align-self: start;
+    padding: 2vh 0;
   }
-  @media screen and (max-width: 480px) and (orientation: portrait){
-      padding: 4vh 8% 2vh 8%;
+  @media screen and (max-width: 640px) and (orientation: portrait){
+      padding: 0 8% ;
   }
   
 `;
@@ -133,9 +142,15 @@ const ImageWrapper = styled.div`
     width: 100%;
         
     @media screen and (max-height: 800px) and (orientation: landscape){
-      margin: auto;
+      margin: 0 auto;
       width: 45vw;
     }
+    
+    @media screen and (min-width:640px) and (max-height: 480px) and (orientation: landscape){
+      width: 33vw;
+    }
+    
+    
   } 
 `
 

@@ -7,6 +7,7 @@ import styled from "styled-components";
 export const Question4 = (props) => {
     const ImageWrapper = styled.div`
       position: relative;
+      height: 100%;
     `
     const FirstImg = styled.img`
       position: absolute;
@@ -19,8 +20,9 @@ export const Question4 = (props) => {
              left: 0;
              height: 33.0078vh;
           }
-      @media screen and (max-width: 640px){ 
-         height: 26.6009vh;
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
+         top: -3.3333vh;
+         height: 29.21875vh;
       }               
 
     `
@@ -41,10 +43,8 @@ export const Question4 = (props) => {
              width: 9.1145vw;
        }  
        
-       @media screen and (max-width: 640px){ 
-            width: 12vw;
-            top: 8.2512vh;
-            height: 19.2118vh;
+       @media screen and (max-width: 640px) and (orientation: portrait){ 
+            display: none;
        } 
     `
     const SecondImg = styled.img`
@@ -60,9 +60,11 @@ export const Question4 = (props) => {
              height: 25.9765vh;
           }    
           
-      @media screen and (max-width: 640px){ 
-        bottom: 0;
-        height: 21.0591vh;
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
+        bottom: -1vh;
+        top: auto;
+        height: 26.71875vh;
+        width: 70.8333vw;
        } 
     `
     const BlueRectangle = styled.div`
@@ -82,10 +84,12 @@ export const Question4 = (props) => {
              width: 35.4166vw;
           }  
           
-      @media screen and (max-width: 640px){ 
-            width: 47.2vw;
-            top: 30.4187vh;
-            height: 7.26601vh;
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
+            width: 21.3888vw;
+            height: auto;
+            top: 0;
+            bottom: 0;
+            left: 0;
       }   
     `
 

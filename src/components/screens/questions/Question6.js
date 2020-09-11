@@ -11,21 +11,21 @@ import styled from "styled-components";
 export const Question6 = (props) => {
     const ImageWrapper = styled.div`
       position: relative;
+      height: 100%;
     `
     const FirstImg = styled.img`
       position: absolute;
       left: 18.803vw;
       top: 1.4814vh;
       height: 66.9444vh;
-      @media screen and (max-width: 1100px)
-          { 
+      @media screen and (max-width: 1100px){ 
              top: 0;
              left: auto;
              right: 0;
              height: 32.3242vh;
           }
-      @media screen and (max-width: 640px) { 
-             height: 26.6009vh;
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
+             height: 33.75vh;
       }     
     `
     const YellowRectangle = styled.div`
@@ -44,11 +44,12 @@ export const Question6 = (props) => {
              height: 5.4687vh;
              width: 33.7239vw;
           }
-      @media screen and (max-width: 640px) { 
-             top: 7.758621vh;
-             height: 4.4334vh;
-             left: 27.4666vw;
-             width: 45.0666vw;
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
+             top: 6.25vh;
+             bottom: 0;
+             left: 50vw;
+             width: 20vw;
+             height: auto;
       }     
     `
     const SecondImg = styled.img`
@@ -61,11 +62,16 @@ export const Question6 = (props) => {
              top: 17.2851vh;
              left: -7.6822vw;
              height: 30.0781vh;
+             
+             @media (max-height: 480px) and (orientation: landscape){ 
+                top: 10vh;
+                left: -10%;
+             }
           } 
-      @media screen and (max-width: 640px) { 
-             left: -10.9333vw;
-             top: 16.37931vh;
-             height: 24.6305vh;
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
+             left: -18.3333vw;
+             top: 1.25vh;
+             height: 31.71875vh;
       }     
     `
     const Gif = styled.img`
@@ -80,10 +86,11 @@ export const Question6 = (props) => {
              left: 19.7917vw;
              height: 17.0898vh;
           }
-      @media screen and (max-width: 640px) { 
-             top: 21.6748vh;
-             height: 14.0394vh;
-             left: 27.4666vw;
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
+             top: auto;
+             bottom: 2.1875vh;
+             height: 17.8125vh;
+             left: 15.83333vw;
       }     
     `
     const createImage = () => {

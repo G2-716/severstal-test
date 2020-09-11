@@ -1,16 +1,16 @@
 import React from 'react';
 import styled from 'styled-components';
-import { fade, slideDown } from '../../utils/keyframes';
-import { Logo } from "../shared/svg/Logo";
-import { useResult } from '../../hocs/useResult';
-import { getShareParams, SocialNetwork } from '../../utils/getShareParams';
-import { VKShareButton } from '../shared/buttons/sharing/VKShareButton';
-import { FacebookShareButton } from '../shared/buttons/sharing/FacebookShareButton';
-import {Text} from "../shared/Text";
-import {Subtitle} from "../shared/Subtitle";
+import { fade, slideDown } from '../../../utils/keyframes';
+import { Logo } from "../../shared/svg/Logo";
+import { useResult } from '../../../hocs/useResult';
+import { getShareParams, SocialNetwork } from '../../../utils/getShareParams';
+import { VKShareButton } from '../../shared/buttons/sharing/VKShareButton';
+import { FacebookShareButton } from '../../shared/buttons/sharing/FacebookShareButton';
+import {Text} from "../../shared/Text";
+import {Subtitle} from "../../shared/Subtitle";
 import { ImageRectangle } from './ImageRectangle';
-import { useBodyBackgroundColor } from '../../hocs/useBodyBackgroundColor';
-import { reachMetrikaGoal } from '../../utils/reachMetrikaGoal';
+import { useBodyBackgroundColor } from '../../../hocs/useBodyBackgroundColor';
+import { reachMetrikaGoal } from '../../../utils/reachMetrikaGoal';
 
 const FinalWrapper = styled.div`
   position: relative;
@@ -132,9 +132,12 @@ const ImgWrapper = styled.div`
       padding: 0;
       grid-area: 1/1/1/3;
       width: 556px;
-      height: 64.5vh;
+      height: 60.5vh;
       margin: 0 auto;
       overflow: hidden;
+      @media screen and (max-width: 640px) and (orientation: portrait) {
+          height: 52.2414vh;
+      }
       @media screen and (orientation: landscape) {
          height: 100vh;
          position: absolute;
@@ -176,6 +179,9 @@ const ShareBox = styled.div`
   @media screen and (max-width: 1100px) { 
      margin-top: 4.78516vh;
   }
+  @media screen and (max-width: 640px) and (min-height: 560px) {
+        margin-bottom: 0;
+    }
 `;
 
 const ShareText = styled.p`

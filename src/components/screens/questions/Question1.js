@@ -7,7 +7,26 @@ import { question1Image1, question1Image2, question1gif } from '../../../constan
 export const Question1 = (props) => {
     const ImageWrapper = styled.div`
       position: relative;
+      height: 100%;
     `
+    const FirstImgWrapper = styled.div`
+       position: absolute;
+       overflow: hidden;
+       right:0;
+       top: 0;
+       bottom:0;
+       width: 42.7777vw;
+    `
+
+    const SecondImgWrapper = styled.div`
+       position: absolute;
+       overflow: hidden;
+       left:0;
+       top: 3.5375vh;
+       bottom:0;
+       width: 48.0555vw;
+    `
+
     const FirstImg = styled.img`
       position: absolute;
       left: 12.95%;
@@ -20,8 +39,12 @@ export const Question1 = (props) => {
           height: 35.8398vh;
         }
         
-      @media screen and (max-width: 640px){ 
-          height: 29.433498vh;
+      @media screen and (max-width: 640px) and (orientation: portrait){ 
+          position: static;
+          height: 90vh;
+          width: 135.2777vw;
+          margin-left: -33.3333vw;
+          margin-top: -7.1875vh;
       }
     `
     const YellowRectangle = styled.div`
@@ -41,9 +64,8 @@ export const Question1 = (props) => {
           width: 55.0877%;
         }
         
-        @media screen and (max-width: 640px) {
-         height: 3.3251vh;
-         top: 34.1133vh;
+        @media screen and (max-width: 640px) and (orientation: portrait) {
+           display: none;
         }
     `
     const SecondImg = styled.img`
@@ -58,10 +80,12 @@ export const Question1 = (props) => {
           height: 23.8281vh;
 
         }
-        @media screen and (max-width: 640px)
+        @media screen and (max-width: 640px) and (orientation: portrait)
         { 
-          top: 20.5665vh;
-          height: 19.5812vh;
+          position: static;
+          height: 33.59375vh;
+          width: 66.3888vw;
+          margin-left: -19.1666vw;
         }
     `
     const Gif = styled.img`
@@ -72,22 +96,32 @@ export const Question1 = (props) => {
       @media screen and (max-width: 1100px)
           { 
              height: 14.746vh;
+             
+             @media (max-height: 480px) and (orientation: landscape){ 
+                 top: 6vh;
+                 left: 23%;
+             }
           }
       
-      @media screen and (max-width: 1100px)
+      @media screen and (max-width: 640px) and (orientation: portrait)
           { 
-             top: 4.6875vh;
-             left: 5.7894%;
-             height: 12.192vh;
+             top: 14.6875vh;
+             left: auto;
+             right: 9.1666vw;
+             height: 16.875vh;
           }    
     `
 
     const createImage = () => {
         return (
             <ImageWrapper>
-                <FirstImg src={question1Image1} />
+                <FirstImgWrapper>
+                    <FirstImg src={question1Image1} />
+                </FirstImgWrapper>
                 <YellowRectangle />
-                <SecondImg src={question1Image2} />
+                <SecondImgWrapper>
+                    <SecondImg src={question1Image2} />
+                </SecondImgWrapper>
                 <Gif src={question1gif} />
             </ImageWrapper>
         );

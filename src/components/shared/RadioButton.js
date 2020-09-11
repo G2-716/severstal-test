@@ -44,19 +44,23 @@ const LabelStyled = styled.label`
     height: 12px;
     border-radius: 50%;
     background-color: #FFFFFF;
-    @media screen and (max-width: 1100px) 
-      { 
+    @media screen and (max-width: 1100px){ 
         top: -1px;
         left: -1px;
         width: 14px;
         height: 14px;
         border: 1px solid white;
-        
-        @media screen and (max-height: 400px) {
-             width: 8px;
-             height: 8px;
-        }
-      }
+      @media screen and (max-width: 640px) {
+          top: 0;
+          left: 0;
+          width: 10px;
+          height: 10px;
+          @media screen and (max-height: 560px) {
+                width: 5px;
+                height: 5px;
+          }
+      }  
+    }
   }
 `;
 
