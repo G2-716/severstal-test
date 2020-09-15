@@ -49,6 +49,7 @@ const jackMaInstagramVKShareImage = process.env.PUBLIC_URL + '/static/images/jac
 const elonMuskIntro = process.env.PUBLIC_URL + '/static/images/elon-musk-intro.png';
 const gagarinIntro = process.env.PUBLIC_URL + '/static/images/gagarin-intro.png';
 const introGif = process.env.PUBLIC_URL + '/static/images/intro.gif';
+const steel = process.env.PUBLIC_URL + '/static/images/steel-intro.png';
 
 export {
     question1Image1,
@@ -86,6 +87,7 @@ export {
     elonMuskIntro,
     gagarinIntro,
     introGif,
+    steel,
     elonMuskFacebookShareImage,
     elonMuskInstagramVKShareImage,
     jackMaFacebookShareImage,
