@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import React from "react";
-import { elonMuskIntro, introGif, gagarinIntro } from "../../../constants/images";
+import { elonMuskIntro, introGif, gagarinIntro, steel } from "../../../constants/images";
 
 const ImageWrapper = styled.div`
   position: absolute;
@@ -75,16 +75,35 @@ const ElonImg = styled.img`
       { 
          height: 34.9609vh;
       }  
-  @media screen and (max-width: 1199px)
+  @media screen and (max-width: 640px)
       { 
          height: 27.9556vh;
       }     
+`
+
+const SteelImg = styled.img`
+  position: absolute;
+  right: 5.0625vw;
+  top: 38.1481vh;
+  z-index: 2;
+  height: 49.3518vh;
+  @media screen and (max-width: 1100px){ 
+         top: 18.2617vh;
+         height: 36.5234vh;
+  }
+    
+  @media screen and (max-width: 640px){ 
+         top: 16.2561vh;
+         right: 13vw;
+         height: 28.3251vh;
+  }    
 `
 export const IntroImage = () => {
     return (
             <ImageWrapper>
                 <ElonImg src={elonMuskIntro} />
                 <Gif src={introGif} />
+                <SteelImg src={steel}/>
                 <GagarinImg src={gagarinIntro} />
                 <Blackout />
             </ImageWrapper>
