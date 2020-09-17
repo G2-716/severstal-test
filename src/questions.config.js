@@ -3,7 +3,7 @@ import { AnswerType } from './answerTypes.config';
 export const questions = [
     {
         id: '1',
-        text: 'Если у вас есть возможность стать чемпионом в одном виде спорта, какой вы бы выбрали?',
+        text: 'Если у тебя есть возможность стать чемпионом в одном виде спорта, какой ты бы выбрал?',
         answers: [
             {
                 id: '1',
@@ -260,7 +260,7 @@ export const questions = [
             },
             {
                 id: '2',
-                text: 'Могу склонить людей на свою точку зрения',
+                text: 'Могу склонить людей на свою сторону',
                 type: AnswerType.Sales,
             },
             {
@@ -270,7 +270,7 @@ export const questions = [
             },
             {
                 id: '4',
-                text: 'Я почти никогда ни с кем не ссорюсь',
+                text: 'Я почти никогда ни с кем не спорю',
                 type: AnswerType.ProjectOffice,
             },
             {
