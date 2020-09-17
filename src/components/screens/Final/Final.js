@@ -319,7 +319,7 @@ export const Final = props => {
                         target={'_blank'}
                         onClick={handleLandingLinkClick}
                     >
-                        на лидерскую программу компании Северсталь
+                        на лидерскую программу компании «‎Северсталь»‎
                     </StyledLink>
                 </InvitingText>
                 <ShareBox>
