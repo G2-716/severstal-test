@@ -36,6 +36,7 @@ export const answerTypes = {
             instagram: elonMuskInstagramVKShareImage,
             facebook: elonMuskFacebookShareImage,
         },
+        precedenceOver: [AnswerType.ProjectOffice, AnswerType.Purchases],
     },
     [AnswerType.ProjectOffice]: {
         type: AnswerType.ProjectOffice,
@@ -49,6 +50,7 @@ export const answerTypes = {
             instagram: peterDruckerInstagramVKShareImage,
             facebook: peterDruckerFacebookShareImage,
         },
+        precedenceOver: [AnswerType.Finance, AnswerType.Sales],
     },
     [AnswerType.Finance]: {
         type: AnswerType.Finance,
@@ -60,6 +62,7 @@ export const answerTypes = {
             instagram: warrenBuffettInstagramVKShareImage,
             facebook: warrenBuffettFacebookShareImage,
         },
+        precedenceOver: [AnswerType.Sales, AnswerType.Engineering],
     },
     [AnswerType.Sales]: {
         type: AnswerType.Sales,
@@ -71,6 +74,7 @@ export const answerTypes = {
             instagram: tonyRobbinsInstagramVKShareImage,
             facebook: tonyRobbinsFacebookShareImage,
         },
+        precedenceOver: [AnswerType.Engineering, AnswerType.Purchases],
     },
     [AnswerType.Purchases]: {
         type: AnswerType.Purchases,
@@ -83,5 +87,6 @@ export const answerTypes = {
             instagram: jackMaInstagramVKShareImage,
             facebook: jackMaFacebookShareImage,
         },
+        precedenceOver: [AnswerType.Finance, AnswerType.ProjectOffice],
     },
 };
